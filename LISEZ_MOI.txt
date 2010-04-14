@@ -48,3 +48,24 @@ Expérimenter
 
 Vous pouvez à présent tester les lignes de commandes décrites dans les fichiers references/techniques/coreutils.txt ou references/techniques/exemples.txt.
 N'ayez pas peur de casser votre ordinateur, à part les commandes *rm* et *>*, rien ne modifie vos fichiers. *rm* supprime un fichier (à utiliser avec précaution car le fichier est directement supprimé sans passer par la corbeille!). La commande *>* permet d'enregistrer le résultat obtenu dans un fichier.
+
+- Pour appeler un fichier se situant dans un sous-dossier, taper :
+  - mon-dossier/mon-fichier.txt
+- Pour appeler un fichier dans un dossier supérieur, taper :
+  - ../mon-fichier.txt
+  
+Affiner sa recherche Twitter
+============================
+
+- utiliser des guillemets pour chercher un groupe de mots exacts: "ma recherche"
+- ajouter "?" pour ne rechercher que des questions
+- ajouter "-rt" pour ne pas recevoir les re-tweets
+- ajouter "filter:links" pour ne recevoir que des liens
+- ajouter "#" devant un mot pour chercher un thème
+- utiliser des smileys pour chercher une humeur: ":)", ":("
+- utiliser le signe moins '-' pour omettre un terme de la recherche
+- utiliser "since:aaaa-mm-jj" et "until:aaaa-mm-jj" pour chercher des tweets sur une période précise
+- "from:utilisateurX": message écrit par l'utilisateurX
+- "to:utilisateurX": message destiné à l'utilisateurX
+- "@utilisateurX": message concernant l'utilisateurX
+- ajouter "near:90210" (code postal Américain) ou "near:Belgium" pour ne recevoir que des tweets locaux
