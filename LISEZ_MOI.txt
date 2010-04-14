@@ -1,0 +1,50 @@
+=======================
+|Please Make Me Design|
+=======================
+
+License
+=======
+
+(c) Stéphanie Vilayphiou, Alexandre Leray et Ludivine Loiseau
+License: GNU-GPL 3
+
+This program is free software: you can redistribute it and/or 
+modify it under the terms of the GNU General Public License as published 
+by the Free Software Foundation, either version 3 of the License, 
+or any later version.
+
+Please don't forget to mention the author's name along your new 
+project as specified in the license.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+Projet
+======
+
+"Please Make Me Design" est à l'origine le matériel nécessaire au "Screen Party" d'Open Source Publishing ayant lieu le 22 avril 2010 à l'ESAPV Mons.
+"Please Make Me Design" est une initiation à la ligne de commande par le biais du design graphique, de l'écriture et de la poésie concrète.
+Ce pack collecte textes et didacticiels de références, ainsi qu'une collection de scripts. Il a été créé pour faciliter la collaboration, mais aussi pour pouvoir être augmenté par la suite pour d'ultérieurs workshops.
+
+
+Pour commencer
+==============
+
+- Placer ce dossier dans votre dossier de travail
+- Ouvrir une fenêtre de Terminal
+  - sur MacOS :
+    - Aller dans Applications/Utilitaires/Terminal
+- Aller dans votre dossier de travail :
+  - cd /Volumes/votre-disque-dur/.../votre-dossier-de-travail/
+  (la commande *cd* permet de changer de répertoire, en anglais *Change Directory*)
+    - *ASTUCE* la touche TAB vous permet d'auto-compléter les noms de dossier et de fichier; ainsi vous n'avez pas besoin de connaître l'arborescence du disque dur et les noms de fichiers par cœur!
+- Aller dans le dossier script du pack "PleaseMakeMeDesign" :
+  - cd pleasemakemedesign/scripts
+
+
+Expérimenter
+============
+
+Vous pouvez à présent tester les lignes de commandes décrites dans les fichiers references/techniques/coreutils.txt ou references/techniques/exemples.txt.
+N'ayez pas peur de casser votre ordinateur, à part les commandes *rm* et *>*, rien ne modifie vos fichiers. *rm* supprime un fichier (à utiliser avec précaution car le fichier est directement supprimé sans passer par la corbeille!). La commande *>* permet d'enregistrer le résultat obtenu dans un fichier.
