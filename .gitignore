@@ -1,0 +1,10 @@
+*.orig
+*.rej
+*~
+*.o
+*.pyc
+*.swp
+*.svn
+*.sock
+*.pid
+.DS_Store
