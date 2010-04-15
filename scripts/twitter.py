@@ -38,6 +38,7 @@ debut = options.debut
 fin = options.fin
 
 url = "http://search.twitter.com/search?&tag=%s&ands=%s&nots=&ors=&phrase=&q=&ref=&rpp=%s&since=%s&until=%s&near=&within=15&units=km&from=&to=&lang=%s" % (tag, requete, nombre, debut, fin, langue)
+# print url
 recherche = urllib.urlopen(url)
 html = recherche.read()
 recherche.close()
@@ -60,4 +61,4 @@ try:
     tweets = BeautifulStoneSoup(tweets, convertEntities="html", smartQuotesTo="html").contents[0].encode('utf-8')
     print tweets.replace('&apos;', "'")
 except:
-    print "Il n'y a aucun résultat."
+    print "Il n'y a aucun resultat."
