@@ -41,6 +41,24 @@ Pour commencer
     - *ASTUCE* la touche TAB vous permet d'auto-compléter les noms de dossier et de fichier; ainsi vous n'avez pas besoin de connaître l'arborescence du disque dur et les noms de fichiers par cœur!
 - Aller dans le dossier script du pack "PleaseMakeMeDesign" :
   - cd pleasemakemedesign/scripts
+  
+Solution alternative
+--------------------
+- Placer ce dossier dans votre dossier de travail
+- Ouvrir une fenêtre de Terminal
+  - sur MacOS :
+    - Aller dans Applications/Utilitaires/Terminal
+- taper "cd"
+- Trouver le dossier du pack dans le Finder
+- Glisser/déposer ce dossier dans le terminal
+- Appuyer sur Entrée
+
+
+Astuces
+=======
+
+- "../" signifie dossier supérieur
+- taper "-h" ou "--help" après le nom d'un programme permet d'afficher l'aide 
 
 
 Expérimenter
@@ -53,7 +71,8 @@ N'ayez pas peur de casser votre ordinateur, à part les commandes *rm* et *>*, r
   - mon-dossier/mon-fichier.txt
 - Pour appeler un fichier dans un dossier supérieur, taper :
   - ../mon-fichier.txt
-  
+
+
 Affiner sa recherche Twitter
 ============================
 
