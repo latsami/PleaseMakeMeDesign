@@ -1,5 +1,9 @@
 #! /bin/bash
 
+echo -e "Taper votre texte:"
+read TEXTE
+echo -e "\nVotre texte:\n------------\n"$TEXTE
+
 SVG_DEBUT='<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="400mm" height="600mm">
     <sodipodi:namedview
@@ -25,4 +29,5 @@ SVG_FIN="</flowPara>
 </svg>
 "
 
-echo $SVG_DEBUT $1 $SVG_FIN >| bash.svg
+
+echo $SVG_DEBUT $TEXTE $SVG_FIN >| bash.svg
