@@ -1,4 +1,4 @@
-#! /bin/zsh
+#! /bin/bash
 
 SVG_DEBUT='<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="400mm" height="600mm">
