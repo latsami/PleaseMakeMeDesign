@@ -1,0 +1,134 @@
+<HTML><HEAD><TITLE>Page de man</TITLE></HEAD>
+<BODY BGCOLOR=#"ffffff" TEXT=#"000010"><PRE><FONT SIZE="3">
+
+
+COL(1)            Manuel de l'utilisateur Linux            COL(1)
+
+
+<FONT COLOR=#"000000"><B>NOM</B></FONT>
+       col - Eliminer les sauts de ligne arrière.
+
+<FONT COLOR=#"000000"><B>SYNOPSIS</B></FONT>
+       <FONT COLOR=#"000000"><B>col</B></FONT> [<FONT COLOR=#"000000"><B>-bfx</B></FONT>] [<FONT COLOR=#"000000"><B>-l</B></FONT> <FONT COLOR=#"0000ff"><I>num</I></FONT>]
+
+<FONT COLOR=#"000000"><B>DESCRIPTION</B></FONT>
+       <FONT COLOR=#"000000"><B>Col</B></FONT>  élimine les sauts (et demi-sauts) de ligne arrière de
+       son entrée de sorte que les lignes  de  la  sortie  soient
+       dans  le  bon ordre avec seulement des sauts et demi-sauts
+       de ligne avant, et remplace les espaces  par  des  tabula­
+       tions  partout  où  c'est  possible.  Ceci peut être utile
+       pour traiter la sortie de nroff(1) et tbl(1).
+
+       <FONT COLOR=#"000000"><B>Col</B></FONT> lit sur son entrée standard et  écrit  sur  sa  sortie
+       standard.
+
+       Les options sont les suivantes :
+
+
+       <FONT COLOR=#"000000"><B>-b</B></FONT>     Ne pas émettre de backspaces et imprimer uniquement
+              le dernier caractère écrit pour chaque colonne.
+
+       <FONT COLOR=#"000000"><B>-f</B></FONT>     Les demi-sauts de ligne avant sont autorisés  (mode
+              ``fine'').  Normalement, les caractères positionnés
+              entre deux lignes sont imprimés sur la ligne  suiv­
+              ante.
+
+       <FONT COLOR=#"000000"><B>-x</B></FONT>     Emet  des espaces multiples au lieu de tabulations.
+
+       <FONT COLOR=#"000000"><B>-l</B></FONT> <FONT COLOR=#"0000ff"><I>num</I></FONT> Stocke au moins <FONT COLOR=#"0000ff"><I>num</I></FONT> lignes en mémoire.  Par défaut,
+              128 lignes sont stockées.
+
+       Les séquences de contrôle que <FONT COLOR=#"000000"><B>col</B></FONT> comprend et leurs équiv­
+       alents en décimal sont décrits dans la table suivante :
+
+       ESC-7            saut de ligne arrière (escape puis 7)
+       ESC-8            demi-saut de ligne arrière (escape puis 8)
+       ESC-9            demi-saut de ligne avant (escape puis 9)
+       backspace        recule d'une colonne (8); ignoré en première colonne
+       retour-chariot   (13)
+       newline          avance d'une ligne (10)
+                        effectue aussi un retour-chariot
+       shift in         passe au jeu de caractères normal (15)
+       shift out        passe au jeu de caractères auxiliaire (14)
+       espace           avance d'une colonne (32)
+       tabulation       avance au prochain taquet de tabulation (9)
+       vertical tab     saut de ligne arrière (11)
+
+       Tous les caractères de contrôle et séquences d'échappement
+       non reconnus sont éliminés.
+
+       <FONT COLOR=#"000000"><B>Col</B></FONT>  tient  à jour le jeu de caractères au fur et à mesure
+       de la lecture de son entrée et fait en sorte que le jeu de
+
+
+
+BSD Expérimental           20 Mai 1997                          1
+
+
+
+
+
+COL(1)            Manuel de l'utilisateur Linux            COL(1)
+
+
+       caractères soit correct dans la sortie.
+
+       Si  l'entrée  tente  de revenir en arrière sur la dernière
+       ligne émise, <FONT COLOR=#"000000"><B>col</B></FONT> affiche un message d'avertissement.
+
+<FONT COLOR=#"000000"><B>VOIR</B></FONT> <FONT COLOR=#"000000"><B>AUSSI</B></FONT>
+       expand(1) , nroff(1) , tbl(1)
+
+<FONT COLOR=#"000000"><B>HISTORIQUE</B></FONT>
+       La commande <FONT COLOR=#"000000"><B>col</B></FONT> est apparue dans  la  version  6  de  AT&T
+       UNIX.
+
+
+<FONT COLOR=#"000000"><B>TRADUCTION</B></FONT>
+       Michel Quercia, 1997.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BSD Expérimental           20 Mai 1997                          2
+
+
+</FONT></PRE></BODY></HTML>

@@ -1,0 +1,200 @@
+<HTML><HEAD><TITLE>Page de man</TITLE></HEAD>
+<BODY BGCOLOR=#"ffffff" TEXT=#"000010"><PRE><FONT SIZE="3">
+
+
+CSPLIT(1)         Manuel de l'utilisateur Linux         CSPLIT(1)
+
+
+<FONT COLOR=#"000000"><B>NOM</B></FONT>
+       csplit  -  Découper un fichier en sections déterminées par
+       des lignes de contexte.
+
+<FONT COLOR=#"000000"><B>SYNOPSIS</B></FONT>
+       <FONT COLOR=#"000000"><B>csplit</B></FONT> [-sqkz] [-f préfixe]  [-b  suffixe]  [-n  longueur]
+       [--prefix=préfixe]    [--suffix-format=suffixe]    [--dig­
+       its=longueur]    [--quiet]    [--silent]    [--keep-files]
+       [--elide-empty-files]    [--help]    [--version]   fichier
+       motif...
+
+<FONT COLOR=#"000000"><B>DESCRIPTION</B></FONT>
+       Cette page de manuel documente la version GNU de <FONT COLOR=#"000000"><B>csplit</B></FONT>.
+
+       <FONT COLOR=#"000000"><B>csplit</B></FONT>  crée  plusieurs  fichiers  de   sortie   contenant
+       différentes  sections  du  <FONT COLOR=#"0000ff"><I>fichier</I></FONT> d'entrée indiqué, ou de
+       l'entrée standard si le nom `-' est fourni.
+
+       Par défaut, <FONT COLOR=#"000000"><B>csplit</B></FONT> affiche le nombre d'octets écrits  dans
+       chaque fichier de sortie après l'avoir créé.
+
+
+       Le  contenu  des  fichiers de sortie est déterminé par les
+       arguments <FONT COLOR=#"0000ff"><I>motif</I></FONT>.  Une erreur est déclenchée si un motif ne
+       correspond à aucune ligne du fichier d'entrée, par exemple
+       si aucune ligne restante ne se rapporte à  une  expression
+       regulière donnée.
+
+       Après  avoir trouvé des lignes correspondantes pour chaque
+       motif donné, le reste du fichier est copié dans un dernier
+       fichier de sortie.
+
+       Les types d'argument <FONT COLOR=#"0000ff"><I>motif</I></FONT> sont :
+
+              <FONT COLOR=#"0000ff"><I>nombre</I></FONT>
+                     Crée un fichier de sortie contenant la ligne
+                     en cours, et les suivantes jusqu'à la  ligne
+                     <FONT COLOR=#"0000ff"><I>nombre</I></FONT>  (un entier positif) non-incluse.  Si
+                     cet  argument  est  suivi  d'un  nombre   de
+                     répétitions, un autre fichier de sortie con­
+                     tenant <FONT COLOR=#"0000ff"><I>nombre</I></FONT> lignes est  créé  pour  chaque
+                     itération.
+
+              /<FONT COLOR=#"0000ff"><I>regexp</I></FONT>/[<FONT COLOR=#"0000ff"><I>décalage</I></FONT>]
+                     Créer  un  fichier de sortie commençant à la
+                     ligne en cours, jusqu'à la  prochaine  ligne
+                     du    fichier   d'entrée   correspondant   à
+                     l'expression régulière <FONT COLOR=#"0000ff"><I>regexp</I></FONT>.  Cette  ligne
+                     n'est  pas incluse. Le <FONT COLOR=#"0000ff"><I>décalage</I></FONT> éventuel est
+                     un nombre entier positif  ou  négatif.  S'il
+                     est  mentionné,  le  fichier  de  sortie ira
+                     jusqu'à la ligne précédant ou suivant de  la
+                     valeur   <FONT COLOR=#"0000ff"><I>décalage</I></FONT>   celle   correspondant  à
+                     l'expression régulière.  La  ligne  suivante
+
+
+
+FSF                       9 Janvier 1997                        1
+
+
+
+
+
+CSPLIT(1)         Manuel de l'utilisateur Linux         CSPLIT(1)
+
+
+                     débutera alors la prochaine section.
+
+              %<FONT COLOR=#"0000ff"><I>regexp</I></FONT>%[<FONT COLOR=#"0000ff"><I>offset</I></FONT>]
+                     Comme le type précédent, à la différence que
+                     le résultat n'est pas écrit dans un  fichier
+                     de sortie, la section est ainsi ignorée.
+
+              {<FONT COLOR=#"0000ff"><I>nombre</I></FONT>}
+                     Répéter <FONT COLOR=#"0000ff"><I>nombre</I></FONT> fois supplémentaires le motif
+                     précédent. <FONT COLOR=#"0000ff"><I>nombre</I></FONT> doit être un entier  posi­
+                     tif.  Un  astérisque  à  la  place de <FONT COLOR=#"0000ff"><I>nombre</I></FONT>
+                     indique une répétition indéfinie, jusqu'à la
+                     fin du fichier d'entrée.
+
+       Les  noms  des fichiers de sortie consistent en un <FONT COLOR=#"0000ff"><I>préfixe</I></FONT>
+       suivi d'un <FONT COLOR=#"0000ff"><I>suffixe</I></FONT>. Par défaut, le suffixe est  un  nombre
+       de  deux  chiffres,  dans  l'intervalle croissant 00 à 99.
+       Néanmoins ceci peut être modifié par les options  <FONT COLOR=#"0000ff"><I>--digits</I></FONT>
+       ou <FONT COLOR=#"0000ff"><I>--suffix-format</I></FONT>.  (Voir plus bas.)
+
+       Dans tous les cas, la concaténation des fichiers résultats
+       dans l'ordre croissant des noms  de  fichiers  redonne  le
+       fichier  original.   Le préfixe par défaut des fichiers de
+       sortie est `xx'.
+
+       Par défaut, lorsque <FONT COLOR=#"000000"><B>csplit</B></FONT> rencontre une erreur, ou reçoit
+       un  signal Hangup, Interrupt, Quit ou Terminate, il efface
+       tous les fichiers résultats qu'il avait créés.
+
+   <FONT COLOR=#"000000"><B>OPTIONS</B></FONT>
+       <FONT COLOR=#"0000ff"><I>-f,</I></FONT> <FONT COLOR=#"0000ff"><I>--prefix=préfixe</I></FONT>
+              Utiliser le <FONT COLOR=#"0000ff"><I>préfixe</I></FONT> indiqué pour créér les noms  de
+              fichiers de sortie.
+
+       <FONT COLOR=#"0000ff"><I>-b,</I></FONT> <FONT COLOR=#"0000ff"><I>--suffix-format=suffixe</I></FONT>
+              Utiliser le <FONT COLOR=#"0000ff"><I>suffixe</I></FONT> pour créér les noms de fichiers
+              de sortie. Quand cette option  est  mentionnée,  la
+              chaîne   <FONT COLOR=#"0000ff"><I>suffixe</I></FONT>   doit   contenir  exactement  une
+              spécification de format compatible  avec  <FONT COLOR=#"000000"><B>printf</B></FONT>(3)
+              (comme  %d,  avec  éventuellement  des attributs de
+              largeur, de précision, ou tout autre modificateur).
+              La  spécification doit permettre la conversion d'un
+              argument entier binaire  en  forme  lisible.  Ainsi
+              seuls les indicateurs de format `d', 'i', `u', `o',
+              `x', et `X'  sont  autorisés.   La  chaîne  <FONT COLOR=#"0000ff"><I>suffixe</I></FONT>
+              complète  (avec le numéro de fichier de sortie) est
+              transmise à <FONT COLOR=#"000000"><B>sprintf</B></FONT>(3) pour créer le suffixe du nom
+              de  chaque  fichier  individuellement.  Quand cette
+              option  est  utilisée,  l'argument   <FONT COLOR=#"0000ff"><I>--digits</I></FONT>   est
+              ignoré.
+
+       <FONT COLOR=#"0000ff"><I>-n,</I></FONT> <FONT COLOR=#"0000ff"><I>--digits=longueur</I></FONT>
+              Utiliser des noms de fichiers contenant des nombres
+              de la <FONT COLOR=#"0000ff"><I>longueur</I></FONT> indiquée. (Par défaut 2).
+
+
+
+FSF                       9 Janvier 1997                        2
+
+
+
+
+
+CSPLIT(1)         Manuel de l'utilisateur Linux         CSPLIT(1)
+
+
+       <FONT COLOR=#"0000ff"><I>-k,</I></FONT> <FONT COLOR=#"0000ff"><I>--keep-files</I></FONT>
+              Ne pas effacer les fichiers résultats  lorsque  des
+              erreurs se produisent.
+
+       <FONT COLOR=#"0000ff"><I>-z,</I></FONT> <FONT COLOR=#"0000ff"><I>--elide-empty-files</I></FONT>
+              Eviter  la  création  de  fichiers  de sortie vides
+              (Dans  le  cas  où  un  identificateur  indique  la
+              première   ligne  de  chaque  section,  le  premier
+              fichier résultat sera  généralement  vide  si  l'on
+              n'utilise  pas  cette  option).  Remarquez  que  la
+              séquence des numéros de  fichiers  de  sortie  sera
+              toujours continue, commençant à 0, même si des sec­
+              tions vides sont éliminées.
+
+       <FONT COLOR=#"0000ff"><I>-s,</I></FONT> <FONT COLOR=#"0000ff"><I>-q,</I></FONT> <FONT COLOR=#"0000ff"><I>--silent,</I></FONT> <FONT COLOR=#"0000ff"><I>--quiet</I></FONT>
+              Ne pas afficher les tailles des fichiers de sortie.
+
+       <FONT COLOR=#"0000ff"><I>--help</I></FONT> Afficher  un  message d'aide sur la sortie standard
+              et terminer normalement.
+
+       <FONT COLOR=#"0000ff"><I>--version</I></FONT>
+              Afficher un numéro de version sur la  sortie  stan­
+              dard et terminer normalement.
+
+
+<FONT COLOR=#"000000"><B>TRADUCTION</B></FONT>
+       Christophe Blaess, 1997.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FSF                       9 Janvier 1997                        3
+
+
+</FONT></PRE></BODY></HTML>

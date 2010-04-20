@@ -1,0 +1,134 @@
+<HTML><HEAD><TITLE>Page de man</TITLE></HEAD>
+<BODY BGCOLOR=#"ffffff" TEXT=#"000010"><PRE><FONT SIZE="3">
+
+
+SPLIT(1)          Manuel de l'utilisateur Linux          SPLIT(1)
+
+
+<FONT COLOR=#"000000"><B>NOM</B></FONT>
+       split - Découper un fichier en différentes partie.
+
+<FONT COLOR=#"000000"><B>SYNOPSIS</B></FONT>
+       <FONT COLOR=#"000000"><B>split</B></FONT>   [-lignes]  [-l  lignes]  [-b  nb_octets[bkm]]  [-C
+       nb_octets[bkm]] [--lines=lignes]  [--bytes=nb_octets[bkm]]
+       [--line-bytes=nb_octets[bkm]]     [--help]     [--version]
+       [fichier_entrée [préfixe_sortie]]
+
+<FONT COLOR=#"000000"><B>DESCRIPTION</B></FONT>
+       Cette page de manuel documente la version GNU de <FONT COLOR=#"000000"><B>split</B></FONT>.
+
+       <FONT COLOR=#"000000"><B>split</B></FONT> crée un ou plusieurs  fichiers  (autant  que  néces­
+       saire)    contenant    les    sections   consécutives   du
+       <FONT COLOR=#"0000ff"><I>fichier_d_entrée</I></FONT>.
+
+       Si aucun fichier n'est fourni, ou si le nom `-'  est  men­
+       tionné, la lecture se fait depuis l'entrée standard.
+
+       Par  défaut,  <FONT COLOR=#"000000"><B>split</B></FONT>  copie 1000 lignes du fichier d'entrée
+       (ou ce qu'il en reste) dans chaque fichier de sortie.
+
+       Le nom des fichiers de sortie  est  composé  d'un  préfixe
+       suivi  d'un groupe de lettres, choisi de telle manière que
+       la concaténation des fichiers  de  sortie,  triés  suivant
+       l'ordre alphabétique, restitue le fichier original.
+
+       Le préfixe par défaut est `x'.  Si l'argument <FONT COLOR=#"0000ff"><I>préfixe_sor­</I></FONT>
+       <FONT COLOR=#"0000ff"><I>tie</I></FONT> est fourni, celui ci est utilisé pour créer  les  noms
+       des fichiers de sortie.
+
+   <FONT COLOR=#"000000"><B>OPTIONS</B></FONT>
+       <FONT COLOR=#"0000ff"><I>-n,</I></FONT> <FONT COLOR=#"0000ff"><I>-l</I></FONT> <FONT COLOR=#"0000ff"><I>n,</I></FONT> <FONT COLOR=#"0000ff"><I>--lines=n</I></FONT>
+              Copier <FONT COLOR=#"0000ff"><I>n</I></FONT> lignes du fichier d'entrée dans chacun des
+              fichiers de sortie.
+
+       <FONT COLOR=#"0000ff"><I>-b</I></FONT> <FONT COLOR=#"0000ff"><I>n[bkm],</I></FONT> <FONT COLOR=#"0000ff"><I>--bytes=n[bkm]</I></FONT>
+              Copier <FONT COLOR=#"0000ff"><I>n</I></FONT> octets du fichier d'entrée dans chacun des
+              fichiers de sortie.  <FONT COLOR=#"0000ff"><I>n</I></FONT> doit être un entier non nul,
+              éventuellement suivi d'un caractère  précisant  une
+              unité différente :
+
+              b      blocs de 512 octets.
+
+              k      blocs de 1 Ko
+
+              m      blocs de 1 Mo
+
+       <FONT COLOR=#"0000ff"><I>-C</I></FONT> <FONT COLOR=#"0000ff"><I>n[bkm],</I></FONT> <FONT COLOR=#"0000ff"><I>--line-bytes=n[bkm]</I></FONT>
+              Copier  dans  chaque  fichier  de  sortie autant de
+              lignes complètes  que  possible,  sans  dépasser  <FONT COLOR=#"0000ff"><I>n</I></FONT>
+              octets  au  maximum.   Si une ligne est plus longue
+              que <FONT COLOR=#"0000ff"><I>n</I></FONT> octets, <FONT COLOR=#"000000"><B>split</B></FONT> copiera <FONT COLOR=#"0000ff"><I>n</I></FONT> octets  de  la  ligne
+              dans chaque fichier jusqu'à ce qu'il reste moins de
+
+
+
+FSF                      14 Janvier 1997                        1
+
+
+
+
+
+SPLIT(1)          Manuel de l'utilisateur Linux          SPLIT(1)
+
+
+              <FONT COLOR=#"0000ff"><I>n</I></FONT> octets sur la ligne, puis continuera normalement.
+              <FONT COLOR=#"0000ff"><I>n</I></FONT> est indiqué avec le même format que dans l'option
+              <FONT COLOR=#"0000ff"><I>--bytes</I></FONT>.
+
+       <FONT COLOR=#"0000ff"><I>--help</I></FONT> Afficher un message d'aide sur la  sortie  standard
+              et terminer normalement.
+
+       <FONT COLOR=#"0000ff"><I>--version</I></FONT>
+              Afficher  un  numéro de version sur la sortie stan­
+              dard et terminer normalement.
+
+
+<FONT COLOR=#"000000"><B>TRADUCTION</B></FONT>
+       Christophe Blaess, 1997.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FSF                      14 Janvier 1997                        2
+
+
+</FONT></PRE></BODY></HTML>
