@@ -60,10 +60,16 @@ def paragraphe(texte, taille):
     """ % (taille, texte)
     return svg_text
     
+    
+print lexique
 #  Pour chaque ligne du lexique :
 for ligne in lexique:
-    occurence, mot = ligne.split()                      # Fait correspondre une occurence à un mot
-    svg_debut += paragraphe(mot, int(occurence)*5)      # Crée le code svg du mot, sa taille est proportionnelle à son nombre d'occurrences
+    print ligne
+    try:
+        occurence, mot = ligne.split()                      # Fait correspondre une occurence à un mot
+        svg_debut += paragraphe(mot, int(occurence)*5)      # Crée le code svg du mot, sa taille est proportionnelle à son nombre d'occurrences
+    except:
+        pass
 
 # Ferme le code svg
 svg = svg_debut + svg_fin
