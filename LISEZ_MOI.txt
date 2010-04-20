@@ -1,31 +1,34 @@
-=======================
-|Please Make Me Design|
-=======================
+==================================
+|Please Computer | Make Me Design|
+==================================
 
 License
 =======
 
-(c) Stéphanie Vilayphiou, Alexandre Leray et Ludivine Loiseau
+(c) 2010, Stéphanie Vilayphiou, Alexandre Leray et Ludivine Loiseau — Tous droits réservés.
 License: GNU-GPL 3
 
-This program is free software: you can redistribute it and/or 
-modify it under the terms of the GNU General Public License as published 
-by the Free Software Foundation, either version 3 of the License, 
-or any later version.
+Ce programme est un logiciel libre ; vous pouvez le redistribuer ou le
+modifier suivant les termes de la “GNU General Public License” telle que
+publiée par la Free Software Foundation : soit la version 3 de cette
+licence, soit (à votre gré) toute version ultérieure.
 
-Please don't forget to mention the author's name along your new 
-project as specified in the license.
+Ce programme est distribué dans l’espoir qu’il vous sera utile, mais SANS
+AUCUNE GARANTIE : sans même la garantie implicite de COMMERCIALISABILITÉ
+ni d’ADÉQUATION À UN OBJECTIF PARTICULIER. Consultez la Licence Générale
+Publique GNU pour plus de détails.
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+Vous devriez avoir reçu une copie de la Licence Générale Publique GNU avec
+ce programme ; si ce n’est pas le cas, consultez :
+<http://www.gnu.org/licenses/>.
 
 
 Projet
 ======
 
-"Please Make Me Design" est à l'origine le matériel nécessaire au "Screen Party" d'Open Source Publishing ayant lieu le 22 avril 2010 à l'ESAPV Mons.
-"Please Make Me Design" est une initiation à la ligne de commande par le biais du design graphique, de l'écriture et de la poésie concrète.
-Ce pack collecte textes et didacticiels de références, ainsi qu'une collection de scripts. Il a été créé pour faciliter la collaboration, mais aussi pour pouvoir être augmenté par la suite pour d'ultérieurs workshops.
+"Please Computer | Make Me Design" est à l'origine le package source de la "Screen Party" du 22 avril 2010 à l'ESAPV Mons, proposé par Open Source Publishing.
+"Please Computer | Make Me Design" est une initiation à la ligne de commande par le biais du design graphique, de l'écriture et de la poésie concrète.
+Ce pack collecte textes et didacticiels de références, ainsi qu'une collection de scripts. Il a été créé pour faciliter la collaboration, mais aussi pour pouvoir être augmenter par la suite, par exemple dans le cadre d'autres ateliers.
 
 
 Pour commencer
@@ -35,15 +38,16 @@ Pour commencer
 - Ouvrir une fenêtre de Terminal
   - sur MacOS :
     - Aller dans Applications/Utilitaires/Terminal
-- Aller dans votre dossier de travail :
+- Aller dans votre dossier de travail (en indiquant le chemin à votre terminal) :
   $ cd /Volumes/votre-disque-dur/.../votre-dossier-de-travail/
   (la commande *cd* permet de changer de répertoire, en anglais *Change Directory*)
     - *ASTUCE* la touche TAB vous permet d'auto-compléter les noms de dossier et de fichier; ainsi vous n'avez pas besoin de connaître l'arborescence du disque dur et les noms de fichiers par cœur!
 - Aller dans le dossier script du pack "PleaseMakeMeDesign" :
   $ cd pleasemakemedesign/scripts
   
-Solution alternative
---------------------
+Solution alternative 
+(pour ne pas écrire le chemin d'un dossier à la main)
+-----------------------------------------------------
 - Placer ce dossier dans votre dossier de travail
 - Ouvrir une fenêtre de Terminal
   - sur MacOS :
@@ -65,7 +69,9 @@ Expérimenter
 ============
 
 Vous pouvez à présent tester les lignes de commandes décrites dans les fichiers references/techniques/coreutils.txt ou references/techniques/exemples.txt.
-N'ayez pas peur de casser votre ordinateur, à part les commandes *rm* et *>*, rien ne modifie vos fichiers. *rm* supprime un fichier (à utiliser avec précaution car le fichier est directement supprimé sans passer par la corbeille!). La commande *>* permet d'enregistrer le résultat obtenu dans un fichier.
+N'ayez pas peur de perdre des fichiers ou de lancer une commande dangereuse. A part les commandes *rm* et *>*, rien ne modifie vos fichiers. 
+*rm* supprime un fichier (à utiliser avec précaution car le fichier est directement supprimé sans passer par la corbeille!). 
+La commande *>* permet d'enregistrer le résultat obtenu dans un fichier.
 
 - Pour appeler un fichier se situant dans un sous-dossier, taper :
   $ mon-dossier/mon-fichier.txt
