@@ -29,7 +29,7 @@ parser = OptionParser()
 parser.add_option("-m", "--mots", dest="mots", default="hello", help="aligne les phrases sur un même mot (ou groupe de mots)")
 (options, args) = parser.parse_args()
 mots = options.mots       # récupère dans la variable "mots" les mots entrés par l'utilisateur
-print "mots = " + mots
+# print "mots = " + mots
 
 texte = sys.stdin.read()     # pour prendre le standard input comme argument
 texte = texte.split('\n')    # séparer le texte en lignes
@@ -59,7 +59,7 @@ svg_fin = """
 def paragraphe(largeur, gauche, haut, texte, alignement, couleur):    
     svg_text = """
     <flowRoot
-        style="font-size:16px;line-height:18px;fill:%s;font-family:Bitstream Vera Sans;text-align:%s">
+        style="font-size:32px;line-height:34px;fill:%s;font-family:FreeSans Bold;text-align:%s">
         <flowRegion>
             <rect width="%d" height="100" x="%d" y="%d" />
         </flowRegion>
@@ -81,9 +81,9 @@ for phrase in texte:
         txt_droite = phrase[indexMots+len(mots):]
 
         # Pour chaque partie de la phrase, crée un code svg pour écrire la phrase avec le MOT toujours au milieu
-        txt_gauche = paragraphe(500, 0, i*100, txt_gauche, 'end', '#000000')
-        txt_milieu = paragraphe(100, 510, i*100, mots, 'start', '#FF0000')
-        txt_droite = paragraphe(500, 620, i*100, txt_droite, 'start', '#000000')
+        txt_gauche = paragraphe(700, 0, i*115, txt_gauche, 'end', '#000000')
+        txt_milieu = paragraphe(100, 710, i*115, mots, 'start', '#FF0000')
+        txt_droite = paragraphe(500, 820, i*115, txt_droite, 'start', '#000000')
         
         # Rajoute les phrases (en svg) au code svg de base
         svg_debut += txt_gauche + txt_milieu + txt_droite
@@ -94,7 +94,9 @@ for phrase in texte:
 # Ferme le code svg
 svg = svg_debut + svg_fin
 
+print svg
+
 #  Enregistre le code svg dans un fichier
-svg_fichier = open('filtre_mot.svg', 'w')
-svg_fichier.write(svg)
-svg_fichier.close()
+# svg_fichier = open('filtre_mot.svg', 'w')
+# svg_fichier.write(svg)
+# svg_fichier.close()
