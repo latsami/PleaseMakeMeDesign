@@ -52,7 +52,7 @@ svg_fin = """
 def paragraphe(texte):
     svg_text = """
     <flowRoot
-        style="font-size:16px;font-family:Bitstream Vera Sans;">
+        style="font-size:16px;font-family:FreeSans Bold;">
         <flowRegion>
             <rect width="600" height="600" x="0" y="0" />
         </flowRegion>
