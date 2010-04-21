@@ -2,11 +2,11 @@
 |Please Computer | Make Me Design|
 ==================================
 
-License
+Licence
 =======
 
-(c) 2010, Stéphanie Vilayphiou, Alexandre Leray et Ludivine Loiseau — Tous droits réservés.
-License: GNU-GPL 3
+Copyright 2010, Stéphanie Vilayphiou, Alexandre Leray et Ludivine Loiseau —
+Tous droits réservés. Licence: GNU-GPL 3
 
 Ce programme est un logiciel libre ; vous pouvez le redistribuer ou le
 modifier suivant les termes de la “GNU General Public License” telle que
@@ -137,3 +137,4 @@ Affiner sa recherche Twitter
 - "to:utilisateurX": message destiné à l'utilisateurX
 - "@utilisateurX": message concernant l'utilisateurX
 - ajouter "near:90210" (code postal Américain) ou "near:Belgium" pour ne recevoir que des tweets locaux
+

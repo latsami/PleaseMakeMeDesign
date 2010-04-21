@@ -1,0 +1,190 @@
+Traduction (et augmentation) de l'introduction du Floss Manual CommandLine
+==========================================================================
+
+    source: http://en.flossmanuals.net/gnulinux
+  
+    © Free Software Foundation 2009
+  
+    This documentation is free documentation; you can redistribute it and/or
+    modify it under the terms of the GNU Free Documentation License as
+    published by the Free Software Foundation; either version 1.3 of the
+    License, or (at your option) any later version.
+  
+    This documentation is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+    or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Free Documentation
+    License for more details. 
+
+
+Prenez les commandes
+--------------------
+
+Les lignes de commande vous permettent de faire toutes sortes de choses très
+puissantes sur votre ordinateur. Pour vous le démontrer, regardez cet exemple
+qui doit probablement vous être familier: si vous utilisez un appareil photo
+numérique, vous avez probablement sur votre ordinateur un dossier rempli
+d'images. Imaginez que vous vouliez redimensionner à 300 pixels de large
+l'image *mon_image.jpg* et la sauvegarder sous un nouveau nom
+*mon_image_petit.jpg*.
+
+Via un logiciel à interface graphique d'édition d'images tels que Gimp (ou
+Photoshop), voici ce que vous feriez sans doute:
+
+- Ouvrir un logiciel d'édition d'images dans le menu des programmes.
+- Cliquer sur Fichier/Ouvrir.
+- Accéder au dossier contenant vos images.
+- Cliquer sur le fichier *profile.jpg*, puis sur Ouvrir.
+- Cliquer sur Image/Mise à l'échelle.
+- Changer la largeur de l'image à 300 pixels, puis cliquer sur Redimensionner.
+- Cliquer sur Fichier/Sauvegarder sous.
+- Taper le nom *mon_image_petit.jpg* comme nouveau nom de fichier et cliquer
+  sur Sauvegarder.
+
+En utilisant la ligne de commande, vous pouvez effectuer toutes ces opérations
+juste en tapant:
+
+  convert -resize 300 mon_image.jpg mon_image_petit.jpg
+
+1 étape en ligne de commande au lieu de 8 avec l'interface graphique.
+Peut-être que vous pensez que réapprendre un nouvel outil pour économiser 7
+étapes ne vaut pas le coup. Mais imaginez que vous ayez 30 images à
+redimensionner. Tenez-vous encore à ouvrir chaque image une à une et répéter
+ces 8 étapes 30 fois de suite? Cela ferait 240 étapes à effectuer. N'est-il
+pas plus pratique d'exécuter tout cela juste en une seule commande?
+
+Une seule et unique commande pourrait faire la même chose, que vous ayez 30,
+300 ou 3000 images. C'est une des raisons les plus attractives de commencer à
+utiliser la ligne de commande. Vous progresserez probablement très lentement
+au début, mais sur le long terme, vous économiserez énormément de temps.
+Encore plus important: apprendre la ligne de commande vous ouvrira à des
+possibilités très intéressantes et souvent différentes de celles de
+l'interface graphique, et des manières de travailler amusantes,
+expérimentales. Regardons de plus près d'autres raisons d'utiliser la ligne de
+commande.
+
+
+Résumé des avantages de la ligne de commande
+--------------------------------------------
+
+Beaucoup de gens qui goûte à la ligne de commande sont impressionés par ses
+possibilités et disent qu'ils ne veulent même pas retourner sur l'interface
+graphique! Pourquoi? Et bien notamment grâce aux avantages des fonctionnalités
+essentielles de la ligne de commande par rapport à l'interface graphique:
+
+- Flexibilité. Avec les logiciels graphiques, vous atteignez parfois une
+  limite, vous vous rendez compte que vous ne pouvez pas faire tout ce que
+  vous voudriez ou que vous devez trouver des alternatives fastidieuses à ces
+  limites. En travaillant en lignes de commande par contre, vous pouvez
+  combiner des commandes pour produire un nombre virtuellement infini de
+  fonctionnalités nouvelles et intéressantes. En combinant les commandes de
+  manière créative, vous pouvez faire faire à la ligne de commande exactement
+  ce que vous voulez -- elle vous donne le contrôle de l'ordinateur.
+- Fiabilité. Les programmes graphiques sont souvent immatures ou même
+  instables. Au contraire, la plupart des outils qu'offre la ligne de commande
+  sont hautement fiables. Une des raisons pour cela est leur maturité: les
+  programmes en ligne de commande les plus vieux datent de la fin des années
+  1970, ce qui signifie qu'ils ont pu être testés sur 30 ans. Ils ont aussi
+  tendance à marcher de la même manière sur différents systèmes
+  d'exploitation, contrairement aux outils graphiques. Si vous voulez un
+  couteau suisse sur lequel vous pouvez compter, la ligne de commande est pour
+  vous.
+- Rapidité. Les graphiques fantaisistes sont gourmands en ressources
+  matérielles, menant souvent à une lenteur et une instabilité. D'un autre
+  côté, la ligne de commande utilise les ressources de l'ordinateur avec
+  parcimonie, laissant la mémoire et la puissance de calcul nécessaires pour
+  les tâches que vous voulez accomplir. La ligne de commande est aussi
+  intrinsèquement plus rapide: au lieu de cliquer tout du long d'une chaîne de
+  menus graphiques, vous pouvez taper les commandes en une douzaine de
+  caractères, et souvent les appliquer à plusieurs fichiers à la fois ou
+  autres objets. Si vous tapez vite au clavier, cela augmentera drastiquement
+  votre productivité.
+- Expérience. Utiliser la ligne de commande est une grande expérience
+  d'apprentissage. Quand vous utilisez la ligne de commande, vous communiquez
+  avec votre ordinateur plus directement qu'avec les programmes graphiques,
+  vous apprenez ainsi beaucoup à propos de ses mécanismes internes: utiliser
+  la ligne de commande régulièrement est la voie à suivre pour devenir un
+  gourou GNU/Linux.
+- Amusement. Avez-vous déjà voulu être comme ces pirates informatiques cools
+  qui peuvent faire faire à une machine GNU/Linux des choses que vous n'avez
+  même jamais imaginées? Presque tous le font en utilisant la ligne de
+  commande. Une fois que vous avez appris à utiliser cet outil puissant, vous
+  vous surprendrez à réaliser des choses amusantes et intéressantes que vous
+  pensiez ne pas être possible.
+
+
+La valeur des scripts
+---------------------
+
+Mais attendez, il y a plus encore! Vous pouvez aussi stocker vos commandes
+dans des fichiers textes. Ceux-ci sont appelés *scripts* et peuvent être
+utilisés au lieu de réécrire toute une série de commandes à chaque fois. Par
+exemple, si vous stocker vos commandes dans un fichier appelé
+*ma_commande.sh*, vous n'avez plus besoin de réécrire cette commande à
+nouveau, il suffit simplement de taper:
+
+    ma_commande.sh
+
+De plus, vous pouvez combiner les commandes ensemble de manière simple ou bien
+plus sophistiquée. Puis, vous pouvez faire exécuter des scripts à une heure ou
+une date précise ou à chaque fois qu'un certain événement arrive sur votre
+ordinateur.
+
+Vous pouvez aussi écrire des scripts qui acceptent des informations
+complémentaires de votre part. Par exemples, un script de redimensionnement
+d'images pourrait vous demander à quelle taille les images doivent être
+redimensionnées avant de commencer. 
+
+Avez-vous déjà tenter de faire tout ceci à distance avec l'interface graphique
+utilisateur? Peut-être que maintenant vous voyez comment travailler avec
+l'interface ligne de commande commence à ouvrir un monde complètement nouveau.
+
+
+Est-ce que mon ordinateur est malade?
+-------------------------------------
+
+Une autre utilisation de la ligne de commande est de vérifier le bon
+fonctionnement de votre ordinateur. Il existe de nombreuses commandes que vous
+pouvez utiliser pour vérifier chaque facette de l'état de santé de ordinateur,
+de la place disponible sur le disque dur à la température du processeur. Si
+votre ordinateur fonctionne mal et que vous en ignorez la raison, ces quelques
+commandes vous aideront vite à déterminer si les problèmes sont d'origine
+matérielle ou logicielle, et vous aiderons à vite les régler.
+
+
+Couvrir le réseau
+-----------------
+
+Il y a encore une autre fonction intéressante dans les interfaces en ligne de
+commande que les interfaces graphiques ne peuvent pas faire: l'interaction
+avec un réseau. Imaginez que vous ayez un ordinateur dans une autre pièce et
+que vous souhaitiez l'éteindre. Comment feriez-vous cela? Facile non?
+Levez-vous, marchez jusqu'à l'ordinateur et cliquer sur le bouton "éteindre".
+
+Et bien, ceux qui le savent peuvent se connecter à l'ordinateur de la pièce
+voisine via la ligne de commande et tapent *halt*.
+
+Ceci peut sembler futile. Peut-être qu'il est en fait mieux pour vous de vous
+lever de cette chaise confortable et perdre 5 calories en marchant jusqu'à
+l'autre pièce. Cependant, comment faire si cet ordinateur était en fait dans
+un autre quartier? Dans une autre ville? Un autre pays? Le contrôle à distance
+de cet ordinateur peut alors s'avérer très utile.
+
+Éteindre un ordinateur à distance est juste un début. Tout ce que vous pouvez
+faire en ligne de commande est applicable à distance. Cela signifie que vous
+pouvez lancer des scripts, exécuter des commandes, éditer des fichiers textes,
+vérifier les diagnostics, etc. Le monde de la ligne de commande vient juste de
+devenir beaucoup plus grand.
+
+
+Même les programmes graphiques sont des commandes
+-------------------------------------------------
+
+Quand vous cliquez sur une icône ou un item d'un menu pour lancer un
+programme, vous exécuter une commande. Parfois, vous comprenez quand il est
+utile de comprendre quelle commande vous exécuter réellement. Par exemple, si
+vous soupçonnez qu'un programme tourne invisiblement en arrière-plan et
+ralentit votre ordinateur, vous pouvez trouver sa commande et arrêter ce
+programme. Les programmes graphiques envoient souvent plus de messages
+d'erreur au CLI que dans les boîtes de dialogues, ce qui est utile pour
+diagnostiquer les problèmes.
+
