@@ -79,7 +79,9 @@ svg_debut += paragraphe(svg_texte)
 # Ferme le code svg
 svg = svg_debut + svg_fin
 
+print svg
+
 #  Enregistre le code svg dans un fichier
-svg_fichier = open('frequence_mots_bloc.svg', 'w')
-svg_fichier.write(svg)
-svg_fichier.close()
+# svg_fichier = open('frequence_mots_bloc.svg', 'w')
+# svg_fichier.write(svg)
+# svg_fichier.close()

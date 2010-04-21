@@ -51,7 +51,7 @@ svg_fin = """
 def paragraphe(texte, taille):
     svg_text = """
     <flowRoot
-        style="font-size:%dpx;font-family:Bitstream Vera Sans;">
+        style="font-size:%dpx;font-family:FreeSans Bold;">
         <flowRegion>
             <rect width="600" height="600" x="0" y="0" />
         </flowRegion>
@@ -61,10 +61,10 @@ def paragraphe(texte, taille):
     return svg_text
     
     
-print lexique
+# print lexique
 #  Pour chaque ligne du lexique :
 for ligne in lexique:
-    print ligne
+    # print ligne
     try:
         occurence, mot = ligne.split()                      # Fait correspondre une occurence à un mot
         svg_debut += paragraphe(mot, int(occurence)*5)      # Crée le code svg du mot, sa taille est proportionnelle à son nombre d'occurrences
@@ -74,7 +74,9 @@ for ligne in lexique:
 # Ferme le code svg
 svg = svg_debut + svg_fin
 
+print svg
+
 #  Enregistre le code svg dans un fichier
-svg_fichier = open('frequence_mots.svg', 'w')
-svg_fichier.write(svg)
-svg_fichier.close()
+# svg_fichier = open('frequence_mots.svg', 'w')
+# svg_fichier.write(svg)
+# svg_fichier.close()
