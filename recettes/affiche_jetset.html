@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Conforming XHTML 1.0 Strict Template</title>
+
+</head>
+
+<body>
+
+<p>Pour fabriquer une affiche à la Experimental JetSet il nous faut:</p>
+
+<h1>Ingrédients</h1>
+
+<ul>
+<li>2 textes d'un bon poids ayant des mots similaires</li>
+<li>Un peu d'huile de coude</li>
+<li>de l'Helvetica Bold, ou mieux: un équivalent libre</li>
+</ul>
+
+<h1>Ustensiles</h1>
+
+<ul>
+<li><code>comm</code></li>
+<li><code>tr</code></li>
+<li><code>cat</code></li>
+<li><code>sort</code></li>
+<li><code>uniq</code></li>
+<li><code>inkscape</code></li>
+<li><code>grep</code> (optionnel)</li>
+<li><code>less</code> (optionnel)</li>
+</ul>
+
+<h1>Étapes</h1>
+
+<ol>
+<li><p>Afficher le contenu du premier fichier dans le shell<br />
+<code>cat fichier_1.txt</code></p></li>
+<li><p>Mettre tous les mots à la ligne<br />
+<code>cat fichier_1.txt | tr " " "\n"</code></p></li>
+<li><p>Supprimer les ponctuations<br />
+<code>cat fichier_1.txt | tr " " "\n" | tr [:punct:] "\n"</code></p></li>
+<li><p>Mettre tous les mots en bas de casse<br />
+<code>cat fichier_1.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:]</code></p></li>
+<li><p>Classer les mots par ordre alphabetique<br />
+<code>cat fichier_1.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort</code></p></li>
+<li><p>Supprimer les doublons<br />
+<code>cat fichier_1.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort | uniq</code></p></li>
+<li><p>Enregistrer le resultat<br />
+<code>cat fichier_1.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort | uniq &gt; liste_mots_1.txt</code></p></li>
+<li><p>Répéter depuis l'étape 1 avec les deuxième fichier<br />
+<code>cat fichier_2.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort | uniq &gt; liste_mots_2.txt</code></p></li>
+<li><p>Comparer les mots communs des deux listes<br />
+<code>comm liste_mots_1.txt liste_mots_2.txt</code><br />
+Astuce: utiliser un <em>pager</em> pour analyser le résultat<br />
+<code>comm liste_mots_1.txt liste_mots_2.txt | less</code></p></li>
+<li><p>Sélectionner un mot intéressant du résultat<br />
+<code>comm liste_mots_1.txt liste_mots_2.txt | grep "mot"</code></p></li>
+<li><p>Utiliser la moulinette SVG pour créer le fichier Inkscape<br />
+<code>comm liste_mots_1.txt liste_mots_2.txt | grep "mot" | jetset.py</code></p></li>
+<li><p>Enregistrer le résultat dans un fichier SVG<br />
+<code>comm liste_mots_1.txt liste_mots_2.txt | grep "mot" | jetset.py &gt; mon_poster.svg</code></p></li>
+</ol>
+
+<p>Voilà une manifique affiche Amstellodamoise! Il ne vous reste plus qu'à l'ouvrir dans Inkscape pour admirer le résultat et ajouter votre touche personnelle!</p>
+
+</body>
+</html>
+
