@@ -1,0 +1,64 @@
+Pour fabriquer un nuage (islandais) de mots il nous faut:
+
+Ingrédients
+===========
+
+- 1 texte riche de vocabulaire
+- Un peu d'huile de coude
+
+Ustensiles
+==========
+
+- `tr`
+- `cat`
+- `sort`
+- `uniq`
+- `inkscape`
+- `frequence_mots.py`
+
+Étapes
+======
+
+01. Afficher le contenu du fichier texte dans le shell  
+    `cat mon_fichier.txt`
+
+02. Mettre tous les mots à la ligne  
+    `cat mon_fichier.txt | tr " " "\n"`
+
+03. Supprimer les ponctuations  
+    `cat mon_fichier.txt | tr " " "\n" | tr [:punct:] "\n"`
+
+04. Mettre tous les mots en bas de casse  
+    `cat mon_fichier.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:]`
+
+05. Classer les mots par ordre alphabetique  
+    `cat mon_fichier.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort`
+
+06. Supprimer les doublons et ajouter en préfixe le nombre d'occurence du mot  
+    `cat mon_fichier.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort | uniq -c`
+
+07. Classer les mots par leur nombre d'occurence, en sens inverse  
+    `cat mon_fichier.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort | uniq -c | sort -nr`
+
+08. Enregistrer le résultat dans un fichier SVG  
+    `cat mon_fichier.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort | uniq -c | sort -nr >| mon_poster.svg`
+
+09. Ouvrir le fichier avec inkscape
+
+10. Ouvrir le panneau "Alignement et distribution"
+    `menu Objet > Alignement et Distribution`
+
+11. Séléctionner l'ensemble du contenu et le dégrouper  
+    `menu Objet > Dégrouper`
+
+12. Distribuer aléatoirement le contenu  
+    `panneau Alignement et distribution > distribuer aléatoirement`
+
+13. Supprimer les chevauchements  
+    `panneau Alignement et distribution > supprimer les chevauchements`
+
+14. N'hésitez pas à essayer les autres options du panneau alignement et
+    distribution, ainsi que celles du panneau lignes et colonnes.
+
+Voilà un magnifique nuage de mots! Aussi utile comme analyse lexicale que beau visuellement!
+
