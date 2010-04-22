@@ -1,0 +1,134 @@
+<HTML><HEAD><TITLE>Page de man</TITLE></HEAD>
+<BODY BGCOLOR=#"ffffff" TEXT=#"000010"><PRE><FONT SIZE="3">
+
+
+TAIL(1)           Manuel de l'utilisateur Linux           TAIL(1)
+
+
+<FONT COLOR=#"000000"><B>NOM</B></FONT>
+       tail - Afficher la dernière partie d'un fichier.
+
+<FONT COLOR=#"000000"><B>SYNOPSIS</B></FONT>
+       <FONT COLOR=#"000000"><B>tail</B></FONT>  [-c  [+]N[bkm]] [-n [+]N] [-fqv] [--bytes=[+]N[bkm]]
+       [--lines=[+]N] [--follow] [--quiet] [--silent] [--verbose]
+       [--help] [--version] [fichier...]
+
+       <FONT COLOR=#"000000"><B>tail</B></FONT> [{-,+}Nbcfklmqv] [fichier...]
+
+<FONT COLOR=#"000000"><B>DESCRIPTION</B></FONT>
+       Cette  page  de  manuel  documente  la version GNU de <FONT COLOR=#"000000"><B>tail</B></FONT>
+       ([NDT] <FONT COLOR=#"000000"><B>tail</B></FONT> = queue).
+
+       <FONT COLOR=#"000000"><B>tail</B></FONT> affiche la dernière partie (par défaut :  10  lignes)
+       de chacun des fichiers indiqués.
+
+       Si  aucun  fichier n'est fourni, ou si le nom `-' est men­
+       tionné, la lecture se fera depuis l'entrée standard.
+
+       Si plusieurs fichiers sont fournis, un en-tête est affiché
+       avant  chaque  fichier contenant son nom encadré par `==>'
+       et `&lt=='.
+
+       La version GNU de  <FONT COLOR=#"000000"><B>tail</B></FONT>  peut  afficher  n'importe  quelle
+       quantité  de  données, contrairement à la version UNIX qui
+       utilise un buffer de taille fixe.
+
+       Elle ne dispose pas pas d'option <FONT COLOR=#"0000ff"><I>-r</I></FONT> (afficher à l'envers).
+       Imprimer un fichier à l'envers est un travail n'ayant rien
+       à voir avec l'affichage de sa fin. La version BSD de  <FONT COLOR=#"000000"><B>tail</B></FONT>
+       ne  peut  imprimer à l'envers que des fichiers tenant dans
+       son buffer, qui à generalement la taille  de  32  Ko.  Une
+       manière  beaucoup  plus  fiable  et  souple  d'inverser un
+       fichier est d'utiliser la commande GNU <FONT COLOR=#"000000"><B>tac</B></FONT>.
+
+   <FONT COLOR=#"000000"><B>OPTIONS</B></FONT>
+       <FONT COLOR=#"000000"><B>tail</B></FONT> accepte deux formats d'options différents. Le nouveau
+       format dans lequel les nombres sont des arguments précédés
+       par les lettres représentant des options, et l'ancien for­
+       mat  dans  lequel  un `+' ou un  `-' est suivi d'un nombre
+       puis d'une lettre d'option.
+
+       Si un nombre (`N')  est  précédé  de  `+',  <FONT COLOR=#"000000"><B>tail</B></FONT>  commence
+       l'affichage  à partir du Nième élément en partant du début
+       du fichier (au lieu de la fin).
+
+       <FONT COLOR=#"0000ff"><I>-c</I></FONT> <FONT COLOR=#"0000ff"><I>N,</I></FONT> <FONT COLOR=#"0000ff"><I>--bytes</I></FONT> <FONT COLOR=#"0000ff"><I>N</I></FONT>
+              Afficher  N  octets.  N  est  un  entier  non  nul,
+              éventuellement  suivi  d'un caractère indiquant une
+              unité différente :
+
+              b      blocs de 512 octets.
+
+
+
+
+FSF                      14 Janvier 1997                        1
+
+
+
+
+
+TAIL(1)           Manuel de l'utilisateur Linux           TAIL(1)
+
+
+              k      blocs de 1 Ko.
+
+              m      blocs de 1 Mo.
+
+       <FONT COLOR=#"0000ff"><I>-f,</I></FONT> <FONT COLOR=#"0000ff"><I>--follow</I></FONT>
+              Boucler indéfiniment, en essayant de lire  de  plus
+              en plus de caractères à la fin du fichier, celui-ci
+              devant grandir. Cette option est ignorée si la lec­
+              ture  se  fait  depuis un tube (pipe). Si plusieurs
+              fichiers d'entrée sont indiqués <FONT COLOR=#"000000"><B>tail</B></FONT> affiche un en-
+              tête  dès  qu'un  fichier est modifié, pour montrer
+              celui qui est imprimé.
+
+       <FONT COLOR=#"0000ff"><I>-l,</I></FONT> <FONT COLOR=#"0000ff"><I>-n</I></FONT> <FONT COLOR=#"0000ff"><I>N,</I></FONT> <FONT COLOR=#"0000ff"><I>--lines</I></FONT> <FONT COLOR=#"0000ff"><I>N</I></FONT>
+              Afficher N  lignes.   <FONT COLOR=#"0000ff"><I>-l</I></FONT>  n'est  reconnu  que  dans
+              l'ancien format d'options.
+
+       <FONT COLOR=#"0000ff"><I>-q,</I></FONT> <FONT COLOR=#"0000ff"><I>--quiet,</I></FONT> <FONT COLOR=#"0000ff"><I>--silent</I></FONT>
+              Ne jamais afficher l'en-tête avec le nom du fichier
+
+       <FONT COLOR=#"0000ff"><I>-v,</I></FONT> <FONT COLOR=#"0000ff"><I>--verbose</I></FONT>
+              Toujours afficher l'en-tête avec le nom du fichier
+
+       <FONT COLOR=#"0000ff"><I>--help</I></FONT> Afficher un message d'aide sur la  sortie  standard
+              et terminer normalement.
+
+       <FONT COLOR=#"0000ff"><I>--version</I></FONT>
+              Afficher  un  numéro de version sur la sortie stan­
+              dard et terminer normalement.
+
+
+<FONT COLOR=#"000000"><B>TRADUCTION</B></FONT>
+       Christophe Blaess, 1997.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FSF                      14 Janvier 1997                        2
+
+
+</FONT></PRE></BODY></HTML>

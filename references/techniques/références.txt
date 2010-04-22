@@ -1,9 +1,0 @@
-====== Références ======
-
-[http://www.gnu.org/software/coreutils/]
-
-[http://en.flossmanuals.net/gnulinux]
-
-[http://pzwart.wdka.hro.nl/mdma/staff/jjfcramer/command_line_cheat_sheet/]
-
-[http://automatist.net/techdaze/RegularExpressionScrapbooks]

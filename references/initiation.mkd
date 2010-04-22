@@ -1,0 +1,404 @@
+Coreutils
+=========
+
+Coreutils est un ensemble de logiciel GNU regroupant les outils logiciels
+essentiels UNIX.
+
+En général, on injecte du contenu à traiter par une ligne de commande; ce
+contenu est appelé *standard input* (stdin). Une fois passé dans la
+moulinette, le contenu est transformé en un nouveau contenu, le *standard
+output* (stdout).
+
+
+Résumé des Commandes de base
+============================
+
+
+Outils systèmes
+---------------
+
+`ls`
+:  Liste les éléments d'un dossier
+
+`cd`
+:  Change de dossier
+
+`mkdir`
+:  Crée un nouveau dossier
+
+`rm`
+:  Supprime un fichier
+
+`less`
+:  Permet de naviguer dans le contenu d'un fichier
+
+`|`
+:  Permet de relier des programmes entre eux
+
+`>`
+:  Permet d'écrire le résultat d'une commande dans un fichier
+
+`>>`
+:  Permet d'écrire le résultat d'une commande à la suite d'un fichier
+
+
+Outils pour le texte
+--------------------
+
+`cat`
+:  Afficher le contenu d'un fichier
+
+`comm`
+:  Comparer deux fichiers triés ligne par ligne
+
+`csplit`
+:  Éclater un fichier en différentes sections
+
+`cut`
+:  Sélectionner une colonne dans un fichier
+
+`fmt`
+:  Formater un texte
+
+`fold`
+:  Mettre toutes les lignes d'un fichier à la même longueur
+
+`head`
+:  Afficher les premières lignes d'un fichier
+
+`join`
+:  Joindre les lignes de 2 fichiers en prenant comme critère une colonne
+   commune
+
+`nl`
+:  Numéroter les lignes d'un fichier
+
+`paste`
+:  Afficher sur chaque ligne de la sortie standard les lignes correspondantes
+   des fichiers passées en paramètre et séparées par des tabulations
+
+`pr`
+:  Convertir un fichier texte pour l'imprimer
+
+`sort`
+:  Trier par ordre alphabétiques les lignes d'un fichier
+
+`split`
+:  Éclater un fichier en plusieurs fichiers de même taille
+
+`tail`
+:  Afficher les dernières lignes d'un fichier
+
+`tr`
+:  Remplacer un caractère particulier dans un fichier (exemple
+   remplacer tous les 'a' par des 'b')
+
+`uniq`
+:  Supprimer les doublons d'un fichier
+
+`wc`
+:  Calculer le nombre de lignes, de mots et de caractères d'un fichier
+
+
+Exemples d'utilisation des commandes
+====================================
+
+cat
+---
+
+Afficher le contenu d'un fichier.
+
+    # Lit tous les fichiers textes du dossier.
+    $ cat *.txt | less
+
+    # Combine deux fichiers textes en un seul.
+    $ cat a.txt b.txt > ab.txt
+
+comm
+----
+
+Comparer deux fichiers triés ligne par ligne Par défaut, 3 colonnes sont
+imprimées. Celle de gauche correspond aux mots présents dans le texte 1
+uniquement, celle de droite dans le texte 2 uniquement et celle du milieu aux
+mots présents dans les deux textes.
+
+    # créer un lexique des deux textes à comparer le lexique est une liste de
+    # tous les mots d'un texte, à la ligne, et triés alphabétiquement
+    $ cat mon_fichier_1.txt | tr " " "\n" | sort | uniq >|
+    lexique_fichier_1.txt $ cat mon_fichier_2.txt | tr " " "\n" | sort | uniq
+    >| lexique_fichier_2.txt
+    # comparer les deux fichiers
+    $ comm lexique_fichier_1.txt lexique_fichier_2.txt
+    > ...  équilibrée.  équipiers éradiquer, étaient était étions étudiants
+    > été évitant ...
+
+
+csplit
+------
+
+éclater un fichier en différentes sections.
+
+cut
+---
+
+Sélectionner une colonne dans un fichier
+
+    # affiche les caractères 2 à 4 
+    $ echo "salut" | cut -c 2-4
+    > alu
+    
+    # affiche les caractères 1 3 et 5
+    $ echo "salut" | cut -c 1,3,5
+    > slt
+    
+    # affiche la première phrase de chaque paragraphe
+    $ cut -d. -f1 discours_columbia.txt 
+    > ...
+    >  Monsieur le Président de l'Université de Columbia,  Mesdames et Me...
+    > Je vais essayer d'être à la hauteur de votre Université prestigieus...
+    > Moi je veux vous parler franchement, en ami, ce qui ne veut pas dir...
+    > Vous appartenez à un pays qui est le premier pays du monde par sa p...
+    > Nous sommes au XXIème siècle
+    > Une deuxième chose dont je suis certain, c'est qu'au XXIème siècle,... 
+    > Et la troisième idée que je voudrais vous faire partager, c'est que... 
+    > ...
+
+fmt
+---
+
+Formater un texte.
+
+    # formate les lignes d'un texte à 20/30 caractères et les centre
+    $ fmt 20 30 discours_columbia.txt | fmt -c
+
+fold
+----
+
+Mettre toutes les lignes d'un fichier à la même longueur.
+
+    # formate les lignes d'un texte à 20 caractères/ligne 
+      sans couper les mots
+    $ fold -sw 20 lux_transcript.txt
+    > Annick Lantenois, 
+    > organizator and 
+    > moderator  of the 
+    > first table starts 
+    > with a quotation by 
+    > Hal Foster:
+    > "Le design est l'un 
+    > des principaux 
+    > agents qui nous 
+    > enferme dans un 
+    > consumérisme 
+    > contemporain"
+    > We aren't anymore 
+    > in an econony of 
+    > tangible goods but 
+    > in an economy of 
+    > knowledge, or 
+    > cognitive 
+    > capitalism.
+    > 
+    > Quel est le 
+    > positionement des 
+    > designers comme 
+    > individus à l'égard 
+    > de ces 
+    > transformation?
+
+head
+----
+
+Afficher les premières lignes d'un fichier.
+
+    # affiche le nom et les 2 premières lignes d'un fichier
+    $ head -vn 2 lux_transcript.txt
+    > ==> lux_transcript.txt <==
+    > Annick Lantenois, organizator and moderator  of the first table starts
+    > with a quotation by Hal Foster: "Le design est l'un des principaux
+    > agents qui nous enferme dans un consumérisme contemporain"
+
+join
+----
+
+Joindre les lignes de 2 fichiers en prenant comme critère une colonne commune.
+
+    $ cat fichier1
+    > a a1
+    > c c1
+    > b b1
+    $ cat fichier2
+    > a a2
+    > c c2
+    >  b b2
+    $ join fichier1 fichier2
+    > a a1 a2
+    > c c1 c2
+    > b b1 b2
+
+nl
+--
+
+Numéroter les lignes d'un fichier.
+
+paste
+-----
+
+Afficher sur chaque ligne de la sortie standard les lignes correspondantes des
+fichiers passées en paramètre et séparées par des tabulations.
+
+    $ cat num2
+    > 1
+    > 2
+    $ cat let3
+    > a
+    > b
+    > c
+    $ paste num2 let3
+    > 1       a
+    > 2       b
+    >         c
+
+
+    $ paste -s num2 let3
+    > 1       2
+    > a       b       c
+
+pr
+--
+
+Convertir un fichier texte pour l'imprimer.
+
+    # met un texte sur 2 colonnes séparées par ' || '
+    $ pr --columns=2 -J -s' || ' 
+    > Annick Lantenois, organizator and modera || - machine
+    > tor  of the first table starts with a qu || - discours
+    > otation by Hal Foster: || - pratique
+    > "Le design est l'un des principaux agent || - industrie
+    > s qui nous enferme dans un consumérisme  || - espace
+    > contemporain" || 
+    > We aren't anymore in an econony of tangi || machine de letcture: Memex
+    > ble goods but in an economy of knowledge || Influence Douglas Engelbart (invente le
+    > , or cognitive capitalism. || PC?) souris/windows
+    >  || Texte de programmation était très littér
+    > Quel est le positionement des designers  || aire  à l'époque.
+    > comme individus à l'égard de ces transfo || Le design du new media -> Brenda Laurel
+    > rmation? || Xanadu Ted Nelson
+
+
+sort
+----
+
+Trier par ordre alphabétiques les lignes d'un fichier.
+
+    # crée un lexique d'un texte
+    $ cat lux_transcipt.txt | tr ' ' '\n' | sort -du
+    > 1947:
+    > 2ème
+    > 5
+    > a
+    > à
+    > agents
+    > Alain
+    > an
+    > and
+    > (anglophone)
+    > Annick
+    > anymore
+    > aren't
+    > au
+    > avec
+    > Basé
+    > Brenda
+    > but
+    > by
+    > capitalism.
+    > Catheine
+    > ces
+    > c'est
+    > (cf
+    > citation
+    > coeur
+    > cognitive
+    > collaboration
+    > ...
+
+split
+-----
+
+Éclater un fichier en plusieurs fichiers de même taille.
+
+    # Sépare un fichier texte en fichiers de 10 lignes maximum
+    $ split -l 10 stdin_grille_numerique.txt grille
+    
+    # Sépare un fichier texte en fichiers de 2ko
+    $ split -b 2k stdin_grille_numerique.txt grille
+
+tail
+----
+
+Afficher les dernières lignes d'un fichier.
+
+    # Affiche toutes les lignes d'un fichier dans l'ordre inverse.
+    $ tail -r monfichier.txt
+
+tr
+--
+
+Remplacer un caractère particulier dans un fichier (exemple : remplacer tous
+les 'a' par des 'b').
+
+    # Remplace toutes les lettres capitales par des minuscules.
+    $ cat monfichier.txt | tr A-Z a-z
+    $ cat monfichier.txt | tr "[:lower:]" "[:upper:]" 
+    
+    # Remplace toutes les espaces par un saut de ligne.
+    $ cat monfichier.txt | tr " " "\n"
+
+    # Remplace toutes les "e" accentués par un "e" non-accentué.
+    $ cat monfichier.txt | tr "[=e=]" "e"
+
+uniq
+----
+
+Supprimer les doublons d'un fichier.
+
+    # Compte le nombre d'occurrences d'un mot dans un texte, classés par ordre
+    # alphabétique
+    $ cat monfichier.txt | tr ' ' '\n' | sort | uniq -c
+
+    # Compte le nombre d'occurrences d'un mot dans un texte, classés par
+    # nombre d'occurrences
+    $ cat monfichier.txt | tr ' ' '\n' | sort | uniq -c | sort -nr 
+
+    
+wc
+--
+
+Calculer le nombre de lignes, de mots et de caractères d'un fichier.
+
+    # Compte le nombre de mots d'un fichier.
+    $ wc -w stdin_grille_numerique.txt
+    > 2504 stdin_grille_numerique.txt
+
+    # Compte le nombre de signes d'un fichier.
+    $ wc -c stdin_grille_numerique.txt
+    > 16721 stdin_grille_numerique.txt
+
+    # Compte le nombre total de fichiers de l'ordinateur
+    $ find / -type f | wc -l
+
+
+Pour aller plus loin
+====================
+
+[Page d'accueil Coreutils](http://www.gnu.org/software/coreutils/)
+
+[Floss Manuals](http://en.flossmanuals.net/gnulinux)
+
+[Aide mémoire des commandes
+shell](http://pzwart.wdka.hro.nl/mdma/staff/jjfcramer/command_line_cheat_sheet/)
+
+[Expression
+rationelles](http://automatist.net/techdaze/RegularExpressionScrapbooks)
+

@@ -1,0 +1,134 @@
+<HTML><HEAD><TITLE>Page de man</TITLE></HEAD>
+<BODY BGCOLOR=#"ffffff" TEXT=#"000010"><PRE><FONT SIZE="3">
+
+
+CUT(1)            Manuel de l'utilisateur Linux            CUT(1)
+
+
+<FONT COLOR=#"000000"><B>NOM</B></FONT>
+       cut - Supprimer une partie de chaque ligne d'un fichier.
+
+<FONT COLOR=#"000000"><B>SYNOPSIS</B></FONT>
+       <FONT COLOR=#"000000"><B>cut</B></FONT>  {-b liste_octets, --bytes=liste_octets} [-n] [--help]
+       [--version] [fichier...]
+
+       <FONT COLOR=#"000000"><B>cut</B></FONT>  {-c  character-list,   --characters=liste_caractères}
+       [--help] [--version] [fichier...]
+
+       <FONT COLOR=#"000000"><B>cut</B></FONT>  {-f  liste_champs, --fields=liste_champs} [-d sépara­
+       teur]  [-s]  [--delimiter=séparateur]   [--only-delimited]
+       [--help] [--version] [fichier...]
+
+<FONT COLOR=#"000000"><B>DESCRIPTION</B></FONT>
+       Cette page de manuel documente la version GNU de <FONT COLOR=#"000000"><B>cut</B></FONT>.
+
+       <FONT COLOR=#"000000"><B>cut</B></FONT>  affiche  une  partie  de  chaque  ligne de chacun des
+       fichiers mentionnés, ou  de  l'entrée  standard  si  aucun
+       fichier  n'est  indiqué.  Un nom de fichier `-' correspond
+       également à l'entrée standard.
+
+       La  partie  affichée  est  sélectionnée  par  les  options
+       présentées ci-dessous.
+
+   <FONT COLOR=#"000000"><B>OPTIONS</B></FONT>
+       Les      <FONT COLOR=#"0000ff"><I>liste_d_octets</I></FONT>,      <FONT COLOR=#"0000ff"><I>liste_de_caractères</I></FONT>,      et
+       <FONT COLOR=#"0000ff"><I>liste_de_champs</I></FONT> se présentent sous forme d'un ou plusieurs
+       nombres  ou  intervalles  (deux  nombres  séparés  par  un
+       tiret), séparés par des  virgules.   La  numérotation  des
+       octets,  caractères  ou  champs  commence à 1.  Des inter­
+       valles incomplets peuvent être indiqués : `-m'  signifiant
+       `1-m'; `n-' signifiant de `n' à la fin de la ligne.
+
+       <FONT COLOR=#"0000ff"><I>-b,</I></FONT> <FONT COLOR=#"0000ff"><I>--bytes</I></FONT> <FONT COLOR=#"0000ff"><I>liste_d_octets</I></FONT>
+              Afficher   uniquement   les  octets  aux  positions
+              indiquées dans la <FONT COLOR=#"0000ff"><I>liste_d_octets</I></FONT>.  Les  tabulations
+              et  les  caractères  BackSpaces  sont traités comme
+              tous les autres caractères, ils occupent 1 octet.
+
+       <FONT COLOR=#"0000ff"><I>-c,</I></FONT> <FONT COLOR=#"0000ff"><I>--characters</I></FONT> <FONT COLOR=#"0000ff"><I>liste_de_caractères</I></FONT>
+              Afficher uniquement les  caractères  aux  positions
+              indiquées   dans   la   <FONT COLOR=#"0000ff"><I>liste_de_caractères</I></FONT>.   Pour
+              l'instant c'est équivalent à -b, mais cette  option
+              différera avec l'internationalisation.  Les tabula­
+              tions et les  caractères  BackSpaces  sont  traités
+              comme  tous  les  autres caractères, ils occupent 1
+              caractère.
+
+       <FONT COLOR=#"0000ff"><I>-f,</I></FONT> <FONT COLOR=#"0000ff"><I>--fields</I></FONT> <FONT COLOR=#"0000ff"><I>liste_de_champs</I></FONT>
+              N'afficher  que  les  champs   indiqués   dans   la
+              <FONT COLOR=#"0000ff"><I>liste_de_champs</I></FONT>.   Les  champs  sont  séparés,  par
+              défaut, par une Tabulation.
+
+
+
+
+FSF                       9 Janvier 1997                        1
+
+
+
+
+
+CUT(1)            Manuel de l'utilisateur Linux            CUT(1)
+
+
+       <FONT COLOR=#"0000ff"><I>-d,</I></FONT> <FONT COLOR=#"0000ff"><I>--delimiter</I></FONT> <FONT COLOR=#"0000ff"><I>séparateur</I></FONT>
+              Avec -f, les champs sont délimités par  le  premier
+              caractère  du  <FONT COLOR=#"0000ff"><I>séparateur</I></FONT>  à la place de la Tabula­
+              tion.
+
+       <FONT COLOR=#"0000ff"><I>-n</I></FONT>     Ne pas couper  les  caractères  multi-octets  (sans
+              effet pour le moment).
+
+       <FONT COLOR=#"0000ff"><I>-s,</I></FONT> <FONT COLOR=#"0000ff"><I>--only-delimited</I></FONT>
+              Avec -f, ne pas afficher les lignes qui ne contien­
+              nent pas le caractère séparateur de champs.
+
+       <FONT COLOR=#"0000ff"><I>--help</I></FONT> Afficher un message d'aide sur la  sortie  standard
+              et terminer normalement.
+
+       <FONT COLOR=#"0000ff"><I>--version</I></FONT>
+              Afficher  un  numéro de version sur la sortie stan­
+              dard et terminer normalement.
+
+
+<FONT COLOR=#"000000"><B>TRADUCTION</B></FONT>
+       Christophe Blaess, 1997.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FSF                       9 Janvier 1997                        2
+
+
+</FONT></PRE></BODY></HTML>
