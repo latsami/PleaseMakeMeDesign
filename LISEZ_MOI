@@ -97,29 +97,28 @@ Recherche un mot sur Twitter.
   -f, --fin     : date de fin de recherche (format aaaa-mm-jj)
 
 
-make_svg.py
------------
+make_svg.py et holande_moderne.py
+---------------------------------
 Convertit le fichier .txt en fichier .svg afin d'être modifié dans Inkscape
 
   $ echo "bonjour" | python make_svg.py
   $ cat mon_fichier.txt | python make_svg.py
 
 
-filtre_mot.py
+zorba.py
 -------------
 Cherche un mot (ou groupe de mots) dans chaque phrase d'un texte et place les phrases de manière à ce que le mot sélectionné soit toujours au milieu.
 
-  $ echo "bonjour" | python filtre_mot.py --mots "bonjour"
-  $ cat mon_fichier.txt | python filtre_mot.py -m "bonjour"
+  $ echo "bonjour" | python zorba.py --mots "bonjour"
+  $ cat mon_fichier.txt | python zorba.py -m "bonjour"
 
 
-frequence_mots.py / frequence_mots_bloc.py
+vulcano.py
 ------------------------------------------
 À partir d'un lexique, change la taille d'un mot en fonction de son nombre d'occurrence dans un texte.
 La version "bloc" place tous les mots dans un même paragraphe.
 
-  $ cat mon_lexique.txt | python frequence_mots.py
-  $ cat mon_lexique.txt | python frequence_mots_bloc.py
+  $ cat mon_lexique.txt | python vulcano.py
   
 
 Affiner sa recherche Twitter

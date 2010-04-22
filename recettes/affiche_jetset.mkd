@@ -55,10 +55,10 @@ Ustensiles
     `comm liste_mots_1.txt liste_mots_2.txt | grep "mot"`
 
 11. Utiliser la moulinette SVG pour créer le fichier Inkscape  
-    `comm liste_mots_1.txt liste_mots_2.txt | grep "mot" | jetset.py`
+    `comm liste_mots_1.txt liste_mots_2.txt | grep "mot" | hollande_moderne.py`
 
 12. Enregistrer le résultat dans un fichier SVG  
-    `comm liste_mots_1.txt liste_mots_2.txt | grep "mot" | jetset.py > mon_poster.svg`
+    `comm liste_mots_1.txt liste_mots_2.txt | grep "mot" | hollande_moderne.py > mon_poster.svg`
 
 Voilà une manifique affiche Amstellodamoise! Il ne vous reste plus qu'à l'ouvrir dans Inkscape pour admirer le résultat et ajouter votre touche personnelle!
 
