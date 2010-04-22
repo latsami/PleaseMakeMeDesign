@@ -16,9 +16,17 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
+html_escape_table = {
+    "&": "&amp;",
+    '"': "&quot;",
+    "'": "&apos;",
+    ">": "&gt;",
+    "<": "&lt;",
+    }
 
-
-
+def html_escape(text):
+    """Produce entities within text."""
+    return "".join(html_escape_table.get(c,c) for c in text)
 
 import sys
 
@@ -57,7 +65,7 @@ def paragraphe(texte, taille):
         </flowRegion>
         <flowPara>%s</flowPara>
     </flowRoot>
-    """ % (taille, texte)
+    """ % (taille, html_escape(texte))
     return svg_text
     
     
