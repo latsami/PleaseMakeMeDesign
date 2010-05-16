@@ -3,7 +3,7 @@ Pour fabriquer une affiche à la Experimental JetSet il nous faut:
 Ingrédients
 ===========
 
-- 2 textes d'un bon poids ayant des mots similaires
+- 2 textes d'un bon poids susceptibles d'avoir des mots en commun
 - Un peu d'huile de coude
 - de l'Helvetica Bold, ou mieux: un équivalent libre
 
