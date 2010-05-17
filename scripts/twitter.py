@@ -48,10 +48,6 @@ resultats = soup('li', 'result')
 
 tweets = ''
 
- # for text in tag.findAll( text=True ):
- #        text = text.strip()
- #        if text:  return text
-         
 for resultat in resultats:
     tweet = ''
     msg = resultat.find('div', 'msg')
@@ -64,7 +60,7 @@ for resultat in resultats:
     for span in infos('span'):
         infos.span.extract()
     infos = infos.text.replace('&middot;', '').encode('utf-8') #enlève le caractère &middot; et encore en utf-8
-    tweets += tweet + ' -- ' + infos + '\n' #ajoute le tweet et les infos correspondantes à la liste des tweets (séparés par un retour chariot)
+    tweets += infos + ' -- ' + tweet  + '\n' #ajoute le tweet et les infos correspondantes à la liste des tweets (séparés par un retour chariot)
 
 try:
     tweets = BeautifulStoneSoup(tweets, convertEntities="html", smartQuotesTo="html").contents[0].encode('utf-8')
