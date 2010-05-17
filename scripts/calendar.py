@@ -56,16 +56,17 @@ svg_fin = """
 """
 
 # Fonction créant un code svg pour un bloc de texte
-def paragraphe(largeur, gauche, haut, texte, alignement, couleur):    
+def paragraphe(largeur, gauche, haut, date, texte, alignement, couleur):    
     svg_text = """
     <flowRoot
         style="font-size:32px;line-height:34px;fill:%s;font-family:PT Sans;text-align:%s">
         <flowRegion>
             <rect width="%d" height="400" x="%d" y="%d" />
         </flowRegion>
-        <flowPara>%s</flowPara>
+       <flowPara>%s</flowPara>
+       <flowPara>%s</flowPara>
     </flowRoot>
-    """ % (couleur, alignement, largeur, gauche, haut, texte)
+    """ % (couleur, alignement, largeur, gauche, haut, date, texte)
     return svg_text
 
 
@@ -75,11 +76,17 @@ y = 75
 
 # Pour chaque phrase du texte
 for phrase in texte:
+    if phrase.find(' -- ') != -1:    
+        contenu = phrase.split(' -- ')
+        # print contenu
+        # phrase = '<flowPara id="flowPara%s">' + contenu[0] + '</flowPara><flowPara id="flowPara%s">' + contenu[1] + '</flowPara>' % (str(i), str(i+1))
+        # phrase = '<flowPara>' + contenu[0] + '\n' contenu[1] + '</flowPara>'
+    
     # Pour chaque partie de la phrase, crée un code svg pour écrire la phrase avec le MOT toujours au milieu
-    bloc_texte = paragraphe(400, x, y, phrase, 'start', '#000000')
+    bloc_texte = paragraphe(400, x, y, contenu[0], contenu[1], 'start', '#000000')
     
     x += 440
-    i += 1
+    i += 2
     if not i%3:
         y += 440
         x = 75
