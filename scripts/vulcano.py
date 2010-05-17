@@ -26,7 +26,7 @@ html_escape_table = {
 
 def html_escape(text):
     """Produce entities within text."""
-    return "".join(html_escape_table.get(c,c) for c in text)
+    # return "".join(html_escape_table.get(c,c) for c in text)
 
 import sys
 
@@ -65,7 +65,7 @@ def paragraphe(texte, taille):
         </flowRegion>
         <flowPara>%s</flowPara>
     </flowRoot>
-    """ % (taille, html_escape(texte))
+    """ % (taille, texte)
     return svg_text
     
     
@@ -85,6 +85,6 @@ svg = svg_debut + svg_fin
 print svg
 
 #  Enregistre le code svg dans un fichier
-# svg_fichier = open('frequence_mots.svg', 'w')
+# svg_fichier = open('vulcano.svg', 'w')
 # svg_fichier.write(svg)
 # svg_fichier.close()
