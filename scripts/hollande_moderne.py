@@ -19,7 +19,7 @@ def html_escape(text):
 
 id = 1
 text = ""
-filename = "mon_poster"
+myname = "mon_poster"
 for line in sys.stdin.readlines():
     text += """<flowPara
          id="flowPara%s"
@@ -102,9 +102,12 @@ filecontents = """\
          id="flowSpan2855">                                   </flowSpan></flowRoot>  </g>
 </svg>""" % text
 
-mysvg = open(filename + ".svg", "w")
+svgname = myname + ".svg"
+mysvg = open(svgname, "w")
 mysvg.write(filecontents)
 mysvg.close()
 
-os.system("inkscape --export-pdf=mon_poster.pdf mon_poster.svg")
-#os.system("lpr " + filename + ".pdf")
+svg2pdf = "inkscape --export-pdf=%s.pdf %s.svg" % (myname, myname)
+os.system(svg2pdf)
+lpr = "lpr %s.pdf" % myname
+#os.system(lpr)
