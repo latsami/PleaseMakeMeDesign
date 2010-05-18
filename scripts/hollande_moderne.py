@@ -3,6 +3,11 @@
 import sys
 import os
 
+#librsvg2-2 - SAX-based renderer library for SVG files (runtime)
+#librsvg2-common - SAX-based renderer library for SVG files (extra runtime)
+#librsvg2-dbg - SAX-based renderer library for SVG files (debug)
+#librsvg2-dev - SAX-based renderer library for SVG files (development)
+
 html_escape_table = {
     "&": "&amp;",
     '"': "&quot;",
@@ -17,7 +22,7 @@ def html_escape(text):
 
 id = 1
 text = ""
-filename = "mon_poster.svg"
+filename = "mon_poster"
 for line in sys.stdin.readlines():
     text += """<flowPara
          id="flowPara%s"
@@ -100,6 +105,9 @@ filecontents = """\
          id="flowSpan2855">                                   </flowSpan></flowRoot>  </g>
 </svg>""" % text
 
-mysvg = open(filename, "w")
+mysvg = open(filename + ".svg", "w")
 mysvg.write(filecontents)
 mysvg.close()
+
+os.system("svg2pdf " + filename + ".svg " + filename + ".pdf")
+#os.system("lpr " + filename + ".pdf")
