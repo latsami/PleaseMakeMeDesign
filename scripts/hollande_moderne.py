@@ -1,6 +1,7 @@
-#! /usr/bin/env python -u
+#!/usr/bin/env python
 
 import sys
+import os
 
 html_escape_table = {
     "&": "&amp;",
@@ -16,13 +17,14 @@ def html_escape(text):
 
 id = 1
 text = ""
+filename = "mon_poster.svg"
 for line in sys.stdin.readlines():
     text += """<flowPara
          id="flowPara%s"
          style="-inkscape-font-specification:FreeSans Bold;font-family:FreeSans;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:72;text-anchor:start;text-align:start;writing-mode:lr;line-height:105%%">%s</flowPara>""" % ( id , html_escape(line.expandtabs(10)) )
     id += 1
 
-print """\
+filecontents = """\
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- generated for Inkscape (http://www.inkscape.org/) -->
 
@@ -98,3 +100,6 @@ print """\
          id="flowSpan2855">                                   </flowSpan></flowRoot>  </g>
 </svg>""" % text
 
+mysvg = open(filename, "w")
+mysvg.write(filecontents)
+mysvg.close()
