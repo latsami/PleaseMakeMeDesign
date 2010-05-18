@@ -82,6 +82,13 @@ La commande *>* permet d'enregistrer le résultat obtenu dans un fichier.
 Usage
 =====
 
+identica.py
+-----------
+Recherche un mot sur Identi.ca.
+
+  $ ./identica.py -r 'lgm'
+
+
 twitter.py
 ----------
 Recherche un mot sur Twitter.
