@@ -322,6 +322,11 @@ Trier par ordre alphabétiques les lignes d'un fichier.
     > cognitive
     > collaboration
     > ...
+    
+    # Compte le nombre d'occurrences de chaque mot d'un texte, 
+    # les classe par ordre décroissant, 
+    # les mots de même occurence sont ensuite classés par ordre alphabétique.
+    $ cat monfichier.txt | sort | uniq -c | sort +1 [-f] | sort +0 -nr
 
 split
 -----
@@ -357,6 +362,13 @@ les 'a' par des 'b').
 
     # Remplace toutes les "e" accentués par un "e" non-accentué.
     $ cat monfichier.txt | tr "[=e=]" "e"
+    
+    # Efface un caractère donné dans tout le fichier.
+    $ cat monfichier.txt | tr -d 'e'
+    
+    # Efface les caractères répétés, excepté la première occurrence
+    # utile pour se débarasser des doubles espaces
+    $ cat monfichier.txt | tr --squeeze-repeats ' '
 
 uniq
 ----
@@ -387,6 +399,11 @@ Calculer le nombre de lignes, de mots et de caractères d'un fichier.
 
     # Compte le nombre total de fichiers de l'ordinateur
     $ find / -type f | wc -l
+    
+    # Donne la taille de la plus longue ligne d'un texte 
+    # (ne marche pas sur OSX10.4, à tester sur OSX plus récents)
+    $ wc -L lexique1.txt
+    > 11
 
 
 Pour aller plus loin
