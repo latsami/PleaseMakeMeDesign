@@ -29,36 +29,39 @@ Ustensiles
     `cat fichier_1.txt | tr " " "\n"`
 
 03. Supprimer les ponctuations.
-    `cat fichier_1.txt | tr " " "\n" | tr [:punct:] "\n"`
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:]`
 
 04. Mettre tous les mots en bas de casse.
-    `cat fichier_1.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:]`
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:]`
 
 05. Classer les mots par ordre alphabétique.
-    `cat fichier_1.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort`
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort`
 
 06. Supprimer les mots en double.
-    `cat fichier_1.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort | uniq`
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq`
 
 07. Sauvegarder le résultat.
-    `cat fichier_1.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort | uniq > liste_mots_1.txt`
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq > liste_mots_1.txt`
 
 08. Répéter les étapes 1 à 7 avec le deuxième fichier.
-    `cat fichier_2.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort | uniq > liste_mots_2.txt`
+    `cat fichier_2.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq > liste_mots_2.txt`
 
 09. Comparer les mots communs des deux listes de mots obtenues.
     `comm liste_mots_1.txt liste_mots_2.txt`  
     Astuce: utiliser un *pager* pour analyser le résultat.
     `comm liste_mots_1.txt liste_mots_2.txt | less`
 
-10. Sélectionner un mot intéressant du résultat.
-    `comm liste_mots_1.txt liste_mots_2.txt | grep "mot"`
+10. Sélectionner un mot intéressant du résultat (avec 5 lignes avant et 5 lignes après).
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot"`
 
-11. Utiliser la moulinette SVG pour créer le fichier Inkscape.
-    `comm liste_mots_1.txt liste_mots_2.txt | grep "mot" | hollande_moderne.py`
+11. Enregistrer le résultat dans un fichier texte.
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" > montexte.txt`
 
-12. Enregistrer le résultat dans un fichier SVG.
-    `comm liste_mots_1.txt liste_mots_2.txt | grep "mot" | hollande_moderne.py > mon_poster.svg`
+12. Mettre en page le texte dans un pdf (jouez avec les éléments variables!).
+    `enscript -B -f 'Helvetica-Bold18/19' -T 16 -p 'my_pdf.ps montexte.txt | ps2pdf my_pdf.ps my_pdf.pdf`
+
+ou 12bis. Mettre en page le texte sur un A4 en adaptant la taille de la typographie en fonction du nombre de lignes (le fichier obtenu s'appelle "my_pdf.pdf")
+    `./layout.sh montexte.txt`
 
 Voilà une manifique affiche Amstellodamoise! Il ne vous reste plus qu'à l'ouvrir dans Inkscape pour admirer le résultat et ajouter votre touche personnelle!
 
