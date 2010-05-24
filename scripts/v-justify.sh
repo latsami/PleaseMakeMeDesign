@@ -1,9 +1,18 @@
-#! /bin/bash -x
+#! /usr/bin/env bash
 
-#FONTSIZE=$((`wc -l | tr -d ' '`*6))
-#FONTSIZE=12
-PAGE=793
-MYLEN=$( cat $1 | wc -l | tr -d ' ')
-FONTSIZE=$((($PAGE-($PAGE/$MYLEN))/$MYLEN))
-#enscript -f 'Helvetica-Bold@'$FONTSIZE'/'$FONTSIZE -p 'bla.ps' --non-printable-format=questionmark -T 1 --mark-wrapped-lines=arrow
-enscript -f 'Helvetica-Bold@'$FONTSIZE'/'$FONTSIZE --non-printable-format=questionmark -T 16 -B --mark-wrapped-lines=arrow $1 -p 'bla.ps'
+content=`cat`
+
+page=793
+# page=500
+# # mylen=$( cat | wc -l | tr -d ' ')
+mylen=$( printf "%s" "$content" | wc -l | tr -d ' ')
+fontsize=$((($page-($page/$mylen))/$mylen))
+
+printf "%s" "${content}" \
+| enscript \
+    -f 'Helvetica-Bold@'${fontsize}'/'${fontsize} \
+    --non-printable-format=questionmark \
+    -T 16 \
+    -B \
+    --mark-wrapped-lines=arrow \
+    -p 'bla.ps'
