@@ -42,7 +42,7 @@ Ustensiles
 
 08. Passer dans la moulinette SVG.
     `cat mon_fichier.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort | uniq -c | sort -nr | ./vulcano.py`
-    
+
 09. Passer dans la moulinette SVG.
     `cat mon_fichier.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort | uniq -c | sort -nr | ./vulcano.py > mon_vulcano.svg`
 
