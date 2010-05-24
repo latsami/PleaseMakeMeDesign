@@ -308,8 +308,8 @@ sort lines of text files
 		> ...
 
     # Counts the number of occurence of every word of a text, 
-    # ranks them in reverse order of occurrences, 
-    # the words of same occurrence are then ranked by alphabetical order
+    # sorts them in reverse order of occurrences, 
+    # the words of same occurrence are then sorted by alphabetical order
     $ cat monfichier.txt | sort | uniq -c | sort +1 [-f] | sort +0 -nr
 	
 
@@ -359,7 +359,7 @@ remove duplicate lines from a sorted file
 	# count the number of occurrences of a word in a text, in alphabetical order
 	$ cat myfile.txt | tr ' ' '\n' | sort | uniq -c
 
-	# count the number of occurrences of a word in a text, ranked by number of occurrences
+	# count the number of occurrences of a word in a text, sorted by number of occurrences
 	$ cat myfile.txt | tr ' ' '\n' | sort | uniq -c | sort -nr 
 
 wc
