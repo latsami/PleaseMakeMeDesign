@@ -68,7 +68,7 @@ Astuces
 Expérimenter
 ============
 
-Vous pouvez à présent tester les lignes de commandes décrites dans les fichiers references/techniques/coreutils.txt ou references/techniques/exemples.txt.
+Vous pouvez à présent tester les lignes de commandes décrites dans les fichiers references/initiation.html ou tester la recette dans recettes/hollande_moderne.html
 N'ayez pas peur de perdre des fichiers ou de lancer une commande dangereuse. A part les commandes *rm* et *>*, rien ne modifie vos fichiers. 
 *rm* supprime un fichier (à utiliser avec précaution car le fichier est directement supprimé sans passer par la corbeille!). 
 La commande *>* permet d'enregistrer le résultat obtenu dans un fichier.
@@ -77,70 +77,4 @@ La commande *>* permet d'enregistrer le résultat obtenu dans un fichier.
   $ mon-dossier/mon-fichier.txt
 - Pour appeler un fichier dans un dossier supérieur, taper :
   $ ../mon-fichier.txt
-
-
-Usage
-=====
-
-identica.py
------------
-Recherche un mot sur Identi.ca.
-
-  $ ./identica.py -r 'lgm'
-
-
-twitter.py
-----------
-Recherche un mot sur Twitter.
-
-  $ ./twitter.py -r "bonjour"
-
-- options (à taper après l'appel du programme. "-r" est le raccourci de "--requete")
-  -r, --requete : mot ou groupe de mots à recherche
-  -l, --langue  : choix de langue (2 lettres, par ex. "fr", "en", "all" pour n'importe quelle langue)
-  -t, --tag     : cherche un thème
-  -n, --nombre  : nombre de résultat souhaité
-  -d, --debut   : date de début de recherche (format aaaa-mm-jj)
-  -f, --fin     : date de fin de recherche (format aaaa-mm-jj)
-
-
-make_svg.py et hollande_moderne.py
----------------------------------
-Convertit le fichier .txt en fichier .svg afin d'être modifié dans Inkscape
-
-  $ echo "bonjour" | ./make_svg.py
-  $ cat mon_fichier.txt | ./make_svg.py
-
-
-zorba.py
--------------
-Cherche un mot (ou groupe de mots) dans chaque phrase d'un texte et place les phrases de manière à ce que le mot sélectionné soit toujours au milieu.
-
-  $ echo "bonjour" | ./zorba.py --mots "bonjour"
-  $ cat mon_fichier.txt | ./zorba.py -m "bonjour"
-
-
-vulcano.py
-------------------------------------------
-À partir d'un lexique, change la taille d'un mot en fonction de son nombre d'occurrence dans un texte.
-La version "bloc" place tous les mots dans un même paragraphe.
-
-  $ cat mon_lexique.txt | ./vulcano.py
-  
-
-Affiner sa recherche Twitter
-============================
-
-- utiliser des guillemets pour chercher un groupe de mots exacts: "ma recherche"
-- ajouter "?" pour ne rechercher que des questions
-- ajouter "-rt" pour ne pas recevoir les re-tweets
-- ajouter "filter:links" pour ne recevoir que des liens
-- ajouter "#" devant un mot pour chercher un thème
-- utiliser des smileys pour chercher une humeur: ":)", ":("
-- utiliser le signe moins '-' pour omettre un terme de la recherche
-- utiliser "since:aaaa-mm-jj" et "until:aaaa-mm-jj" pour chercher des tweets sur une période précise
-- "from:utilisateurX": message écrit par l'utilisateurX
-- "to:utilisateurX": message destiné à l'utilisateurX
-- "@utilisateurX": message concernant l'utilisateurX
-- ajouter "near:90210" (code postal Américain) ou "near:Belgium" pour ne recevoir que des tweets locaux
 
