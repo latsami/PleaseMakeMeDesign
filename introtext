@@ -1,0 +1,16 @@
+
+These embodied two fundamentally different approaches to computing. When you
+were using cards, you'd punch a whole stack of them and run them through the
+reader all at once, which was called batch processing. You could also do batch
+processing with a teletype, as I have already described, by using the paper
+tape reader, and we were certainly encouraged to use this approach when I was
+in high school. But--though efforts were made to keep us unaware of this--the
+teletype could do something that the card reader could not. On the teletype,
+once the modem link was established, you could just type in a line and hit the
+return key. The teletype would send that line to the computer, which might or
+might not respond with some lines of its own, which the teletype would hammer
+out--producing, over time, a transcript of your exchange with the machine.
+This way of doing it did not even have a name at the time, but when, much
+later, an alternative became available, it was retroactively dubbed the
+Command Line Interface.
+
