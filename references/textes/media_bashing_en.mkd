@@ -1,0 +1,32 @@
+Command Line Media / "Media Bashing"
+====================================
+
+    Source: http://automatist.net/techdaze/2009_102
+    Licence: Creative Common Attribution-Share Alike 3.0 Netherlands
+
+While the command line, or shell, is a text-based interface, this does not mean
+that manipulating other kinds of media, image, sound, video, is excluded. Far
+from it, many command line tools offer extremely useful and uniquely powerful
+functionality difficult to achieve with GUI programs. In addition, by applying
+the basics of pipelining and abstraction (through creating your own scripts
+with parameters), the command line enables highly particular and personal media
+tools to be created by pulling existing tools together in novel ways.
+
+Considering the difference between graphical / interactive software and textual
+/ non-interactive, you could compare:
+
+Graphique/Interactive  | Command Line/Non-interactive
+---------------------- | ----------------------------
+The GIMP ou Photoshop  | imagemagick                     
+Firefox                | Wget                             
+Cinelerra ou Final Cut | FFMPEG                          
+
+So the difference is not simply whether a program uses graphics or not --
+Command-line programs are designed to perform a very specific task, and
+typically are specified textually according to a strict syntax (command-line
+options, etc.) They are non-interactive in the sense that you start them up,
+they do their thing, and you get the result -- you don't typically influence
+them while they are running. However, you often can work interactively with
+these programs through cycles of making changes to a script, running it,
+observing the result and repeating.
+
