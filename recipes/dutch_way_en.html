@@ -12,17 +12,21 @@
 
 <body>
 
-<p>Pour fabriquer une affiche à la Experimental JetSet il nous faut:</p>
+<h1>Poster à la Sauce Hollandaise</h1>
 
-<h1>Ingrédients</h1>
+<p>Difficulty: **...
+Preparing time: 1 hour
+Cooking time: 2 hours</p>
+
+<h1>Ingredients</h1>
 
 <ul>
-<li>2 textes d'un bon poids ayant des mots similaires</li>
-<li>Un peu d'huile de coude</li>
-<li>de l'Helvetica Bold, ou mieux: un équivalent libre</li>
+<li>2 texts quite long, likely to have words in common</li>
+<li>some elbow grease</li>
+<li>some Helvetica Bold, or better: a freed equivalent</li>
 </ul>
 
-<h1>Ustensiles</h1>
+<h1>Utensils</h1>
 
 <ul>
 <li><code>comm</code></li>
@@ -30,43 +34,60 @@
 <li><code>cat</code></li>
 <li><code>sort</code></li>
 <li><code>uniq</code></li>
-<li><code>inkscape</code></li>
-<li><code>grep</code> (optionnel)</li>
-<li><code>less</code> (optionnel)</li>
+<li><code>grep</code> (optional)</li>
+<li><code>less</code> (optional)</li>
+<li><code>enscript</code></li>
+<li><code>ps2pdf</code></li>
 </ul>
 
-<h1>Étapes</h1>
+<h1>Steps</h1>
 
 <ol>
-<li><p>Afficher le contenu du premier fichier dans le shell<br />
-<code>cat fichier_1.txt</code></p></li>
-<li><p>Mettre tous les mots à la ligne<br />
-<code>cat fichier_1.txt | tr " " "\n"</code></p></li>
-<li><p>Supprimer les ponctuations<br />
-<code>cat fichier_1.txt | tr " " "\n" | tr [:punct:] "\n"</code></p></li>
-<li><p>Mettre tous les mots en bas de casse<br />
-<code>cat fichier_1.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:]</code></p></li>
-<li><p>Classer les mots par ordre alphabetique<br />
-<code>cat fichier_1.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort</code></p></li>
-<li><p>Supprimer les doublons<br />
-<code>cat fichier_1.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort | uniq</code></p></li>
-<li><p>Enregistrer le resultat<br />
-<code>cat fichier_1.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort | uniq &gt; liste_mots_1.txt</code></p></li>
-<li><p>Répéter depuis l'étape 1 avec les deuxième fichier<br />
-<code>cat fichier_2.txt | tr " " "\n" | tr [:punct:] "\n" | tr [:upper:] [:lower:] | sort | uniq &gt; liste_mots_2.txt</code></p></li>
-<li><p>Comparer les mots communs des deux listes<br />
-<code>comm liste_mots_1.txt liste_mots_2.txt</code><br />
-Astuce: utiliser un <em>pager</em> pour analyser le résultat<br />
-<code>comm liste_mots_1.txt liste_mots_2.txt | less</code></p></li>
-<li><p>Sélectionner un mot intéressant du résultat<br />
-<code>comm liste_mots_1.txt liste_mots_2.txt | grep "mot"</code></p></li>
-<li><p>Utiliser la moulinette SVG pour créer le fichier Inkscape<br />
-<code>comm liste_mots_1.txt liste_mots_2.txt | grep "mot" | hollande_moderne.py</code></p></li>
-<li><p>Enregistrer le résultat dans un fichier SVG<br />
-<code>comm liste_mots_1.txt liste_mots_2.txt | grep "mot" | hollande_moderne.py &gt; mon_poster.svg</code></p></li>
+<li><p>Go to the project directory.
+<code>cd my_path/PleaseMakeMeDesign</code></p></li>
+<li><p>Create a new directory where you will work in.
+<code>mkdir wip</code></p></li>
+<li><p>Go to this directory.
+<code>cd wip</code></p></li>
+<li><p>Display the content of the first file in the shell.
+<code>cat ../texts/file_1.txt</code></p></li>
+<li><p>Put every word on a new line.
+<code>cat ../texts/file_1.txt | tr " " "\n"</code></p></li>
+<li><p>Suppress punctuation.
+<code>cat ../texts/file_1.txt | tr " " "\n" | tr -d [:punct:]</code></p></li>
+<li><p>Make everything lowercase.
+<code>cat ../texts/file_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:]</code></p></li>
+<li><p>Sort by alphabetical order.
+<code>cat ../texts/file_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort</code></p></li>
+<li><p>Removes all duplicate words.
+<code>cat ../texts/file_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq</code></p></li>
+<li><p>Save the result in a file.
+<code>cat ../texts/file_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq &gt; word_list_1.txt</code></p></li>
+<li><p>Repeat steps 1 to 7 with the second text.
+<code>cat ../texts/file_2.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq &gt; word_list_2.txt</code></p></li>
+<li><p>Compare the words used in both texts (common words are in the middle).
+<code>comm word_list.txt word_list_2.txt</code><br />
+Tip: use a <em>pager</em> to be able to scroll up and down.
+<code>comm word_list_1.txt word_list_2.txt | less</code></p></li>
+<li><p>Select an interesting word in the result (with 5 lines before and after).
+<code>comm word_list_1.txt word_list_2.txt | grep -C 5 "anyword"</code></p></li>
+<li><p>Layout the text in a pdf (play with variable elements !).
+<code>comm word_list_1.txt word_list_2.txt | grep -C 5 "anyword" | enscript -B -f 'Helvetica-Bold@18/19' -T 16 -p 'my_pdf.ps'</code></p></li>
+<li><p>Convert the postscript file to a pdf file.
+<code>comm word_list_1.txt word_list_2.txt | grep -C 5 "anyword" | enscript -B -f 'Helvetica-Bold@18/19' -T 16 -p 'my_pdf.ps' | ps2pdf my_pdf.ps</code></p></li>
 </ol>
 
-<p>Voilà une manifique affiche Amstellodamoise! Il ne vous reste plus qu'à l'ouvrir dans Inkscape pour admirer le résultat et ajouter votre touche personnelle!</p>
+<h1>Alternative end</h1>
+
+<ol>
+<li><p>Layout the text on an A4 with automatic font-size so that it fits the page vertically. (the output file is "my_pdf.pdf")
+<code>comm word_list_1.txt word_list_2.txt | grep -C 5 "anyword" | ../scripts/./v-justify.sh</code></p></li>
+<li><p>Convert the postscript file to a pdf file.
+<code>comm word_list_1.txt word_list_2.txt | grep -C 5 "anyword" | ../scripts/./v-justify.sh | ps2pdf my_pdf.ps</code></p></li>
+</ol>
+
+<p>Here you are! You now have a wonderful Dutch style poster!</p>
+
 
 </body>
 </html>

@@ -30,54 +30,62 @@ Utensils
 
 Steps
 ======
+01. Go to the project directory.
+    `cd my_path/PleaseMakeMeDesign`
 
-01. Display the content of the first file in the shell.
-    `cat fichier_1.txt`
+02. Create a new directory where you will work in.
+    `mkdir wip`
 
-02. Put every word on a new line.
-    `cat fichier_1.txt | tr " " "\n"`
+03. Go to this directory.
+    `cd wip`
 
-03. Suppress punctuation.
-    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:]`
+04. Display the content of the first file in the shell.
+    `cat ../texts/file_1.txt`
 
-04. Make everything lowercase.
-    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:]`
+05. Put every word on a new line.
+    `cat ../texts/file_1.txt | tr " " "\n"`
 
-05. Sort by alphabetical order.
-    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort`
+06. Suppress punctuation.
+    `cat ../texts/file_1.txt | tr " " "\n" | tr -d [:punct:]`
 
-06. Removes all duplicate words.
-    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq`
+07. Make everything lowercase.
+    `cat ../texts/file_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:]`
 
-07. Save the result in a file.
-    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq > liste_mots_1.txt`
+08. Sort by alphabetical order.
+    `cat ../texts/file_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort`
 
-08. Repeat steps 1 to 7 with the second text.
-    `cat fichier_2.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq > liste_mots_2.txt`
+09. Removes all duplicate words.
+    `cat ../texts/file_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq`
 
-09. Compare the words used in both texts (common words are in the middle).
-    `comm liste_mots_1.txt liste_mots_2.txt`  
+10. Save the result in a file.
+    `cat ../texts/file_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq > word_list_1.txt`
+
+11. Repeat steps 1 to 7 with the second text.
+    `cat ../texts/file_2.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq > word_list_2.txt`
+
+12. Compare the words used in both texts (common words are in the middle).
+    `comm word_list.txt word_list_2.txt`  
     Tip: use a *pager* to be able to scroll up and down.
-    `comm liste_mots_1.txt liste_mots_2.txt | less`
+    `comm word_list_1.txt word_list_2.txt | less`
 
-10. Select an interesting word in the result (with 5 lines before and after).
-    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot"`
+13. Select an interesting word in the result (with 5 lines before and after).
+    `comm word_list_1.txt word_list_2.txt | grep -C 5 "anyword"`
 
-11. Layout the text in a pdf (play with variable elements !).
-    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | enscript -B -f 'Helvetica-Bold18/19' -T 16 -p 'my_pdf.ps`
+14. Layout the text in a pdf (play with variable elements !).
+    `comm word_list_1.txt word_list_2.txt | grep -C 5 "anyword" | enscript -B -f 'Helvetica-Bold@18/19' -T 16 -p 'my_pdf.ps'`
 
-12. Convert the postscript file to a pdf file.
-    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | enscript -B -f 'Helvetica-Bold18/19' -T 16 -p 'my_pdf.ps | ps2pdf my_pdf.ps`
+15. Convert the postscript file to a pdf file.
+    `comm word_list_1.txt word_list_2.txt | grep -C 5 "anyword" | enscript -B -f 'Helvetica-Bold@18/19' -T 16 -p 'my_pdf.ps' | ps2pdf my_pdf.ps`
 
 
 Alternative end
 ===============
 
-11. Layout the text on an A4 with automatic font-size so that it fits the page vertically. (the output file is "my_pdf.pdf")
-    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | ./v-justify.sh`
+14. Layout the text on an A4 with automatic font-size so that it fits the page vertically. (the output file is "my_pdf.pdf")
+    `comm word_list_1.txt word_list_2.txt | grep -C 5 "anyword" | ../scripts/./v-justify.sh`
 
-12. Convert the postscript file to a pdf file.
-    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | ./v-justify.sh | ps2pdf my_pdf.ps`
+15. Convert the postscript file to a pdf file.
+    `comm word_list_1.txt word_list_2.txt | grep -C 5 "anyword" | ../scripts/./v-justify.sh | ps2pdf my_pdf.ps`
 
 Here you are! You now have a wonderful Dutch style poster!
 
