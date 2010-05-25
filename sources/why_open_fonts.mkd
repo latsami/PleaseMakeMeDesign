@@ -1,0 +1,239 @@
+# June 2008 / Printparty Polonaise 
+
+## OSP FAQ 1.0 
+
+Today we launch NotCourier-sans, our first typeface under an open licence. 
+
+Here at the foundry-station, I would like to speak about why we are interested in typography, and 
+especially in the relation between typography and Free Culture. 
+
+Pierre will give you a tour through the history of Courier, an almost too familiar typeface, and Ludivine 
+will explain how we actually made NotCourier-sans – before uploading the font to the Open Font 
+library. 
+
+##OSP (Open Source Publishing)? 
+
+Almost every design, whether it is a poster, website or publication, is the result of a partial or a 
+complete digital process. But worldwide there is just one single company that supplies designers with 
+tools to make them. Adobe's out-of-the-box packages are certainly powerful but we were interested in a 
+more active engagement with our tools. 
+
+This is why two years ago, a few designers working in Brussels, decided to see whether it was possible 
+to uses Free Libre and Open Source Software (FLOSS), open fonts and copyleft licences for all their 
+design productions. 
+
+Since then, we have made a number of publications, posters, brochures and websites and this 
+experience has changed our practice; it led to surprising discoveries about the way we work and what 
+we actually expect from software.
+
+## Why is OSP concerned with Free, Libre and Open Source Software (FLOSS)? 
+
+Software has become such an important ingredient to our daily lives that we cannot trat it as 'just a tool' 
+anymore. It litterally circumscribes what we can and cannot make, and therefore we think it is 
+important to be actively engaged in the way it works; to make it part of our design process; this is why 
+we visit developers' conferences, interview software developers and work with programmers to develop 
+a kind of practice that takes advantage of the moment that software and design meet. 
+
+Proprietary software restricts our role to 'end users' or consumers of software; in Free Software we are 
+potentially co-developers and that makes a difference. According to the Free software foundation, Free 
+Software grants users the freedom to run, copy and distribute, study, change and improve software. 
+Those ‘four freedoms’ are considered as essential prerequisites for the development of stable and 
+versatile code, and the same could be said for the development of typefaces. As designers we are 
+interested in a culture that favors exchange over property, because we understand that creativity relies 
+on the inspiration by others and we feel more at ease with tools that are produced with the same idea in 
+mind. 
+
+## In what way is OSP design done differently? 
+
+We have made a few changes to our design practice: 
+
+  - We started to **use other software programmes**: Scribus, Gimp, Inkscape – alternatives for Adobe software that are not just copy-cats of their proprietary versions, but offer truly different experiments of doing design. 
+
+  - Some of us **switched to operating systems**; so instead of Apple OSX tiger / leopard, we use linux distributions: Ubuntu, Debian, Gentoo. 
+
+  - Because we are able to look under the hood of the softwares we are using, we started **scripting and programming our own tools** and the publication Ivan is preparing is an example of the kinds of practices this could open up. 
+
+  - It also means, that we continually experiment with **making our own design sources** available. So we write about what we do, publish our mistakes and discoveries on our weblog and ... we organise Print Parties like the one we do today. 
+
+  - We prefer **designing content that is released under an open license itself**, because design amalgamates content and form; for it to be available as source itself once printed or published, it means we need free content as much as free design. 
+
+  - We **use fonts that are released under open licences**. Fonts are the first and most atomic level design starts with. 
+
+## What is the difference between a proprietary, a free and an open font? 
+
+The confusing answer is, that there are no physical differences between the three. It is as easy to copy, 
+open up, make changes to a proprietary, commercial font as it is to change an Open Font. A copy of 
+any  digital font is identical to it's original, like software, it does not deterioate when copied. The only 
+difference is in the license, the legal document that comes with the font and tells you what you are able 
+to do or not as a user. 
+
+Most fonts that are distributed 'gratis' on Windows and Macs, or fonts you buy at Type Foundries are 
+proprietary fonts. You can only legally use them once you signed an End User Licensing agreement. 
+
+A typical phrase from such an EAL grants you limited rights to use the font (TEFF = Enschede Font 
+Foundry, the foundry established by Dutch type designer Gerrit Noordzij): 
+
+  > TEFF grants Licensee the right, exclusively for the purpose of protecting the fonts/data and exclusively 
+  > for himself, to make one (back up) copy of the fonts mentioned in Article 2 of this Agreement. 
+  
+(you can only make one copy) 
+
+and further on: 
+
+  > Licensee shall refrain from altering, adapting, editing, modifying, or converting the fonts/data covered 
+  > by this Agreement in any way whatsoever without prior written permission from TEFF. 
+  
+(you are not allowed to make any changes) 
+
+The Monotype End User License Agreement is explicit too: 
+
+  > You may not alter Font Software for the purpose of adding any functionality which such Font Software 
+  > did not have when delivered to you by MI. 
+
+(you are not allowed to make any changes) 
+
+Free fonts are distrbuted by typedesigners themselves, because they are interested in 'airplay', 
+sometimes they are little experiments done by amateurs and sometimes they are pirated versions of 
+proprietary fonts that with a few minimal changes, are released under another name. 
+
+A typical Freeware font license invites you to use the font *for free* (often only for non-commercial use), 
+but explicitly forbids to make derivative works, even if the font itself was based upon a familiar 
+original (Larabie Fonts License Agreement (freeware)): 
+
+  > 1. GRANT OF LICENSE. This document grants you the following rights: 
+  > - Installation and Use. You may install and use an unlimited number of copies of the SOFTWARE 
+  > PRODUCT. 
+  > - Reproduction and Distribution. You may reproduce and distribute an unlimited number of copies of 
+  > the SOFTWARE PRODUCT; provided that each copy shall be a true and complete copy, including all 
+  > copyright and trademark notices (if applicable) , and shall be accompanied by a copy of this text file. 
+  > Copies of the SOFTWARE PRODUCT may not be distributed for profit either on a standalone basis or 
+  > included as part of your own product unless by prior permission of Larabie Fonts. 
+  > 2. DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS. 
+  > - Restrictions on Alteration. You may not rename, edit or create any derivative works from the 
+  > SOFTWARE PRODUCT, other than subsetting when embedding them in documents unless you have 
+  > permission from Larabie Fonts. 
+
+An Open Font, is entirely different in that respect. It in fact invites you to make copies, changes and 
+alterations as long as the licence remains in tact (others need to be able to do the same) and as long as 
+you release the font under another name. It is just like Free Software  (Liberation font license):
+
+  > LIBERATION font software  (the "Software") consists of TrueType-OpenType formatted font software 
+  > for rendering LIBERATION typefaces in sans serif, serif, and monospaced character styles. You are 
+  > licensed to use, modify, copy, and distribute the Software pursuant to the GNU General Public License 
+  > v.2 
+
+## Why are fonts like software? 
+
+A font is software for writing; it is everywhere and at the same time it is virtually invisible; embedded 
+in computer systems and digital documents it plays a vital part in how we communicate and even 
+something as plain as a terminal window requires a font, requires information to make letters appear on 
+a screen in a certain way. However ubiquitous, each text requires a precise decision about which 
+typeface is used once displayed, whether that choice is a conscious decision or instead the result of a 
+default setting. 
+
+In the long tradition of type design, committed typographers have worked at this non-spectacular level, 
+using their skills to draw letter forms in ways that they felt would enhance the clarity of messages, any 
+message. They have been joined by computer scientists, understanding the continuum  between 
+language, typography and programming. 
+
+(Donald Knuth is probably the only person I have seen both Free Software developers and designers 
+wear on their T-shirts. Computer scientists need groupies too!) 
+
+The effect of the digital revolution for type design, is that typefaces have been transformed into fonts - 
+no more lead blocks, but sets of data, lines of code that describe how each glyph should be drawn on 
+screen or by a printer. The challenge for contemporary typographers, is to take advantage of this new 
+materiality of fonts. It means to work from the fact that they are essentially data files, optimized to 
+work between systems. Not only between computer systems, but also language systems, cultural 
+contexts and design traditions. 
+
+Soon after OSP was launched, we realised that the extraordinary area of type design is where Free 
+Software and design naturally meet. This area of work is what kernel coding is for a Linux developer: 
+only a few people actually make fonts but many people use them all the time. 
+
+When you take this software-like aspect as a startingpoint, many ways to collaborate (between 
+programmers and typographers; between people speaking different languages) open up, as long as you 
+let go of the uptight licensing policies that apply to most commercial fonts. 
+
+## Why should fonts be free software? 
+Instead of working with the constraints and affordances of digital files, contemporary typography has 
+become an essentially contradictory business model that has very strong stands against “font forging” 
+and copyright issues, although it has historically - and now, more than ever - thrived on constant, and 
+often uncredited, appropriation of ideas and designs.[^1] 
+
+Strict licensing rules apply to most fonts, and they forbid us to add the characters, accents and glyphs 
+we might need. 
+
+The alphabet may belong to all of us, but it's designed embodiment certainly does not. As fonts are 
+such excellent expressions of bits, we would like to re-think use, distribution and production in the light 
+of alternative approaches to knowledge production as proposed by the Free Software and Copy-Left movement. 
+
+  - Typography is inherently generative. It's own use of the term 'Font Family' to begin with, each typeface is a variation on a theme. 
+  
+  - The proprietary model is impossible to enforce: the distribution of fonts asks for another legal position, and another economic model. 
+  
+  - Collaboration might enhance quality – a typeface is a complicated piece of software and it's quality would go up once many eyes look at ti and help fix bugs. 
+  
+  - A decentralized model of work necessary to develop large families fit for different contexts. Those are expensive to develop; in a proprietary context minority languages are often treated as extensions of a main, dominant set 
+
+## What about multilingual typography? 
+
+Anyone not speaking English, knows that computer-users really need larger character sets that allow 
+for communication between let’s say Greek, Russian, Slovak and French. On our trip to Wroclaw, we 
+met many Polish users that were angry about how little Polish characters were implemented in most 
+typefaces. 
+
+  > as this sad story about the missing letter illustrates: 
+  
+  > The life of 20-year-old Emine, and her 24-year-old husband Ramazan Çalçoban was pretty 
+  > much the normal life of any couple in a separation process. After deciding to split up, the two 
+  > kept having bitter arguments over the cellphone, sending text messages to each other until one 
+  > day Ramazan wrote "you change the topic every time you run out of arguments." That day, the 
+  > lack of a single dot over a letter—product of a faulty localization of the cellphone's typing 
+  > system—caused a chain of events that ended in a violent blood bath 
+  
+  > The surreal mistake happened because Ramazan's sent a message and Emine's cellphone didn't 
+  > have an specific character from the Turkish alphabet: the letter "" or closed i. While "i" isı  
+  > available in all phones in Turkey—where this happened—the closed i apparently doesn't exist in 
+  > most of the terminals in that country.   
+  > The use of "i" resulted in an SMS with a completely twisted meaning: instead of writing the 
+  > word "sksnca" it looked like he wrote "sikisince." Ramazan wanted to write "You change theı ı ı  
+  > topic every time you run out of arguments" (sounds familiar enough) but what Emine read was, 
+  > "You change the topic every time they are fucking you" (sounds familiar too.) 
+  
+  > The end of this story ivolves knives, blood, revenge and an actual killing. 
+
+For the exchange of documents between multiple languages, multilingual character sets are essential 
+and for this many designers need to work together. Instead of getting caught up in anti-piracy measures 
+and digital type management, the limited-access craft might need to move away from Fordist lines of 
+production and distribution. These kinds of vast projects are so much easier to develop and maintain in 
+a Free Software way; the DeJaVu font project shows that it is possible to work with many people 
+spread over different countries modifying the same set of files with the help of versioning systems like CVS.
+
+## Why is OSP interested in collaborative typography? 
+
+A typographer is traditionally a solitary master passing on the secret trade to his devoted pupils, 
+devoted to a trade that is ignored and misunderstood by most common people; an image of suffering 
+for the greater good of mankind that is carefully preserved in the closed world of type design. 
+
+This image contrasts with the lightweight, widespread character of typography today. It certainly 
+contrasts with the invitation of free software to anyone to run, copy, distribute, study, change and 
+improve. 
+
+  - Could the production and distribution of open fonts turn the patriarchal guild system inside out? 
+  
+  - What if users themselves could make improvements typefaces they use, and share them with others?
+  
+  - What if the design of a typeface would benefit from the many eyes of designers working around the world? 
+
+  - What if a typeface is not a fixed entity, but a networked set of elements, responding to context and types of use? 
+  
+We think that it is about time to reconnect the tradition of typography again to the freedom of 
+expression. We think it is imperative that citizens can express themselves through channels that are 
+publicly owned, with tools they can re-make if needed. We have started to see how new forms of 
+collaboration, with the help of new tools, could possibly change the form of typefaces themselves. 
+
+We promise that the typeface we are launching today is only the beginning.
+
+
+  [^1]: Ricardo Lafuente
+  
