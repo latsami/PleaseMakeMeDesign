@@ -8,19 +8,19 @@ Licence
 Copyright 2010, Stéphanie Vilayphiou, Alexandre Leray et Ludivine Loiseau —
 Tous droits réservés. Licence: GNU-GPL 3
 
-Ce programme est un logiciel libre ; vous pouvez le redistribuer ou le
-modifier suivant les termes de la “GNU General Public License” telle que
-publiée par la Free Software Foundation : soit la version 3 de cette
-licence, soit (à votre gré) toute version ultérieure.
-
-Ce programme est distribué dans l’espoir qu’il vous sera utile, mais SANS
-AUCUNE GARANTIE : sans même la garantie implicite de COMMERCIALISABILITÉ
-ni d’ADÉQUATION À UN OBJECTIF PARTICULIER. Consultez la Licence Générale
-Publique GNU pour plus de détails.
-
-Vous devriez avoir reçu une copie de la Licence Générale Publique GNU avec
-ce programme ; si ce n’est pas le cas, consultez :
-<http://www.gnu.org/licenses/>.
+    Ce programme est un logiciel libre ; vous pouvez le redistribuer ou le
+    modifier suivant les termes de la “GNU General Public License” telle que
+    publiée par la Free Software Foundation : soit la version 3 de cette
+    licence, soit (à votre gré) toute version ultérieure.
+    
+    Ce programme est distribué dans l’espoir qu’il vous sera utile, mais SANS
+    AUCUNE GARANTIE : sans même la garantie implicite de COMMERCIALISABILITÉ
+    ni d’ADÉQUATION À UN OBJECTIF PARTICULIER. Consultez la Licence Générale
+    Publique GNU pour plus de détails.
+    
+    Vous devriez avoir reçu une copie de la Licence Générale Publique GNU avec
+    ce programme ; si ce n’est pas le cas, consultez :
+    <http://www.gnu.org/licenses/>.
 
 
 Projet
@@ -36,45 +36,47 @@ Pour commencer
 
 - Placer ce dossier dans votre dossier de travail
 - Ouvrir une fenêtre de Terminal
-  - sur MacOS :
-    - Aller dans Applications/Utilitaires/Terminal
+    - sur MacOS :
+      - Aller dans Applications/Utilitaires/Terminal
+    - on Ubuntu :
+      - Go to Applications/Accessories/Terminal
 - Aller dans votre dossier de travail (en indiquant le chemin à votre terminal) :
-  $ cd /Volumes/votre-disque-dur/.../votre-dossier-de-travail/
-  (la commande *cd* permet de changer de répertoire, en anglais *Change Directory*)
-    - *ASTUCE* la touche TAB vous permet d'auto-compléter les noms de dossier et de fichier; ainsi vous n'avez pas besoin de connaître l'arborescence du disque dur et les noms de fichiers par cœur!
+    $ cd /Volumes/votre-disque-dur/.../votre-dossier-de-travail/
+    (la commande `cd` permet de changer de répertoire, en anglais *Change Directory*)
+      - *ASTUCE* la touche TAB vous permet d'auto-compléter les noms de dossier et de fichier; ainsi vous n'avez pas besoin de connaître l'arborescence du disque dur et les noms de fichiers par cœur!
 - Aller dans le dossier script du pack "PleaseMakeMeDesign" :
-  $ cd pleasemakemedesign/scripts
+    $ cd pleasemakemedesign/scripts
   
 Solution alternative 
 (pour ne pas écrire le chemin d'un dossier à la main)
 -----------------------------------------------------
 - Placer ce dossier dans votre dossier de travail
 - Ouvrir une fenêtre de Terminal
-  - sur MacOS :
-    - Aller dans Applications/Utilitaires/Terminal
-- taper "cd"
+    - sur MacOS :
+      - Aller dans Applications/Utilitaires/Terminal
+- taper `cd ` (l'espace est important !)
 - Trouver le dossier du pack dans le Finder
-- Glisser/déposer ce dossier dans le terminal
+- Glisser/déposer ce dossier dans le Terminal
 - Appuyer sur Entrée
 
 
 Astuces
 =======
 
-- "../" signifie dossier supérieur
-- taper "-h" ou "--help" après le nom d'un programme permet d'afficher l'aide 
+- `../` signifie dossier supérieur
+- taper `-h` ou `--help` après le nom d'un programme permet d'afficher l'aide 
 
 
 Expérimenter
 ============
 
-Vous pouvez à présent tester les lignes de commandes décrites dans les fichiers references/initiation.html ou tester la recette dans recettes/hollande_moderne.html
-N'ayez pas peur de perdre des fichiers ou de lancer une commande dangereuse. A part les commandes *rm* et *>*, rien ne modifie vos fichiers. 
+Vous pouvez à présent tester les lignes de commandes décrites dans les fichiers 'references/initiation.html' ou tester la recette dans 'recipes/dutch_way.html'
+N'ayez pas peur de perdre des fichiers ou de lancer une commande dangereuse. A part les commandes `rm` et `>`, rien ne modifie vos fichiers. 
 *rm* supprime un fichier (à utiliser avec précaution car le fichier est directement supprimé sans passer par la corbeille!). 
-La commande *>* permet d'enregistrer le résultat obtenu dans un fichier.
+La commande `>` permet d'enregistrer le résultat obtenu dans un fichier.
 
 - Pour appeler un fichier se situant dans un sous-dossier, taper :
-  $ mon-dossier/mon-fichier.txt
+    $ mon-dossier/mon-fichier.txt
 - Pour appeler un fichier dans un dossier supérieur, taper :
-  $ ../mon-fichier.txt
+    $ ../mon-fichier.txt
 

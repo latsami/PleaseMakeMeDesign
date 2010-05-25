@@ -15,9 +15,10 @@ Ustensiles
 - `cat`
 - `sort`
 - `uniq`
-- `inkscape`
 - `grep` (optionnel)
 - `less` (optionnel)
+- `enscript`
+- `ps2pdf`
 
 Étapes
 ======
@@ -46,22 +47,28 @@ Ustensiles
 08. Répéter les étapes 1 à 7 avec le deuxième fichier.
     `cat fichier_2.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq > liste_mots_2.txt`
 
-09. Comparer les mots communs des deux listes de mots obtenues.
+09. Comparer les mots des deux listes obtenues (les mots en commun sont au milieu).
     `comm liste_mots_1.txt liste_mots_2.txt`  
-    Astuce: utiliser un *pager* pour analyser le résultat.
+    Astuce: utiliser un *pager* pour pouvoir *scroller* dans le résultat.
     `comm liste_mots_1.txt liste_mots_2.txt | less`
 
 10. Sélectionner un mot intéressant du résultat (avec 5 lignes avant et 5 lignes après).
     `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot"`
 
-11. Enregistrer le résultat dans un fichier texte.
-    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" > montexte.txt`
+11. Mettre en page le texte dans un pdf (jouez avec les éléments variables!).
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | enscript -B -f 'Helvetica-Bold18/19' -T 16 -p 'my_pdf.ps`
+    
+12. Convertir le fichier postscript en un fichier pdf.
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | enscript -B -f 'Helvetica-Bold18/19' -T 16 -p 'my_pdf.ps | ps2pdf my_pdf.ps`
 
-12. Mettre en page le texte dans un pdf (jouez avec les éléments variables!).
-    `enscript -B -f 'Helvetica-Bold18/19' -T 16 -p 'my_pdf.ps montexte.txt | ps2pdf my_pdf.ps my_pdf.pdf`
 
-ou 12bis. Mettre en page le texte sur un A4 en adaptant la taille de la typographie en fonction du nombre de lignes (le fichier obtenu s'appelle "my_pdf.pdf")
-    `./layout.sh montexte.txt`
+Alternative end
+===============
 
-Voilà une manifique affiche Amstellodamoise! Il ne vous reste plus qu'à l'ouvrir dans Inkscape pour admirer le résultat et ajouter votre touche personnelle!
+11. Mettre en page le texte sur un A4 en adaptant la taille de la typographie en fonction du nombre de lignes (le fichier obtenu s'appelle "my_pdf.pdf")
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | ./v-justify.sh`
 
+12. Convertir le fichier postscript en un fichier pdf.
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | ./v-justify.sh | ps2pdf my_pdf.ps`
+
+Voilà une manifique affiche Amstellodamoise!

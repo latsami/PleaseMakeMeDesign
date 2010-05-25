@@ -1,0 +1,396 @@
+Coreutils
+=========
+
+Coreutils est un ensemble de logiciel GNU regroupant les outils logiciels
+essentiels UNIX.
+
+En général, on injecte du contenu à traiter par une ligne de commande; ce
+contenu est appelé *standard input* (stdin). Une fois passé dans la
+moulinette, le contenu est transformé en un nouveau contenu, le *standard
+output* (stdout).
+
+
+Résumé des Commandes de base
+============================
+
+Outils systèmes
+---------------
+
+`ls`
+:  list the files of a directory
+
+`cd`
+:  change directory
+
+`mkdir`
+:  create a directory
+
+`rm`
+:  remove (delete) files
+
+`less`
+:  browse the contents of a file with a scrollbar
+
+`|`
+:  link programs together
+
+`>`
+:  write the result of a command in a file
+
+`>>`
+:  write the result of a command at the end of a file
+
+
+Outils pour le texte
+--------------------
+
+`cat`
+:  concatenate and print files on the standard output
+
+`comm`
+:  compare two sorted files line by line
+
+`csplit`
+:  split a file into sections based on context
+
+`cut`
+:  select portions of each line of a file
+
+`fmt`
+:  simple text formatter
+
+`fold`
+:  wrap each input line to fit in specified width
+
+`head`
+:  display first lines of a file
+
+`join`
+:  join lines of two files on a common field
+
+`nl`
+:  number the lines of a file
+
+`paste`
+:  merge corresponding or subsequent lines of files
+
+`pr`
+:  convert text files for printing
+
+`sort`
+:  sort lines of text files
+
+`split`
+:  split a file into pieces
+
+`tail`
+:  display the last part of a file
+
+`tr`
+:  translate or delete characters
+
+`uniq`
+:  remove duplicate lines from a sorted file
+
+`wc`
+:  word, line, character, and byte count
+
+
+Command Line Examples
+=====================
+
+cat
+===
+concatenate and print files on the standard output
+
+	# read all text files of the folder
+	$ cat *.txt | less
+
+	# combine two text files into a single one
+	$ cat a.txt b.txt > ab.txt
+
+comm
+====
+compare two sorted files line by line
+
+	# create a lexicon of two texts to compare,
+	# a lexicon is a list of all words of a text
+	# one word per line, and alphabetically sorted 
+	$ cat my_file_1.txt | tr " " "\n" | sort | uniq >|
+	lexicon_file_1.txt $ cat my_file_2.txt | tr " " "\n" | sort | uniq >| lexicon_file_2.txt
+	# compare 2 files 
+	$ comm lexicon_file_1.txt lexicon_file_2.txt
+	> ...  équilibrée.  équipiers éradiquer, étaient était étions étudiants
+	> été évitant ...
+
+
+csplit
+======
+split a file into sections based on context
+
+cut
+===
+select portions of each line of a file
+
+	# displays characters 2-4
+	$ echo "hello" | cut -c 2-4
+	> ell
+
+	# displays characters 1 3 and 5
+	$ echo "hello" | cut -c 1,3,5
+	> hlo
+
+	# displays the first sentence of each paragraph
+	$ cut -d. -f1 discours_columbia.txt 
+	> ...
+	>  Monsieur le Président de l'Université de Columbia,  Mesdames et Me...
+	> Je vais essayer d'être à la hauteur de votre Université prestigieus...
+	> Moi je veux vous parler franchement, en ami, ce qui ne veut pas dir...
+	> Vous appartenez à un pays qui est le premier pays du monde par sa p...
+	> Nous sommes au XXIème siècle
+	> Une deuxième chose dont je suis certain, c'est qu'au XXIème siècle,... 
+	> Et la troisième idée que je voudrais vous faire partager, c'est que... 
+	> ...
+
+
+fmt
+===
+simple text formatter
+
+	# format lines of text to 20/30 characters and center them
+	$ fmt 20 30 discours_columbia.txt | fmt -c
+
+fold
+====
+wrap each input line to fit in specified width
+
+	# format lines of text at 20 characters/line without hyphenation
+	$ fold -sw 20 lux_transcript.txt
+	> Annick Lantenois, 
+	> organizator and 
+	> moderator  of the 
+	> first table starts 
+	> with a quotation by 
+	> Hal Foster:
+		> "Le design est l'un 
+		> des principaux 
+		> agents qui nous 
+		> enferme dans un 
+		> consumérisme 
+		> contemporain"
+		> We aren't anymore 
+		> in an econony of 
+		> tangible goods but 
+		> in an economy of 
+		> knowledge, or 
+		> cognitive 
+		> capitalism.
+		> 
+		> Quel est le 
+		> positionement des 
+		> designers comme 
+		> individus à l'égard 
+		> de ces 
+		> transformation?
+		
+
+head
+====
+display first lines of a file
+
+	# displays the name and the first 2 lines of a file
+	$ head -vn 2 lux_transcript.txt
+	> ==> lux_transcript.txt <==
+	> Annick Lantenois, organizator and moderator  of the first table starts
+	> with a quotation by Hal Foster: "Le design est l'un des principaux
+	> agents qui nous enferme dans un consumérisme contemporain"
+
+
+join
+====
+join lines of two files on a common field
+
+	$ cat file1
+	> a a1
+	> c c1
+	> b b1
+	$ cat file2
+	> a a2
+	> c c2
+	>  b b2
+	$ join file1 file2
+	> a a1 a2
+	> c c1 c2
+	> b b1 b2
+
+nl
+===
+number the lines of a file
+
+
+paste
+=====
+merge corresponding or subsequent lines of files
+
+	$ cat num2
+	> 1
+	> 2
+	$ cat let3
+	> a
+	> b
+	> c
+	$ paste num2 let3
+	> 1       a
+	> 2       b
+	>         c
+
+	$ paste -s num2 let3
+	> 1       2
+	> a       b       c
+
+pr
+===
+convert text files for printing
+
+	# lay out text in two columns separated by ' || '
+	$ pr --columns=2 -J -s' || ' 
+	> Annick Lantenois, organizator and modera || - machine
+	> tor  of the first table starts with a qu || - discours
+	> otation by Hal Foster: || - pratique
+	> "Le design est l'un des principaux agent || - industrie
+	> s qui nous enferme dans un consumérisme  || - espace
+	> contemporain" || 
+	> We aren't anymore in an econony of tangi || machine de letcture: Memex
+	> ble goods but in an economy of knowledge || Influence Douglas Engelbart
+	(invente le
+	> , or cognitive capitalism. || PC?) souris/windows
+	>  || Texte de programmation était très littér
+	> Quel est le positionement des designers  || aire  à l'époque.
+	> comme individus à l'égard de ces transfo || Le design du new media ->
+Brenda	Laurel
+	> rmation? || Xanadu Ted Nelson
+
+
+sort
+====
+sort lines of text files
+
+	# creates a glossary of a text
+	$ cat lux_transcipt.txt | tr ' ' '\n' | sort -du
+	> 1947:
+		> 2ème
+		> 5
+		> a
+		> à
+		> agents
+		> Alain
+		> an
+		> and
+		> (anglophone)
+		> Annick
+		> anymore
+		> aren't
+		> au
+		> avec
+		> Basé
+		> Brenda
+		> but
+		> by
+		> capitalism.
+		> Catheine
+		> ces
+		> c'est
+		> (cf
+		> citation
+		> coeur
+		> cognitive
+		> collaboration
+		> ...
+
+    # Counts the number of occurence of every word of a text, 
+    # sorts them in reverse order of occurrences, 
+    # the words of same occurrence are then sorted by alphabetical order
+    $ cat monfichier.txt | sort | uniq -c | sort +1 [-f] | sort +0 -nr
+	
+
+split
+=====
+split a file into pieces
+
+	# splits a text file in files of 10 lines
+	$ split -l 10 stdin_grille_numerique.txt grille
+
+	# splits a text file in files of 2Kb
+	$ split -b 2k stdin_grille_numerique.txt grille
+
+
+tail
+====
+display the last part of a file
+
+	# displays all lines of a file in reverse order
+	$ tail -r myfile.txt
+
+tr
+===
+translate or delete characters
+
+	# replace all capital letters to lowercase
+	$ cat myfile.txt | tr A-Z a-z
+	$ cat myfile.txt | tr "[:lower:]" "[:upper:]" 
+
+	# replace all spaces with a newline
+	$ cat myfile.txt | tr " " "\n"
+
+    # replace all accented "e" with non-accented e's
+	$ cat myfile.txt | tr "[=e=]" "e"
+
+    # Deletes the specified character in the whole text (here we remove all the e's as a quotation of Georges Pérec's *La Disparition*)
+    $ cat monfichier.txt | tr -d 'e'
+
+    # Removes repeated characters, except the first occurrence.
+    # Useful to get rid of double spaces.
+    $ cat monfichier.txt | tr --squeeze-repeats ' '
+
+uniq
+====
+remove duplicate lines from a sorted file
+
+	# count the number of occurrences of a word in a text, in alphabetical order
+	$ cat myfile.txt | tr ' ' '\n' | sort | uniq -c
+
+	# count the number of occurrences of a word in a text, sorted by number of occurrences
+	$ cat myfile.txt | tr ' ' '\n' | sort | uniq -c | sort -nr 
+
+wc
+===
+word, line, character, and byte count
+
+	# count the number of words of a file
+	$ wc -w stdin_grille_numerique.txt
+	> 2504 stdin_grille_numerique.txt
+
+	# count the number of characters of a file
+	$ wc -c stdin_grille_numerique.txt
+	> 16721 stdin_grille_numerique.txt
+
+	# count the total number of files in the computer
+	$ find / -type f | wc -l
+
+    # Gives the length of the longest line of a text
+    # (doesn't work on OSX 10.4, maybe on more recent OSX?)
+    $ wc -L lexique1.txt
+    > 11
+
+
+
+Go Further
+==========
+
+[Coreutils Homepage](http://www.gnu.org/software/coreutils/)
+
+[Floss Manuals](http://en.flossmanuals.net/gnulinux)
+
+[Command-line Cheatsheet](http://pzwart.wdka.hro.nl/mdma/staff/jjfcramer/command_line_cheat_sheet/)
+
+[Regular Expressions exercises](http://automatist.net/techdaze/RegularExpressionScrapbooks)
