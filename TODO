@@ -1,10 +1,10 @@
-- Rename the licenses with proper filenames i
-- complete missing licenses i
-  - GNU documentation license i
++ Rename the licenses with proper filenames i
++ complete missing licenses i
+  + GNU documentation license i
 - Check translations for files in references directory A
 - Check instructions in READ_ME i
 - check MArkdown syntax in READ_ME A
-- rename READ_ME README A
++ rename READ_ME README A
 - what to do with épicerie ?
 - tutorial installation enscript S
 - testing the podofo imposition
