@@ -8,3 +8,4 @@
 *.sock
 *.pid
 .DS_Store
+tests/*

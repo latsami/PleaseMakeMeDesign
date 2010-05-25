@@ -1,0 +1,77 @@
+To make a poster *à la* Experimental JetSet we need:
+
+Ingredients
+===========
+
+- 2 texts quite long, likely to have words in common
+- some elbow grease
+- some Helvetica Bold, or better: a freed equivalent
+
+
+Utensils
+========
+
+- `comm`
+- `tr`
+- `cat`
+- `sort`
+- `uniq`
+- `grep` (optional)
+- `less` (optional)
+- `enscript`
+- `ps2pdf`
+
+
+Steps
+======
+
+01. Display the content of the first file in the shell.
+    `cat fichier_1.txt`
+
+02. Put every word on a new line.
+    `cat fichier_1.txt | tr " " "\n"`
+
+03. Suppress punctuation.
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:]`
+
+04. Make everything lowercase.
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:]`
+
+05. Sort by alphabetical order.
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort`
+
+06. Removes all duplicate words.
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq`
+
+07. Save the result in a file.
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq > liste_mots_1.txt`
+
+08. Repeat steps 1 to 7 with the second text.
+    `cat fichier_2.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq > liste_mots_2.txt`
+
+09. Compare the words used in both texts (common words are in the middle).
+    `comm liste_mots_1.txt liste_mots_2.txt`  
+    Tip: use a *pager* to be able to scroll up and down.
+    `comm liste_mots_1.txt liste_mots_2.txt | less`
+
+10. Select an interesting word in the result (with 5 lines before and after).
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot"`
+
+11. Layout the text in a pdf (play with variable elements !).
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | enscript -B -f 'Helvetica-Bold18/19' -T 16 -p 'my_pdf.ps`
+
+12. Convert the postscript file to a pdf file.
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | enscript -B -f 'Helvetica-Bold18/19' -T 16 -p 'my_pdf.ps | ps2pdf my_pdf.ps`
+
+
+Alternative end
+===============
+
+11. Layout the text on an A4 with automatic font-size so that it fits the page vertically. (the output file is "my_pdf.pdf")
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | ./v-justify.sh`
+
+12. Convert the postscript file to a pdf file.
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | ./v-justify.sh | ps2pdf my_pdf.ps`
+
+Here you are! You now have a wonderful Dutch style poster!
+

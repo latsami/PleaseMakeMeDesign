@@ -1,0 +1,85 @@
+==================================
+|Please Computer | Make Me Design|
+==================================
+
+License
+=======
+
+Copyright 2010, Stéphanie Vilayphiou, Alexandre Leray and Ludivine Loiseau —
+All rights reserved. License: GNU-GPL 3
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+Project
+=======
+
+"Please Computer | Design Make Me" was originally the source package for the "Screen Party" of April 22, 2010 at ESAPV Mons, proposed by Open Source Publishing.
+"Please Computer | Design Make Me" is an introduction to the command line through graphic design, writing and concrete poetry.
+This package gathers reference texts, tutorials and a collection of scripts. It was created to facilitate collaboration, but also to be increased later on, for example through other workshops.
+
+
+
+Getting Started
+===============
+
+- Place this folder in your working folder
+- Open a Terminal window
+    - On MacOS:
+      - Go to Applications/Utilities/Terminal
+- Go into your working folder (telling the path to your terminal):
+    $ cd /Volumes/your-hard-drive/.../your-folder/
+    (`cd` stands for 'change directory')
+      - *TIP* The TAB key allows you to auto-complete folder names and file, so you do not need to know the hard disk tree and file names by heart!
+- Go to the 'scripts' folder in the "PleaseMakeMeDesign" package 
+    $ cd pleasemakemedesign/scripts
+
+
+Alternative way
+(Avoid writing the whole path by hand)
+--------------------------------------
+- Place this file in your working folder
+- Open a Terminal window
+    - On MacOS:
+      - Go to Applications/Utilities/Terminal
+    - On Ubuntu:
+      - Go to Applications/Accessories/Terminal
+- Type `cd ` (space is important !)
+- Find the package folder in the Finder 
+- Drag and drop this folder in the Terminal
+- Press Enter
+
+
+Tips
+====
+- `../` means higher folder
+- type `-h` or `--help` after the name of a program allows to view the help text
+
+
+Experiment
+============
+
+You can now test the command lines described in the file 'references/initiation.html' or 'recipes/dutch_way.html'
+Do not be afraid of losing files or launch a dangerous command. Besides the orders `rm` and `>`, nothing changes your files.
+`rm` deletes a file (use with caution because the file is deleted directly without going through the trash !).
+The command `>` saves the output in a file.
+
+- To call a file located in a subfolder, type :
+    $ mon-dossier/mon-fichier.txt
+- To call a file in a folder above, type :
+    $ ../my-file.txt
+
+
+

@@ -1,0 +1,74 @@
+Pour fabriquer une affiche à la Experimental JetSet il nous faut:
+
+Ingrédients
+===========
+
+- 2 textes d'un bon poids susceptibles d'avoir des mots en commun
+- Un peu d'huile de coude
+- de l'Helvetica Bold, ou mieux: un équivalent libre
+
+Ustensiles
+==========
+
+- `comm`
+- `tr`
+- `cat`
+- `sort`
+- `uniq`
+- `grep` (optionnel)
+- `less` (optionnel)
+- `enscript`
+- `ps2pdf`
+
+Étapes
+======
+
+01. Afficher le contenu du premier fichier dans le *shell*.
+    `cat fichier_1.txt`
+
+02. Mettre tous les mots à la ligne.
+    `cat fichier_1.txt | tr " " "\n"`
+
+03. Supprimer les ponctuations.
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:]`
+
+04. Mettre tous les mots en bas de casse.
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:]`
+
+05. Classer les mots par ordre alphabétique.
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort`
+
+06. Supprimer les mots en double.
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq`
+
+07. Sauvegarder le résultat.
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq > liste_mots_1.txt`
+
+08. Répéter les étapes 1 à 7 avec le deuxième fichier.
+    `cat fichier_2.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq > liste_mots_2.txt`
+
+09. Comparer les mots des deux listes obtenues (les mots en commun sont au milieu).
+    `comm liste_mots_1.txt liste_mots_2.txt`  
+    Astuce: utiliser un *pager* pour pouvoir *scroller* dans le résultat.
+    `comm liste_mots_1.txt liste_mots_2.txt | less`
+
+10. Sélectionner un mot intéressant du résultat (avec 5 lignes avant et 5 lignes après).
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot"`
+
+11. Mettre en page le texte dans un pdf (jouez avec les éléments variables!).
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | enscript -B -f 'Helvetica-Bold18/19' -T 16 -p 'my_pdf.ps`
+    
+12. Convertir le fichier postscript en un fichier pdf.
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | enscript -B -f 'Helvetica-Bold18/19' -T 16 -p 'my_pdf.ps | ps2pdf my_pdf.ps`
+
+
+Alternative end
+===============
+
+11. Mettre en page le texte sur un A4 en adaptant la taille de la typographie en fonction du nombre de lignes (le fichier obtenu s'appelle "my_pdf.pdf")
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | ./v-justify.sh`
+
+12. Convertir le fichier postscript en un fichier pdf.
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | ./v-justify.sh | ps2pdf my_pdf.ps`
+
+Voilà une manifique affiche Amstellodamoise!
