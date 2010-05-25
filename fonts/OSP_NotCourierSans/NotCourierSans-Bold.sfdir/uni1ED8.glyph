@@ -1,0 +1,14 @@
+
+StartChar: uni1ED8
+Encoding: 7896 7896 613
+Width: 600
+Flags: HMW
+HStem: -14 100<251 348.5 251 376> 497 100<251 333.5 223 349.5>
+VStem: 21 100<235.5 348 235.5 376> 479 100<234 335 205 346.5>
+LayerCount: 2
+Fore
+Refer: 129 729 N 1 0 0 1 0 -764 2
+Refer: 125 710 N 1 0 0 1 0 143 2
+Refer: 47 79 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

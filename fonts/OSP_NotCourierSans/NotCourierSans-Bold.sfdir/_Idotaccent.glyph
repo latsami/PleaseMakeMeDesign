@@ -1,0 +1,23 @@
+
+StartChar: Idotaccent
+Encoding: 304 304 173
+Width: 600
+Flags: HMW
+HStem: 0 100<137 250 149 250 350 451> 483 100<136.5 451 149 250 350 451 350 350>
+VStem: 250 100<100 483 100 483>
+LayerCount: 2
+Fore
+SplineSet
+300 798 m 0
+ 334 798 360 771 360 737 c 0
+ 360 705 333 678 300 678 c 0
+ 267 678 240 705 240 738 c 0
+ 240 771 267 798 300 798 c 0
+350 0 m 1
+ 250 0 l 1
+ 250 584 l 1
+ 350 584 l 1
+ 350 0 l 1
+EndSplineSet
+Validated: 1
+EndChar

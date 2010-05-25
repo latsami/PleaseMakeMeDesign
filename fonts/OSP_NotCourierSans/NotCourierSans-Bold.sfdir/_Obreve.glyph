@@ -1,0 +1,13 @@
+
+StartChar: Obreve
+Encoding: 334 334 543
+Width: 600
+Flags: HMW
+HStem: -15 99<243 337.5 243 364> 482 96<243 323.5 216 339> 603 67<264 318 264 335.5>
+VStem: 20 97<227.5 337 227.5 364.5> 464 97<226 324 198 335.5>
+LayerCount: 2
+Fore
+Refer: 128 728 N 1 0 0 1 -8 144 2
+Refer: 47 79 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

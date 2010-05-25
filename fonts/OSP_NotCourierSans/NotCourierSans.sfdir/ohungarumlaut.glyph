@@ -1,0 +1,13 @@
+
+StartChar: ohungarumlaut
+Encoding: 249 337 249
+Width: 600
+Flags: HMW
+HStem: -16 41<248 351.5 248 363> 390 41<248 352.5>
+VStem: 72 41<157 258.5 157 269.5> 487 41<155.5 257.5>
+LayerCount: 2
+Fore
+Refer: 133 733 S 1 0 0 1 0 0 2
+Refer: 79 111 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

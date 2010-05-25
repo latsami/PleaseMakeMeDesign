@@ -1,0 +1,13 @@
+
+StartChar: scaron
+Encoding: 353 353 251
+Width: 600
+Flags: HMW
+HStem: -16 100<275.5 332 273 368.5> 350 100<275.5 322> 566 20<310 310>
+VStem: 92 110<310.5 324 310.5 353> 417 110<115.5 133.5>
+LayerCount: 2
+Fore
+Refer: 135 711 S 1 0 0 1 9 0 2
+Refer: 83 115 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

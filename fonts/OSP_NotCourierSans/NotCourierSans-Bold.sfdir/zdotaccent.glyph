@@ -1,0 +1,12 @@
+
+StartChar: zdotaccent
+Encoding: 380 380 263
+Width: 600
+Flags: HMW
+HStem: 0 100<244 419 244 519> 337 100<197 346 197 197>
+LayerCount: 2
+Fore
+Refer: 129 729 N 1 0 0 1 0 0 2
+Refer: 90 122 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

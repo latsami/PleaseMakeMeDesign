@@ -1,0 +1,13 @@
+
+StartChar: Gcircumflex
+Encoding: 284 284 521
+Width: 600
+Flags: HMW
+HStem: -15 99<284.5 338 284.5 358.5> 174 97<327 508 339 436 339 533> 482 96<281 333.5 267.5 343.5> 604 67<156 171.5>
+VStem: 32 97<239 244 244 307 216.5 344> 436 97<107 174 47 174>
+LayerCount: 2
+Fore
+Refer: 125 710 N 1 0 0 1 4 143 2
+Refer: 39 71 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

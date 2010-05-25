@@ -1,0 +1,23 @@
+
+StartChar: Ldot
+Encoding: 540 319 540
+Width: 600
+Flags: HMW
+HStem: 0 41<87 172 96 172 213 492> 522 41<87 290 96 172 213 290 213 213>
+VStem: 172 41<41 522 41 522> 492 38<41 201 0 210>
+LayerCount: 2
+Fore
+SplineSet
+381 346 m 2
+ 391 346 l 2
+ 429 346 459 318 459 280 c 0
+ 459 242 429 214 391 214 c 2
+ 381 214 l 2
+ 341 214 311 244 311 280 c 0
+ 311 318 341 346 381 346 c 2
+EndSplineSet
+Refer: 44 76 N 1 0 0 1 0 0 2
+Validated: 1
+LCarets2: 1 0 
+Ligature2: "'liga' Standard Ligatures in Latin lookup 0 subtable" L periodcentered
+EndChar

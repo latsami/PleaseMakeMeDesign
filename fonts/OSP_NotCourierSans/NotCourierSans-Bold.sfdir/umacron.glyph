@@ -1,0 +1,13 @@
+
+StartChar: umacron
+Encoding: 363 363 273
+Width: 600
+Flags: HMW
+HStem: -13 100<253 300.5> 337 100<68 195 375 410> 546 80<165.5 422 178 422>
+VStem: 95 100<156 159 159 338 338 338> 410 100<0 437 48 437 155 337 337 337>
+LayerCount: 2
+Fore
+Refer: 127 175 S 1 0 0 1 0 0 2
+Refer: 85 117 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

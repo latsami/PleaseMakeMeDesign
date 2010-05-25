@@ -1,0 +1,13 @@
+
+StartChar: hcircumflex
+Encoding: 528 293 528
+Width: 600
+Flags: HMW
+HStem: 0 41<73 128 80 128 170 214 396 442 483 528> 390 41<293 338> 563 41<66 170 76 128>
+VStem: 128 42<41 296 347 563 563 563> 442 41<41 288 288 291 41 303>
+LayerCount: 2
+Fore
+Refer: 125 710 N 1 0 0 1 -4 182 2
+Refer: 72 104 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

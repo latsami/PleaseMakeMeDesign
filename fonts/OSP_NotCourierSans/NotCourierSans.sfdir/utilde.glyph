@@ -1,0 +1,13 @@
+
+StartChar: utilde
+Encoding: 552 361 552
+Width: 600
+Flags: HMW
+HStem: -16 41<238 297 238 298> 376 42<70 173 80 132 374 448> 479 41<356 371 356 377> 528 39<231 248>
+VStem: 132 41<115 376 376 376> 448 42<41 66 66 66 115 376 376 376>
+LayerCount: 2
+Fore
+Refer: 126 732 N 1 0 0 1 -10 0 2
+Refer: 85 117 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

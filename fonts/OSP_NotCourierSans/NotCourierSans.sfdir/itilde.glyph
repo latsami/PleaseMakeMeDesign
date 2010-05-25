@@ -1,0 +1,13 @@
+
+StartChar: itilde
+Encoding: 532 297 532
+Width: 600
+Flags: HMW
+HStem: 0 41<110 280 120 280 321 480> 376 42<153 321 162 280> 479 41<356 371 356 377> 528 39<231 248>
+VStem: 280 41<41 376 376 376>
+LayerCount: 2
+Fore
+Refer: 126 732 N 1 0 0 1 0 0 2
+Refer: 144 305 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

@@ -1,0 +1,13 @@
+
+StartChar: Eacute
+Encoding: 162 201 162
+Width: 600
+Flags: W
+HStem: 0 41<165 520> 272 41<165 351> 522 41<165 499>
+VStem: 124 41<41 272 313 522>
+LayerCount: 2
+Fore
+Refer: 124 180 S 1 0 0 1 -44 150 2
+Refer: 37 69 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

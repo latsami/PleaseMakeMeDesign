@@ -1,0 +1,12 @@
+
+StartChar: afii10055
+Encoding: 386 1030 386
+Width: 600
+Flags: HMW
+HStem: 0 41<132 280 140 280 321 458> 522 41<132 458 140 280 321 458 321 321>
+VStem: 280 41<41 522 41 522>
+LayerCount: 2
+Fore
+Refer: 41 73 S 1 0 0 1 0 0 2
+Validated: 1
+EndChar

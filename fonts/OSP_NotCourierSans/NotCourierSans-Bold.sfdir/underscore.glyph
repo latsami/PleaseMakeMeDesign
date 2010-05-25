@@ -1,0 +1,17 @@
+
+StartChar: underscore
+Encoding: 95 95 63
+Width: 600
+Flags: HMW
+HStem: -125 50<-12 612 -12 612>
+LayerCount: 2
+Fore
+SplineSet
+612 -75 m 1
+ 612 -125 l 1
+ -12 -125 l 1
+ -12 -75 l 1
+ 612 -75 l 1
+EndSplineSet
+Validated: 1
+EndChar

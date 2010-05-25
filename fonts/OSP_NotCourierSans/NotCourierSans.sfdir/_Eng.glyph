@@ -1,0 +1,12 @@
+
+StartChar: Eng
+Encoding: 543 330 543
+Width: 600
+Flags: MW
+HStem: 0 41<68 112 78 112 153 228> 522 41<49 164 58 112 394 470 511 511 511 544>
+VStem: 112 41<41 503 41 522 41 522> 470 41<60 522>
+LayerCount: 2
+Fore
+Refer: 46 78 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

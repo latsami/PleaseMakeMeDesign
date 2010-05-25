@@ -1,0 +1,23 @@
+
+StartChar: guilsinglleft
+Encoding: 8249 8249 106
+Width: 600
+Flags: HMW
+HStem: 0 20<304.5 318>
+LayerCount: 2
+Fore
+SplineSet
+175 218 m 1
+ 326 77 l 2
+ 337 67 342 59 342 50 c 0
+ 342 34 327 20 309 20 c 0
+ 300 20 295 22 281 33 c 2
+ 33 218 l 1
+ 281 402 l 2
+ 295 413 300 415 310 415 c 0
+ 327 415 342 401 342 385 c 0
+ 342 376 338 368 326 358 c 2
+ 175 218 l 1
+EndSplineSet
+Validated: 1
+EndChar

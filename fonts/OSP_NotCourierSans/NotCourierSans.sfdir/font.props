@@ -1,0 +1,111 @@
+SplineFontDB: 3.0
+FontName: NotCourierSans
+FullName: NotCourier
+FamilyName: NotCourierSans
+Weight: Regular
+Copyright: NotCourier was designed by OSP (Ludivine Loiseau), in July 2008. It is based on Nimbus Mono, copyright (URW)++,Copyright 1999 by (URW)++ Design & Development; Cyrillic glyphs added by Valek Filippov (C) 2001-2005
+UComments: "NotCourierSans contains 2 ornamental glyphs encoded in the private use characters:+AAoA-- in U E000, the OSP frog mascot is accessible through the Ornament Open Type feature under the OSP_frog ligature (source glyph name : O S P - to access it from the keyboard +ACIA-OSP+ACIA)+AAoA-- in U E001, the 75 ligature added during an OSP workshop in Le 75, +AMkA-cole Sup+AOkA-rieure des Arts de l+IBkA-image (www.le75.be), is accessible through the Ornament Open Type feature under the OSP_workshop75 ligature (source glyph name : seven five - to access it from the keyboard +ACIA-75+ACIA)+AAoA	" 
+FontLog: "Basic Font Information+AAoA---------------------------+AAoA-NotCourier is a re-interpretation of Nimbus Mono and was designed in Wroclaw at the occasion of Linux Graphics Meeting (LGM 2008).+AAoA-For more detailed information: http://ospublish.constantvzw.org+AAoACgAA-We took Nimbus as the base of the design. We proceeded to remove the serifs with raw cuts. We did not soften the edges. We are not here to be polite.+AAoA-See the file NotCourierSans-work.png included in the package.+AAoACgAK-Information for Contributors+AAoA-------------------------------+AAoA-See the project website for the current trunk and the various branches:+AAoA-http://openfontlibrary.org/media/people/OSP+AAoACgAA-Notes:+AAoA-- lower case x-height cyrillic characters are different from latin characters in the bold version - not fixed yet+AAoA-- didn't verify yet if all repeated vectors were replaced with references - if has, shouldn't be that much.+AAoA-- didn't test the typefaces with cyrillic text intensivelly, since i'm not russian, ukranian or bielo-russian fluent...+AAoACgAK-ChangeLog+AAoA-----------+AAoACgAA-2008 september 14 (Paulo Silva) - NotCourier version 1.1+AAoA-- removed all kerning pairs +AAoA-- fixed all characters width to 600 units +AAoA-- replaced repeated vectorial information from accented characters with references+AAoA-- removed serifs from cyrillic characters+AAoACgAKAAoACgAA-Acknowledgements+AAoA--------------------------+AAoA-If you make modifications be sure to add your name (N), email (E), web-address+AAoA(W) and description (D). This list is sorted by last name in alphabetical+AAoA-order.)+AAoACgAA-N: OSP (Harrisson, Pierre Huyghebaert, Femke Snelting, Ivan Monroy-Lopez, Yi Jiang, Nicolas Malev+AOkA, Ludivine Loiseau)+AAoA-E: ludi.loiseau@gmail.com+AAoA-W: http://ospublish.constantvzw.org +AAoA-D: Open Source Publishing is a graphic design agency that uses only Free Software tools. Closely affiliated with the Brussels based digital culture foundation Constant, OSP aims to test the possibilities and realities of doing graphic design using an expanding range of Free Software tools.+AAoACgAA--+AAoA-N: Paulo Silva+AAoA-E: nitrofurano_at_gmail_dot_com+AAoA-W: http://nitrofurano.linuxkafe.com+AAoA-D: " 
+Version: 1.1
+ItalicAngle: 0
+UnderlinePosition: -100
+UnderlineWidth: 50
+Ascent: 800
+Descent: 200
+LayerCount: 2
+Layer: 0 0 "Back"  1
+Layer: 1 0 "Fore"  0
+NeedsXUIDChange: 1
+UniqueID: 4136475
+FSType: 0
+OS2Version: 0
+OS2_WeightWidthSlopeOnly: 0
+OS2_UseTypoMetrics: 0
+CreationTime: 1178440826
+ModificationTime: 1242408331
+PfmFamily: 49
+TTFWeight: 400
+TTFWidth: 5
+LineGap: 90
+VLineGap: 0
+Panose: 2 11 3 9 3 1 2 2 2 3
+OS2TypoAscent: 0
+OS2TypoAOffset: 1
+OS2TypoDescent: 0
+OS2TypoDOffset: 1
+OS2TypoLinegap: 90
+OS2WinAscent: 0
+OS2WinAOffset: 1
+OS2WinDescent: 0
+OS2WinDOffset: 1
+HheadAscent: 0
+HheadAOffset: 1
+HheadDescent: 0
+HheadDOffset: 1
+OS2SubXSize: 2
+OS2SubYSize: 0
+OS2SubXOff: 29520
+OS2SubYOff: 0
+OS2SupXSize: 14320
+OS2SupYSize: 0
+OS2SupXOff: 3488
+OS2SupYOff: 32767
+OS2StrikeYSize: 0
+OS2StrikeYPos: 32767
+OS2Vendor: 'PfEd'
+Lookup: 4 0 0 "'dlig' Discretionary Ligatures lookup 0"  {"'dlig' Discretionary Ligatures lookup 0-1"  } ['dlig' ('DFLT' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 4 0 1 "'liga' Standard Ligatures in Latin lookup 0"  {"'liga' Standard Ligatures in Latin lookup 0 subtable"  } ['liga' ('latn' <'dflt' > ) ]
+Lookup: 4 0 0 "OSP_workshop75"  {"'ornm' OSP 02"  } ['ornm' ('DFLT' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 4 0 0 "OSP_frog"  {"'ornm' OSP 01"  } ['ornm' ('DFLT' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
+DEI: 91125
+LangName: 1033 "" "" "" "" "" "" "" "" "OSP" "Harrisson, Pierre Huyghebaert, Femke Snelting, Ivan Monroy-Lopez, Yi Jiang, Nicolas Malev+AI4A6QAA, Ludivine Loiseau" "" "" "http://ospublish.constantvzw.org/" "This Font Software is an open font and is released under the GPL v2 with font exception; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation." "http://www.gnu.org/licenses/old-licenses/gpl-2.0.html" "" "" "" "" "P+APMA-jd+AXoBfAAA-e, ki+AUQA t+ARkA chmurno+AVsBBwAA w g+AUIBBQAA-b flaszy!" 
+Encoding: Custom
+UnicodeInterp: none
+NameList: Adobe Glyph List
+DisplaySize: -36
+AntiAlias: 1
+FitToEm: 1
+WinInfo: 416 26 10
+BeginPrivate: 7
+BlueValues 31 [-20 0 417 437 563 583 603 623]
+BlueScale 8 0.039625
+StdHW 4 [43]
+StdVW 4 [41]
+StemSnapH 4 [43]
+StemSnapV 4 [41]
+ForceBold 5 false
+EndPrivate
+Grid
+218 1300 m 0
+ 218 -700 l 0
+364 1300 m 0
+ 364 -700 l 0
+-1000 309 m 0
+ 2000 309 l 0
+-1000 92 m 0
+ 2000 92 l 0
+126 1300 m 0
+ 126 -700 l 0
+476 1300 m 0
+ 476 -700 l 0
+184 1300 m 0
+ 184 -700 l 0
+457.333 1300 m 0
+ 457.333 -700 l 0
+144 1300 m 0
+ 144 -700 l 0
+-1000 189 m 0
+ 2000 189 l 0
+107.5 1300 m 0
+ 107.5 -700 l 0
+58 1300 m 0
+ 58 -700 l 0
+542 1300 m 0
+ 542 -700 l 0
+492 1300 m 0
+ 492 -700 l 0
+90 1300 m 0
+ 90 -700 l 0
+EndSplineSet
+TeXData: 1 0 0 629145 314572 209715 437256 1048576 209715 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
+EndSplineFont

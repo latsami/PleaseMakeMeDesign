@@ -1,0 +1,13 @@
+
+StartChar: Uacute
+Encoding: 218 218 192
+Width: 600
+Flags: HMW
+HStem: -14 100<273 327.5> 483 100<71 206 171 171 171 206 394 429 529 537.5>
+VStem: 71 100<205 483> 429 100<196 205 205 483>
+LayerCount: 2
+Fore
+Refer: 124 180 N 1 0 0 1 -29 144 2
+Refer: 53 85 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

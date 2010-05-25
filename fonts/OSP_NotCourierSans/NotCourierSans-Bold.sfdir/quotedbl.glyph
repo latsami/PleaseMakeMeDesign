@@ -1,0 +1,24 @@
+
+StartChar: quotedbl
+Encoding: 34 34 2
+Width: 600
+Flags: HMW
+HStem: 582 20<136 264 264 264 336 464 464 464>
+LayerCount: 2
+Fore
+SplineSet
+136 602 m 1
+ 264 602 l 1
+ 233 348 l 2
+ 229 322 221 312 201 312 c 0
+ 182 312 173 322 170 347 c 2
+ 136 602 l 1
+336 602 m 1
+ 464 602 l 1
+ 433 348 l 2
+ 429 322 421 312 401 312 c 0
+ 382 312 373 322 370 347 c 2
+ 336 602 l 1
+EndSplineSet
+Validated: 1
+EndChar

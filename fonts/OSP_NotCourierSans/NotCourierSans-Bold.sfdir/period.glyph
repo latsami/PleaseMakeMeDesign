@@ -1,0 +1,19 @@
+
+StartChar: period
+Encoding: 46 46 14
+Width: 600
+Flags: HMW
+HStem: -15 20
+LayerCount: 2
+Fore
+SplineSet
+309 -15 m 2
+ 291 -15 l 2
+ 255 -15 225 15 225 51 c 0
+ 225 87 255 117 291 117 c 2
+ 309 117 l 2
+ 346 117 375 88 375 51 c 0
+ 375 14 346 -15 309 -15 c 2
+EndSplineSet
+Validated: 1
+EndChar

@@ -1,0 +1,13 @@
+
+StartChar: Ucircumflex
+Encoding: 194 219 194
+Width: 600
+Flags: HMW
+HStem: -16 41<255.5 344 255.5 356> 522 41<58 216 67 101 142 142 142 216 384 458 499 533 499 499>
+VStem: 101 41<185 522> 458 41<185 522>
+LayerCount: 2
+Fore
+Refer: 125 710 N 1 0 0 1 -1 150 2
+Refer: 53 85 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

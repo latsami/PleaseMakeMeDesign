@@ -1,0 +1,13 @@
+
+StartChar: uni04DD
+Encoding: 1245 1245 483
+Width: 600
+Flags: HMW
+HStem: 0 97<33 46 33 115> 326 97<28 115 340 340> 463 116<174.5 206.5 375.5 407>
+VStem: 240 100<97 156 97 156 277 326>
+LayerCount: 2
+Fore
+Refer: 130 168 N 1 0 0 1 -7 0 2
+Refer: 353 1078 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

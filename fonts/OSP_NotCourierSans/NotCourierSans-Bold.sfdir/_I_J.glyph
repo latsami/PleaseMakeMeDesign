@@ -1,0 +1,30 @@
+
+StartChar: IJ
+Encoding: 306 306 533
+Width: 600
+Flags: HMW
+HStem: 0 97<-17.5 92 -6 92 189 287> 468 97<-18 287 -6 92 189 287 189 189>
+VStem: 92 97<97 468 97 468>
+LayerCount: 2
+Fore
+SplineSet
+234 51 m 1
+ 334 117 l 1
+ 383 95 417 86 451 86 c 0
+ 487 86 523 100 546 122 c 0
+ 567 143 570 152 570 198 c 2
+ 570 583 l 9
+ 670 583 l 17
+ 670 187 l 2
+ 670 121 653 83 606 42 c 0
+ 564 6 508 -14 449 -14 c 0
+ 392 -14 325 6 234 51 c 1
+200 0 m 1
+ 100 0 l 1
+ 100 584 l 1
+ 200 584 l 1
+ 200 0 l 1
+EndSplineSet
+Validated: 1
+Ligature2: "'dlig' Discretionary Ligatures lookup 0-1" I J
+EndChar
