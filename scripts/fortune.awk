@@ -1,6 +1,7 @@
 #!/usr/bin/awk -f
 
 # returns a random word from /usr/share/dict/words
+# MYWORD=`./fortune.awk /usr/share/dict/words` && ./myscript.sh | grep $MYWORD
 
 BEGIN {
 	srand()
