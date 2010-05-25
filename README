@@ -1,12 +1,8 @@
-==================================
-|Please Computer | Make Me Design|
-==================================
+please computer | make me design
+================================
 
-License
-=======
-
-Copyright 2010, Stéphanie Vilayphiou, Alexandre Leray and Ludivine Loiseau —
-All rights reserved. License: GNU-GPL 3
+    Copyright 2010, Ivan Monroy Lopez, Stéphanie Vilayphiou, Alexandre Leray
+    and Ludivine Loiseau — All rights reserved. License: GNU-GPL 3
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -24,16 +20,20 @@ All rights reserved. License: GNU-GPL 3
 
 
 Project
-=======
+-------
 
-"Please Computer | Design Make Me" was originally the source package for the "Screen Party" of April 22, 2010 at ESAPV Mons, proposed by Open Source Publishing.
-"Please Computer | Design Make Me" is an introduction to the command line through graphic design, writing and concrete poetry.
-This package gathers reference texts, tutorials and a collection of scripts. It was created to facilitate collaboration, but also to be increased later on, for example through other workshops.
+"please computer | make me design" was originally the source package for the
+"Screen Party" of April 22, 2010 at ESAPV Mons, proposed by Open Source
+Publishing.  "Please Computer | Design Make Me" is an introduction to the
+command line through graphic design, writing and concrete poetry.  This package
+gathers reference texts, tutorials and a collection of scripts. It was created
+to facilitate collaboration, but also to be increased later on, for example
+through other workshops.
 
 
 
 Getting Started
-===============
+---------------
 
 - Place this folder in your working folder
 - Open a Terminal window
@@ -47,9 +47,9 @@ Getting Started
     $ cd pleasemakemedesign/scripts
 
 
-Alternative way
-(Avoid writing the whole path by hand)
---------------------------------------
+Alternative way (Avoid writing the whole path by hand)
+------------------------------------------------------
+
 - Place this file in your working folder
 - Open a Terminal window
     - On MacOS:
@@ -63,23 +63,25 @@ Alternative way
 
 
 Tips
-====
+----
+
 - `../` means higher folder
 - type `-h` or `--help` after the name of a program allows to view the help text
 
 
 Experiment
-============
+----------
 
-You can now test the command lines described in the file 'references/initiation.html' or 'recipes/dutch_way.html'
-Do not be afraid of losing files or launch a dangerous command. Besides the orders `rm` and `>`, nothing changes your files.
-`rm` deletes a file (use with caution because the file is deleted directly without going through the trash !).
-The command `>` saves the output in a file.
+You can now test the command lines described in the file
+'references/initiation.html' or 'recipes/dutch_way.html' Do not be afraid of
+losing files or launch a dangerous command. Besides the orders `rm` and `>`,
+nothing changes your files.  `rm` deletes a file (use with caution because the
+file is deleted directly without going through the trash !).  The command `>`
+saves the output in a file.
 
 - To call a file located in a subfolder, type :
     $ mon-dossier/mon-fichier.txt
 - To call a file in a folder above, type :
     $ ../my-file.txt
-
 
 
