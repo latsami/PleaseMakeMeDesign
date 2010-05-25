@@ -1,0 +1,19 @@
+
+StartChar: zdotaccent
+Encoding: 264 380 264
+Width: 600
+Flags: W
+HStem: 0 41<171 489> 376 41<124 416> 511 100<259.396 340.604>
+VStem: 250 100<520.396 601.544>
+LayerCount: 2
+Fore
+SplineSet
+300 611 m 0
+ 328 611 350 588 350 560 c 0
+ 350 534 327 511 300 511 c 0
+ 273 511 250 534 250 561 c 0
+ 250 588 273 611 300 611 c 0
+EndSplineSet
+Refer: 90 122 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

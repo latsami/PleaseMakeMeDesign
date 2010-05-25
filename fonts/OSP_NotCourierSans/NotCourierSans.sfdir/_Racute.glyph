@@ -1,0 +1,13 @@
+
+StartChar: Racute
+Encoding: 185 340 185
+Width: 600
+Flags: HMW
+HStem: 0 41<61 124 70 124 165 240 531 562> 251 41<165 279 165 279 279 297> 522 41<61 318 70 124 165 165 165 318>
+VStem: 124 41<41 251 292 522> 457 41<376 438>
+LayerCount: 2
+Fore
+Refer: 124 180 N 1 0 0 1 0 150 2
+Refer: 50 82 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

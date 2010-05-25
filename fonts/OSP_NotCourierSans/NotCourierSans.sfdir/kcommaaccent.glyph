@@ -1,0 +1,27 @@
+
+StartChar: kcommaaccent
+Encoding: 270 311 270
+Width: 600
+Flags: HMW
+HStem: 0 41<81 144 90 144 90 185 383 411 469 514> 376 41<327 466 336 358 419 419 419 466> 563 41<81 185 90 144>
+VStem: 144 41<41 180 229 563 563 563>
+LayerCount: 2
+Fore
+SplineSet
+144 0 m 1
+ 144 604 l 1
+ 185 604 l 1
+ 185 229 l 1
+ 407 417 l 1
+ 468 417 l 1
+ 262 245 l 1
+ 510 0 l 1
+ 452 0 l 1
+ 231 219 l 1
+ 185 180 l 1
+ 185 0 l 1
+ 144 0 l 1
+EndSplineSet
+Refer: 301 -1 N 1 0 0 1 -41 0 2
+Validated: 1
+EndChar

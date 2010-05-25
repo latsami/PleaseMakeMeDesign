@@ -1,0 +1,13 @@
+
+StartChar: tcommaaccent
+Encoding: 266 355 266
+Width: 600
+Flags: HMW
+HStem: -16 41<263.5 326 263.5 342.5> 376 41<61.5 145 71 145 186 406>
+VStem: 145 41<107 109 109 376 417 536>
+LayerCount: 2
+Fore
+Refer: 301 -1 N 1 0 0 1 -41 0 2
+Refer: 84 116 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

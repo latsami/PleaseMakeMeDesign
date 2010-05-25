@@ -1,0 +1,13 @@
+
+StartChar: Ncaron
+Encoding: 327 327 177
+Width: 600
+Flags: HMW
+HStem: 0 100<67 73 53.5 79 173 208> 483 100<45.5 173 58 73 396 431 531 539.5>
+VStem: 73 100<100 394 100 483 100 483> 431 100<191 483 0 483>
+LayerCount: 2
+Fore
+Refer: 135 711 N 1 0 0 1 0 143 2
+Refer: 46 78 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

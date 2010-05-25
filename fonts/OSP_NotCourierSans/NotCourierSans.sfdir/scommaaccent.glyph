@@ -1,0 +1,13 @@
+
+StartChar: scommaaccent
+Encoding: 253 537 253
+Width: 600
+Flags: W
+HStem: -16 41<197.423 396.857> 390 41<208.379 391.891>
+VStem: 102.855 41.145<66.8508 136.975> 124 45<277.368 357.759> 452 45<68.8475 163.349>
+LayerCount: 2
+Fore
+Refer: 301 -1 S 1 0 0 1 -41 0 2
+Refer: 83 115 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

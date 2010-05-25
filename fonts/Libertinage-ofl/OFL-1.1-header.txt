@@ -1,0 +1,16 @@
+This file is part of Libertinage and is for description.
+
+Copyright (C) 2008 OSP (Harrisson and Ludivine Loiseau).
+
+This Font Software is Copyright (c) 2003-2006, Philipp H. Poll (http://linuxlibertine.sf.net/).
+All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+
+You should have received a copy of the license along with this Font Software (either in stand-alone text files, human-readable headers or in the appropriate machine-readable metadata fields within text or binary files).
+
+If this is not the case, go to <http://scripts.sil.org/OFL> for all
+the details including a FAQ.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the SIL Open Font License for more details.
+

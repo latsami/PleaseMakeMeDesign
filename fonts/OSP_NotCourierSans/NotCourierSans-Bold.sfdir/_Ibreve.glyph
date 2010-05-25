@@ -1,0 +1,13 @@
+
+StartChar: Ibreve
+Encoding: 300 300 531
+Width: 600
+Flags: HMW
+HStem: 0 97<132.5 242 144 242 339 437> 468 97<132 437 144 242 339 437 339 339> 603 67<264 318 264 335.5>
+VStem: 242 97<97 468 97 468>
+LayerCount: 2
+Fore
+Refer: 128 728 N 1 0 0 1 -7 144 2
+Refer: 41 73 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

@@ -1,0 +1,21 @@
+
+StartChar: dotlessi
+Encoding: 144 305 144
+Width: 600
+Flags: HMW
+HStem: 0 41<110 279 119 279 320 480> 376 41<152 320 161 279>
+VStem: 279 41<41 376 376 376>
+LayerCount: 2
+Fore
+SplineSet
+279 0 m 1xe8
+ 279 376 l 1
+ 161 376 l 2
+ 143 376 134 383 134 397 c 0
+ 134 410 143 417 161 417 c 2
+ 320 417 l 1
+ 320 0 l 1
+ 279 0 l 1xe8
+EndSplineSet
+Validated: 1
+EndChar

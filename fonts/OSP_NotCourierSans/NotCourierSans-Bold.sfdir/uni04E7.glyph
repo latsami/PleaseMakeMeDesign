@@ -1,0 +1,13 @@
+
+StartChar: uni04E7
+Encoding: 1255 1255 493
+Width: 600
+Flags: MW
+HStem: -16 100<255.5 344.5 255.5 372> 350 100<256.5 345.5>
+VStem: 42 100<179.5 255 179.5 283> 42 120 250 120 458 100<179.5 254>
+LayerCount: 2
+Fore
+Refer: 79 111 N 1 0 0 1 0 0 2
+Refer: 130 168 S 1 0 0 1 0 0 2
+Validated: 1
+EndChar

@@ -1,0 +1,12 @@
+
+StartChar: uni04DB
+Encoding: 1243 1243 481
+Width: 600
+Flags: HMW
+HStem: -16 97<251.5 314.5 251.5 324> 152 97<226 434 250 433> 339 97<269.5 315> 463 116<174.5 206.5 375.5 407>
+LayerCount: 2
+Fore
+Refer: 130 168 S 1 0 0 1 -6 0 2
+Refer: 376 1101 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

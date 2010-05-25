@@ -1,0 +1,13 @@
+
+StartChar: Imacron
+Encoding: 205 298 205
+Width: 600
+Flags: HMW
+HStem: 0 41<131 279 140 279 320 459> 522 41<131 459 140 279 320 459 320 320> 686 40<173 418 182 418>
+VStem: 279 41<41 522 41 522>
+LayerCount: 2
+Fore
+Refer: 41 73 N 1 0 0 1 0 0 2
+Refer: 127 175 S 1 0 0 1 0 150 2
+Validated: 1
+EndChar

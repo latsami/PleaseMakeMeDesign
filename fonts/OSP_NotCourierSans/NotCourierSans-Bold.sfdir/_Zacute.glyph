@@ -1,0 +1,13 @@
+
+StartChar: Zacute
+Encoding: 377 377 198
+Width: 600
+Flags: HMW
+HStem: 0 100<201 427 73 73> 483 100<196 375 196 196>
+VStem: 96 100<413 483 399.5 583> 427 100<100 172 0 184.5>
+LayerCount: 2
+Fore
+Refer: 124 180 N 1 0 0 1 0 144 2
+Refer: 58 90 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

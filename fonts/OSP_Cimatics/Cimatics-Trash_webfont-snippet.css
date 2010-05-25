@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Cimatics-Trash";
+  src: local("Cimatics-Trash.ttf"), url("http://example.com/Cimatics-Trash.ttf") format("truetype");
+  font-weight:  400;
+  font-style:   regular;
+  font-variant: normal;
+  font-stretch: normal;
+}   

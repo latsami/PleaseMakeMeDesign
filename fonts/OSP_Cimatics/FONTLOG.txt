@@ -1,0 +1,58 @@
+
+FONTLOG
+Cimatics
+==============
+
+
+This file provides detailed information on the Cimatics font software.
+This information should be distributed along with the Cimatics fonts and any derivative works.
+
+Basic Font Information
+--------------------------
+Cimatics was designed by OSP (http://ospublish.constantvzw.org) in July 2009 for the graphic identity of Cimatics A\V Platform (http://www.cimatics.com). 
+It is based on URW Gothic L.
+Copyright (URW)++, Copyright 1999 by (URW)++ Design & Development; Cyrillic glyphs added by Valek Filippov (C) 2001-2005
+
+Cimatics gathers glyphs from FreeSerif, FreeSerifItalic, DejaVuSans, DejaVuSerif, joined by the OSP_frog mascot, the Cimatics two piece heart, a baronchon_palm_tree from Open Clip Art Library (www.openclipart.org) and private use dingbats drawned for Cimatics (CimaticsScaredEye, CimaticsWhitePentagon). 
+
+
+Cimatics currently provides the following Unicode coverage:
+Basic Latin: 95/95 
+Latin-1 Supplement: 93/96
+Latin Extended-A: 128/128
+Latin Extended-B: 3/208
+Cyrillic: 198/256
+
+
+Information for Contributors
+------------------------------
+
+
+
+
+
+
+ChangeLog
+----------
+(This should list both major and minor changes, most recent first.)
+
+
+
+
+
+
+Acknowledgements
+-------------------------
+If you make modifications be sure to add your name (N), email (E), web-address
+(W) and description (D). This list is sorted by last name in alphabetical
+order.)
+
+N: Ludivine Loiseau
+E: ludi.loiseau@gmail.com
+W: http://ospublish.constantvzw.org/
+D: Designer
+
+N: Ivan Monroy López
+E: ivan@textzi.net
+W: http://ospublish.constantvzw.org/
+D: Designer 

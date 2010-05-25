@@ -1,0 +1,23 @@
+
+StartChar: z
+Encoding: 90 122 90
+Width: 600
+Flags: W
+HStem: 0 41<171 489> 376 41<124 416>
+LayerCount: 2
+Fore
+SplineSet
+489 0 m 1
+ 115 0 l 1
+ 115 36 l 1
+ 416 376 l 1
+ 124 376 l 1
+ 124 417 l 1
+ 474 417 l 1
+ 474 381 l 1
+ 171 41 l 1
+ 489 41 l 1
+ 489 0 l 1
+EndSplineSet
+Validated: 1
+EndChar

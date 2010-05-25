@@ -1,0 +1,19 @@
+
+StartChar: quoteleft
+Encoding: 64 8216 64
+Width: 600
+Flags: MW
+HStem: 584 20G<260 393 393 393>
+LayerCount: 2
+Fore
+SplineSet
+393 604 m 1
+ 463 379 l 2
+ 464 376 465 372 465 369 c 0
+ 465 355 452 343 436 343 c 0
+ 423 343 415 348 405 365 c 2
+ 260 604 l 1
+ 393 604 l 1
+EndSplineSet
+Validated: 1
+EndChar

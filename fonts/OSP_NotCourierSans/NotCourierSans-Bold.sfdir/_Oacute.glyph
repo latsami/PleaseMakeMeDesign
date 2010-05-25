@@ -1,0 +1,13 @@
+
+StartChar: Oacute
+Encoding: 211 211 180
+Width: 600
+Flags: HMW
+HStem: -14 100<251 348.5 251 376> 497 100<251 333.5 223 349.5>
+VStem: 21 100<235.5 348 235.5 376> 479 100<234 335 205 346.5>
+LayerCount: 2
+Fore
+Refer: 47 79 N 1 0 0 1 0 0 2
+Refer: 124 180 S 1 0 0 1 -29 144 2
+Validated: 1
+EndChar

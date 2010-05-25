@@ -1,0 +1,22 @@
+
+StartChar: T
+Encoding: 52 84 52
+Width: 600
+Flags: HMW
+HStem: 0 41<166 280 175 280 321 426> 522 41<113 280 113 113 321 321 321 487>
+VStem: 72 41<449 522> 280 41<41 522> 487 41<449 522 522 522>
+LayerCount: 2
+Fore
+SplineSet
+72 563 m 1
+ 528 563 l 1
+ 528 522 l 1
+ 321 522 l 1
+ 321 0 l 1
+ 280 0 l 1
+ 280 522 l 1
+ 72 522 l 1
+ 72 563 l 1
+EndSplineSet
+Validated: 1
+EndChar

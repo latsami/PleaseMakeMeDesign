@@ -1,0 +1,21 @@
+
+StartChar: Delta
+Encoding: 305 916 305
+Width: 600
+Flags: MW
+HStem: 0 40<103 497 103 557> 543 20<278 322 322 322>
+LayerCount: 2
+Fore
+SplineSet
+43 0 m 1
+ 278 563 l 1
+ 322 563 l 1
+ 557 0 l 1
+ 43 0 l 1
+103 40 m 1
+ 497 40 l 1
+ 300 513 l 1
+ 103 40 l 1
+EndSplineSet
+Validated: 1
+EndChar

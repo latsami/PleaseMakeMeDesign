@@ -1,0 +1,13 @@
+
+StartChar: Jcircumflex
+Encoding: 537 308 537
+Width: 600
+Flags: HMW
+HStem: -16 41<215 280 215 290> 522 41<217 522 226 386 427 522 427 427>
+VStem: 50 41<93 223 93 223 93 232.5> 386 41<165 522>
+LayerCount: 2
+Fore
+Refer: 125 710 N 1 0 0 1 121 150 2
+Refer: 42 74 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

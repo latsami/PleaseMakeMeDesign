@@ -1,0 +1,19 @@
+
+StartChar: Edotaccent
+Encoding: 166 278 166
+Width: 600
+Flags: W
+HStem: 0 41<165 520> 272 41<165 351> 522 41<165 499> 661 100<259.396 340.604>
+VStem: 124 41<41 272 313 522> 250 100<670.396 751.544>
+LayerCount: 2
+Fore
+SplineSet
+300 761 m 0
+ 328 761 350 738 350 710 c 0
+ 350 684 327 661 300 661 c 0
+ 273 661 250 684 250 711 c 0
+ 250 738 273 761 300 761 c 0
+EndSplineSet
+Refer: 37 69 S 1 0 0 1 0 0 2
+Validated: 1
+EndChar

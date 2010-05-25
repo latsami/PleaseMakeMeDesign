@@ -1,0 +1,13 @@
+
+StartChar: lcaron
+Encoding: 318 318 239
+Width: 600
+Flags: HMW
+HStem: 0 100<116.5 250 128 250 350 472> 524 100<159.5 350 172 250>
+VStem: 250 100<100 524 524 524>
+LayerCount: 2
+Fore
+Refer: 76 108 N 1 0 0 1 0 0 2
+Refer: 299 -1 N 1 0 0 1 179 696 2
+Validated: 1
+EndChar

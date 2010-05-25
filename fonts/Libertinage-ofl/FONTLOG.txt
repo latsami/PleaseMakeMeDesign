@@ -1,0 +1,51 @@
+
+FONTLOG for Libertinage
+-------------------
+This file provides detailed information on the Libertinage font software.
+This information should be distributed along with the Libertinage fonts
+and any derivative works.
+
+Basic Font Information
+--------------------------
+Libertinage is a remix of Linux Libertine and was designed in August 2008.
+For more detailed information: http://ospublish.constantvzw.org
+
+We built Libertinage by copying and pasting parts of Linux Libertine glyphs. There are 26 variations, one for each latin letter in the alphabet.
+This version is the 'Full' version, containing all modifications.
+
+Single letter versions are named Libertinage-a, Libertinage-b, Libertinage-c... depending on the letter that was changed. All 26 are gathered in the Libertinage package as .ttf files.
+
+Libertinage currently provides the following Unicode coverage:
+Basic Latin: 95/95 
+Latin-1 Supplement: 96/96 
+
+Information for Contributors
+------------------------------
+
+Copyright (C) 2008 OSP (Harrisson and Ludivine Loiseau).
+
+This Font Software is Copyright (c) 2003-2006, Philipp H. Poll (http://linuxlibertine.sf.net/).
+All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+
+You should have received a copy of the license along with this Font Software (either in stand-alone text files, human-readable headers or in the appropriate machine-readable metadata fields within text or binary files).
+
+See the project website for the current trunk and the various branches:
+http://openfontlibrary.org/projects/Libertinage
+
+ChangeLog
+----------
+
+Acknowledgements
+-------------------------
+If you make modifications be sure to add your name (N), email (E), web-address
+(W) and description (D). This list is sorted by last name in alphabetical
+order.)
+
+N: HARRISSON, Pierre Huyghebaert, Femke Snelting, Ivan Monroy-Lopez, Yi Jiang and Nicolas Malevé.
+E: 
+W: http://ospublish.constantvzw.org 
+D: 
+
+

@@ -1,0 +1,13 @@
+
+StartChar: Ycircumflex
+Encoding: 557 374 557
+Width: 600
+Flags: HMW
+HStem: 0 41<166 280 176 280 320 428> 522 41<59 188 68 102 150 150 150 188 412 450 496 496 496 530>
+VStem: 280 40<41 253 41 253>
+LayerCount: 2
+Fore
+Refer: 125 710 N 1 0 0 1 1 150 2
+Refer: 57 89 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

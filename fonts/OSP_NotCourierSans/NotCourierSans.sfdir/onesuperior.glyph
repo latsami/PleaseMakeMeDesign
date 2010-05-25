@@ -1,0 +1,21 @@
+
+StartChar: onesuperior
+Encoding: 289 185 289
+Width: 600
+Flags: HMW
+HStem: 259 37<211.5 212 212 226 211.5 390>
+VStem: 283 36<295 563 563 563>
+LayerCount: 2
+Fore
+SplineSet
+283 259 m 1
+ 283 563 l 1
+ 218 542 l 2
+ 214 541 211 540 209 540 c 0
+ 201 540 192 549 192 558 c 0
+ 192 573 192 573 319 612 c 1
+ 319 259 l 1
+ 283 259 l 1
+EndSplineSet
+Validated: 1
+EndChar

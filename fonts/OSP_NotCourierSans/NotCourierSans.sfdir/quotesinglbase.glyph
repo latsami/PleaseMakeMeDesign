@@ -1,0 +1,18 @@
+
+StartChar: quotesinglbase
+Encoding: 116 8218 116
+Width: 600
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+207 145 m 1
+ 340 145 l 1
+ 195 -120 l 2
+ 185 -139 177 -145 164 -145 c 0
+ 148 -145 135 -132 135 -116 c 0
+ 135 -112 136 -109 137 -105 c 2
+ 207 145 l 1
+EndSplineSet
+Validated: 1
+EndChar

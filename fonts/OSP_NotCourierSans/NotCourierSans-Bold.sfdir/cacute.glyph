@@ -1,0 +1,13 @@
+
+StartChar: cacute
+Encoding: 263 263 222
+Width: 600
+Flags: HMW
+HStem: -16 100<274.5 350 271.5 359.5> 350 100<284.5 332>
+VStem: 54 100<176.5 226 166 278.5>
+LayerCount: 2
+Fore
+Refer: 124 180 N 1 0 0 1 0 0 2
+Refer: 67 99 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar

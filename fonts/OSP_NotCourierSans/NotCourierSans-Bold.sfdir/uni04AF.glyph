@@ -1,0 +1,23 @@
+
+StartChar: uni04AF
+Encoding: 1199 1199 444
+Width: 600
+Flags: HMW
+HStem: -146 100<173 250 185 250 350 415> 337 100<64.5 177 514 514 514 516>
+VStem: 250 100<-46 99 -46 99>
+LayerCount: 2
+Fore
+SplineSet
+250 -146 m 17
+ 250 99 l 1
+ 15 437 l 1
+ 135 437 l 1
+ 300 202 l 1
+ 463 437 l 1
+ 583 437 l 1
+ 350 99 l 1
+ 350 -146 l 1
+ 250 -146 l 17
+EndSplineSet
+Validated: 1
+EndChar

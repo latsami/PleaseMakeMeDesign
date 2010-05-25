@@ -1,0 +1,26 @@
+
+StartChar: radical
+Encoding: 307 8730 307
+Width: 600
+Flags: MW
+HStem: 272 37<42 147 49 115> 663 36<431 606 431 431>
+LayerCount: 2
+Fore
+SplineSet
+147 309 m 1
+ 202 99 l 1
+ 402 699 l 1
+ 606 699 l 2
+ 620 699 628 693 628 681 c 0
+ 628 670 620 663 606 663 c 2
+ 431 663 l 1
+ 199 0 l 1
+ 115 272 l 1
+ 49 272 l 2
+ 35 272 27 279 27 290 c 2
+ 27 291 l 2
+ 27 302 35 309 49 309 c 2
+ 147 309 l 1
+EndSplineSet
+Validated: 1
+EndChar

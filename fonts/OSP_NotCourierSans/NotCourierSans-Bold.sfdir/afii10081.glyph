@@ -1,0 +1,22 @@
+
+StartChar: afii10081
+Encoding: 1087 1087 362
+Width: 600
+Flags: HMW
+HStem: 0 97<88 105 85.5 110 85.5 197 364 380> 326 97<85.5 473 202 380 202 202 477 494 110 496>
+VStem: 105 97<97 326 97 326> 380 97<97 326 97 326>
+LayerCount: 2
+Fore
+SplineSet
+477 423 m 6
+ 477 0 l 2
+ 380 0 l 2
+ 380 326 l 1
+ 202 326 l 1
+ 202 0 l 2
+ 105 0 l 2
+ 105 423 l 2
+ 477 423 l 6
+EndSplineSet
+Validated: 1
+EndChar

@@ -1,0 +1,13 @@
+
+StartChar: Dcaron
+Encoding: 270 270 160
+Width: 600
+Flags: HMW
+HStem: 0 100<68 74 55 80 174 284> 483 100<54.5 292 174 174 174 284>
+VStem: 74 100<100 483> 450 100<261 305 221.5 307 221.5 330.5>
+LayerCount: 2
+Fore
+Refer: 135 711 N 1 0 0 1 0 143 2
+Refer: 36 68 N 1 0 0 1 0 0 2
+Validated: 5
+EndChar

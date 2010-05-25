@@ -1,0 +1,23 @@
+
+StartChar: uni04B2
+Encoding: 1202 1202 447
+Width: 600
+Flags: HMW
+HStem: 0 97<62 67 49 74 49 181>
+VStem: 477 95<-73 0 0 0>
+LayerCount: 2
+Fore
+SplineSet
+496 3 m 5
+ 533 97 l 1
+ 569 97 590 78 590 48 c 2
+ 590 -73 l 2
+ 590 -99 590 -107 583 -116 c 0
+ 573 -129 557 -136 543 -136 c 0
+ 526 -136 511 -128 501 -113 c 0
+ 495 -105 494.711 -94.998 495 -73 c 2
+ 496 3 l 5
+EndSplineSet
+Refer: 56 88 N 1 0 0 1 0 0 2
+Validated: 37
+EndChar

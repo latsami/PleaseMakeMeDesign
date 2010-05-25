@@ -1,0 +1,12 @@
+
+StartChar: hbar
+Encoding: 295 295 528
+Width: 600
+Flags: HMW
+HStem: 0 97<75 92 86 92 189 195 391 396 492 499> 339 97<296.5 326.5> 508 96<64 189 77 92>
+VStem: 92 97<97 274 378 508 508 508> 396 96<97 263 263 275 97 279>
+LayerCount: 2
+Fore
+Refer: 72 104 N 1 0 0 1 0 0 2
+Validated: 1
+EndChar
