@@ -1,0 +1,332 @@
+<HTML><HEAD><TITLE>Page de man</TITLE></HEAD>
+<BODY BGCOLOR=#"ffffff" TEXT=#"000010"><PRE><FONT SIZE="3">
+
+
+GREP(1)           Manuel de l'utilisateur Linux           GREP(1)
+
+
+<FONT COLOR=#"000000"><B>NOM</B></FONT>
+       grep,  egrep,  fgrep - Afficher les lignes correspondant à
+       un motif donné.
+
+<FONT COLOR=#"000000"><B>SYNOPSIS</B></FONT>
+       <FONT COLOR=#"000000"><B>grep</B></FONT> [ <FONT COLOR=#"000000"><B>-</B></FONT>[[<FONT COLOR=#"000000"><B>AB</B></FONT>] ]<FONT COLOR=#"0000ff"><I>num</I></FONT> ] [ <FONT COLOR=#"000000"><B>-</B></FONT>[<FONT COLOR=#"000000"><B>CEFGVBchilnsvwx</B></FONT>] ] [ <FONT COLOR=#"000000"><B>-e</B></FONT> ] <FONT COLOR=#"0000ff"><I>motif</I></FONT> |
+       <FONT COLOR=#"000000"><B>-ffichier</B></FONT> ] [ <FONT COLOR=#"0000ff"><I>fichiers...</I></FONT>  ]
+
+<FONT COLOR=#"000000"><B>DESCRIPTION</B></FONT>
+       <FONT COLOR=#"000000"><B>Grep</B></FONT>  Recherche  dans  les  <FONT COLOR=#"0000ff"><I>fichiers</I></FONT> d'entrée indiqués les
+       lignes correspondant à un certain <FONT COLOR=#"0000ff"><I>motif</I></FONT>.
+
+       Si aucun fichier n'est fourni, ou si le nom `-'  est  men­
+       tionné, la lecture se fait depuis l'entrée standard.
+
+       Par  défaut,  <FONT COLOR=#"000000"><B>grep</B></FONT>  affiche  les  lignes  correspondant au
+       motif.
+
+       Il existe trois variantes principales de <FONT COLOR=#"000000"><B>grep</B></FONT>,  controlées
+       par les options suivantes.
+
+       <FONT COLOR=#"000000"><B>-G</B></FONT>     Interprète  le <FONT COLOR=#"0000ff"><I>motif</I></FONT> comme une expression régulière
+              simple (voir plus bas). C'est le  comportement  par
+              défaut.
+       <FONT COLOR=#"000000"><B>-E</B></FONT>     Interprète  le <FONT COLOR=#"0000ff"><I>motif</I></FONT> comme une expression régulière
+              étendue (voir plus bas).
+       <FONT COLOR=#"000000"><B>-F</B></FONT>     Interprète le <FONT COLOR=#"0000ff"><I>motif</I></FONT>  comme  une  liste  de  chaînes
+              figées, séparées par des Sauts de Lignes (NewLine).
+              La correspondance est faite avec n'importe laquelle
+              de ces chaînes.
+
+       De  plus, il existe deux variantes du programme : <FONT COLOR=#"000000"><B>egrep</B></FONT> et
+       <FONT COLOR=#"000000"><B>fgrep</B></FONT>.   <FONT COLOR=#"000000"><B>Egrep</B></FONT>  est  similaire  (sans  être  identique)  à
+       <FONT COLOR=#"000000"><B>grep</B></FONT> <FONT COLOR=#"000000"><B>-E</B></FONT>,  et  est  compatible  avec les versions UNIX his­
+       toriques de <FONT COLOR=#"000000"><B>egrep</B></FONT>.  <FONT COLOR=#"000000"><B>Fgrep</B></FONT> est identique à <FONT COLOR=#"000000"><B>grep</B></FONT> <FONT COLOR=#"000000"><B>-F</B></FONT>.
+
+       Toutes les variantes de <FONT COLOR=#"000000"><B>grep</B></FONT> acceptent les  options  suiv­
+       antes :
+       <FONT COLOR=#"000000"><B>-num</B></FONT>   Les   correspondances  seront  affichées  avec  <FONT COLOR=#"0000ff"><I>num</I></FONT>
+              lignes supplémentaires avant et  après.  Néanmoins,
+              <FONT COLOR=#"000000"><B>grep</B></FONT>  n'affichera jamais une ligne plus d'une fois.
+       <FONT COLOR=#"000000"><B>-A</B></FONT> <FONT COLOR=#"0000ff"><I>num</I></FONT> Afficher <FONT COLOR=#"0000ff"><I>num</I></FONT> lignes supplémentaires après la  ligne
+              correspondante.
+       <FONT COLOR=#"000000"><B>-B</B></FONT> <FONT COLOR=#"0000ff"><I>num</I></FONT> Afficher  <FONT COLOR=#"0000ff"><I>num</I></FONT> lignes supplémentaires avant la ligne
+              correspondante.
+       <FONT COLOR=#"000000"><B>-C</B></FONT>     est équivalent à <FONT COLOR=#"000000"><B>-2</B></FONT>.
+       <FONT COLOR=#"000000"><B>-V</B></FONT>     Afficher le numéro de version de <FONT COLOR=#"000000"><B>grep</B></FONT> sur la sortie
+              d'erreur  standard. Ce numéro de version devra être
+              inclus dans tous les rapports de  bugs  (voir  plus
+              bas).
+       <FONT COLOR=#"000000"><B>-b</B></FONT>     Avant  chaque  ligne,  afficher  son  décalage  (en
+              octet) au sein du fichier d'entrée.
+       <FONT COLOR=#"000000"><B>-c</B></FONT>     Ne pas afficher les résultats normaux. A la  place,
+              afficher  un compte des lignes correspondantes pour
+
+
+
+FSF                      15 Janvier 1997                        1
+
+
+
+
+
+GREP(1)           Manuel de l'utilisateur Linux           GREP(1)
+
+
+              chaque fichier d'entrée.  Avec  l'option  <FONT COLOR=#"000000"><B>-v</B></FONT>  (voir
+              plus bas), afficher les nombres de lignes ne corre­
+              spondant pas au motif.
+       <FONT COLOR=#"000000"><B>-e</B></FONT> <FONT COLOR=#"0000ff"><I>motif</I></FONT>
+              Utiliser le <FONT COLOR=#"0000ff"><I>motif</I></FONT> indiqué. Ceci permet de  protéger
+              les motifs commençant par <FONT COLOR=#"000000"><B>-</B></FONT>.
+       <FONT COLOR=#"000000"><B>-f</B></FONT> <FONT COLOR=#"0000ff"><I>fichier</I></FONT>
+              Lire le motif dans le <FONT COLOR=#"0000ff"><I>fichier</I></FONT> indiqué.
+       <FONT COLOR=#"000000"><B>-h</B></FONT>     Ne pas afficher le nom des fichiers dans les résul­
+              tats lorsque plusieurs fichiers sont parcourus.
+       <FONT COLOR=#"000000"><B>-i</B></FONT>     Ignorer les différences majuscules/minuscules aussi
+              bien  dans le <FONT COLOR=#"0000ff"><I>motif</I></FONT> que dans les fichiers d'entrée.
+              ([NDT] Comme toujours, ceci ne fonctionne pas  avec
+              les caractères accentués...)
+       <FONT COLOR=#"000000"><B>-L</B></FONT>     Ne  pas afficher les résultats normaux. A la place,
+              indiquer le nom des fichiers  pour  lesquels  aucun
+              résultat n'aurait été affiché.
+       <FONT COLOR=#"000000"><B>-l</B></FONT>     Ne  pas afficher les résultats normaux. A la place,
+              indiquer le nom  des  fichiers  pour  lesquels  des
+              résultats auraient été affiches.
+       <FONT COLOR=#"000000"><B>-n</B></FONT>     Ajouter  à  chaque  ligne de sortie un préfixe con­
+              tenant son numéro dans le fichier d'entrée.
+       <FONT COLOR=#"000000"><B>-q</B></FONT>     Silence. Ne pas afficher les résultats normaux.
+       <FONT COLOR=#"000000"><B>-s</B></FONT>     Ne pas afficher les messages  d'erreurs  concernant
+              les fichiers inexistants ou illisibles.
+       <FONT COLOR=#"000000"><B>-v</B></FONT>     Inverser la mise en correspondance, pour sélection­
+              ner les lignes ne correspondant pas au motif.
+       <FONT COLOR=#"000000"><B>-w</B></FONT>     Ne sélectionner que les lignes contenant une corre­
+              spondance  formant  un mot complet.  La sous-chaîne
+              correspondante doit donc être soit au début  de  la
+              ligne,  soit  précédée d'un caractère n'appartenant
+              pas à un mot.  De même elle doit se trouver soit  à
+              la  fin  de  la ligne, soit être suivie par un car­
+              actère n'appartenant pas à un mot.  Les  caractères
+              composants  les mots sont les lettres, les chiffres
+              et le souligné  (`_').   ([NDT]  Bien  entendu  les
+              minuscules  accentuées  ne  sont  pas des lettres !
+              elles servent donc à séparer les mots...)
+       <FONT COLOR=#"000000"><B>-x</B></FONT>     Ne sélectionner que les correspondances  qui  occu­
+              pent une ligne entière.
+
+<FONT COLOR=#"000000"><B>EXPRESSIONS</B></FONT> <FONT COLOR=#"000000"><B>RÉGULIÈRES</B></FONT>
+       Une  expression  régulière  est  un  motif  qui  permet de
+       décrire un ensemble de chaînes. Les expressions régulières
+       sont  construites  comme  des opérations arithmétiques, en
+       utilisant des opérateurs divers pour combiner des  expres­
+       sions plus petites.
+
+       <FONT COLOR=#"000000"><B>Grep</B></FONT>  comprend  deux  versions différentes pour la syntaxe
+       des expressions régulières :  ``simple''  et  ``étendue.''
+       Dans  la  version  GNU de <FONT COLOR=#"000000"><B>grep</B></FONT>, il n'y a pas de différence
+       dans les fonctionnalités disponibles en utilisant l'une ou
+       l'autre  des syntaxes.  Dans d'autres implémentations, les
+       expressions régulières simples sont moins  puissantes.  La
+
+
+
+FSF                      15 Janvier 1997                        2
+
+
+
+
+
+GREP(1)           Manuel de l'utilisateur Linux           GREP(1)
+
+
+       description  ci-dessous  correspond  aux expressions éten­
+       dues, les différences avec les expressions  simples  étant
+       résumées ensuite.
+
+       Les  briques  élémentaires sont les expressions régulières
+       correspondant à un simple caractère. La plupart  des  car­
+       actères,  y  compris  toutes  les lettres et les chiffres,
+       sont des expressions régulières se  correspondant  à  eux-
+       mêmes.   Tout   méta-caractère   ayant  une  signification
+       spéciale doit être protégé en  le  faisant  précéder  d'un
+       BackSlash.
+
+       Une  liste  de  caractères,  encadrée par <FONT COLOR=#"000000"><B>[</B></FONT> et <FONT COLOR=#"000000"><B>]</B></FONT> peut être
+       mise  en  correspondance  avec  n'importe  quel  caractère
+       unique appartenant à la liste.  Si le premier caractère de
+       la liste est l'accent circonflexe <FONT COLOR=#"000000"><B>^</B></FONT> alors la mise en  cor­
+       respondance  se  fait avec n'importe quel caractère <FONT COLOR=#"0000ff"><I>absent</I></FONT>
+       de  la  liste.   Par   exemple,   l'expression   régulière
+       <FONT COLOR=#"000000"><B>[0123456789]</B></FONT> convient pour n'importe quel chifre unique.
+
+       Un  intervalle  de  caractères  ASCII peut être indiqué en
+       donnant le premier et le dernier caractère séparés par  un
+       tiret.
+
+       Finalement  il  existe  certaines  classes  de  caractères
+       prédéfinies.   Leurs  noms   sont   assez   explicites   :
+       <FONT COLOR=#"000000"><B>[:alnum:]</B></FONT>,  <FONT COLOR=#"000000"><B>[:alpha:]</B></FONT>,  <FONT COLOR=#"000000"><B>[:cntrl:]</B></FONT>,  <FONT COLOR=#"000000"><B>[:digit:]</B></FONT>  (chiffres),
+       <FONT COLOR=#"000000"><B>[:graph:]</B></FONT>,  <FONT COLOR=#"000000"><B>[:lower:]</B></FONT>  (minuscules),  <FONT COLOR=#"000000"><B>[:print:]</B></FONT>   (affich­
+       ables),  <FONT COLOR=#"000000"><B>[:punct:]</B></FONT>,  <FONT COLOR=#"000000"><B>[:space:]</B></FONT>, <FONT COLOR=#"000000"><B>[:upper:]</B></FONT> (majuscules), et
+       <FONT COLOR=#"000000"><B>[:xdigit:]</B></FONT>   (chiffres   héxadécimaux).    par    exemple,
+       <FONT COLOR=#"000000"><B>[[:alnum:]]</B></FONT>  correspond à <FONT COLOR=#"000000"><B>[0-9A-Za-z]</B></FONT>, à la différence que
+       le dernier dépend de l'encodage ASCII, alors que  le  pre­
+       mier  est  plus portable.  Remarquez que les crochets dans
+       les noms de classes font partie intégrante du nom  symbol­
+       ique,  et qu'ils doivent donc être inclus en plus des cro­
+       chets encadrant la liste.  La plupart des  méta-caractères
+       perdent leurs significations spéciales au sein des listes.
+       Pour inclure un <FONT COLOR=#"000000"><B>]</B></FONT> littéral, mettez-le en premier  dans  la
+       liste.   De  même,  pour  inclure un <FONT COLOR=#"000000"><B>^</B></FONT> littéral, placez-le
+       n'importe ou sauf au  début  de  la  liste.   Enfin,  pour
+       inclure un <FONT COLOR=#"000000"><B>-</B></FONT> placez-le en dernier.
+
+       Le  point <FONT COLOR=#"000000"><B>.</B></FONT>  correspond à n'importe quel caractère unique.
+       Le symbole <FONT COLOR=#"000000"><B>\w</B></FONT> est un synonyme de <FONT COLOR=#"000000"><B>[[:alnum:]]</B></FONT> et <FONT COLOR=#"000000"><B>\W</B></FONT> un syn­
+       onyme de <FONT COLOR=#"000000"><B>[^[:alnum]]</B></FONT>.
+
+       L'accent  circonflexe  <FONT COLOR=#"000000"><B>^</B></FONT>  et  le symbole dollar <FONT COLOR=#"000000"><B>$</B></FONT> sont des
+       méta-caratères correspondant respectivement à  une  chaîne
+       vide  au  début et en fin de ligne.  Les symboles <FONT COLOR=#"000000"><B>\&lt</B></FONT> et <FONT COLOR=#"000000"><B>\></B></FONT>
+       correspondent respectivement à une chaîne vide en début et
+       en fin de mot.  Le symbole <FONT COLOR=#"000000"><B>\b</B></FONT> correspond à une chaîne vide
+       à l'extrémité d'un mot, et <FONT COLOR=#"000000"><B>\B</B></FONT> correspond à une chaîne vide
+       ne se trouvant <FONT COLOR=#"0000ff"><I>pas</I></FONT> à une extrémité de mot.
+
+
+
+
+FSF                      15 Janvier 1997                        3
+
+
+
+
+
+GREP(1)           Manuel de l'utilisateur Linux           GREP(1)
+
+
+       Une  expression  régulière  correspondant  à  un caractère
+       unique  peut  être  suivie  par  l'un  des  opérateurs  de
+       répétition suivants :
+       <FONT COLOR=#"000000"><B>?</B></FONT>      L'élément précédent est facultatif et doit être mis
+              en correspondance une fois au maximum.
+       <FONT COLOR=#"000000"><B>*</B></FONT>      L'élément précédent doit être mis en correspondance
+              zéro ou plusieurs fois.
+       <FONT COLOR=#"000000"><B>+</B></FONT>      L'élément précédent doit être mis en correspondance
+              au moins une fois.
+       <FONT COLOR=#"000000"><B>{n}</B></FONT>    L'élément précédent doit être mis en correspondance
+              exactement <FONT COLOR=#"0000ff"><I>n</I></FONT> fois.
+       <FONT COLOR=#"000000"><B>{n,}</B></FONT>   L'élément précédent doit être mis en correspondance
+              <FONT COLOR=#"0000ff"><I>n</I></FONT> fois ou plus.
+       <FONT COLOR=#"000000"><B>{,m}</B></FONT>   L'élément précédent est facultatif et doit être mis
+              en correspondance <FONT COLOR=#"0000ff"><I>m</I></FONT> fois au plus.
+       <FONT COLOR=#"000000"><B>{n,m}</B></FONT>  L'élément précédent doit être mis en correspondance
+              au moins <FONT COLOR=#"0000ff"><I>n</I></FONT> fois, mais au plus <FONT COLOR=#"0000ff"><I>m</I></FONT> fois.
+
+       Deux  expressions  régulières  peuvent  être  juxtaposées,
+       l'expression  en  résultant  correspondra  à  toute chaîne
+       formée par la juxtaposition de  deux  sous-chaînes  corre­
+       spondant respectivement aux deux sous-expression.
+
+       Deux  expressions  régulières  peuvent  être  reliées  par
+       l'opérateur infixe <FONT COLOR=#"000000"><B>|</B></FONT>; l'expression résultante correspondra
+       à  toute  chaîne correspondant à l'une ou l'autre des deux
+       sous-expressions.
+
+       Les répétitions ont priorité sur les juxtapositions, qui à
+       leur  tour  ont  priorité  sur les alternatives. Une sous-
+       expression peut être entourée  par  des  parenthèses  pour
+       modifier ces règles de précédence.
+
+       La référence inverse <FONT COLOR=#"000000"><B>\n</B></FONT>, ou <FONT COLOR=#"0000ff"><I>n</I></FONT> est un chiffre, correspond à
+       la sous-chaîne déjà mise en correspondance avec  la  <FONT COLOR=#"0000ff"><I>n</I></FONT>ième
+       sous-expression régulière entre parenthèses.
+
+       Dans  les  expressions  régulières  simples, les méta-car­
+       actères <FONT COLOR=#"000000"><B>?</B></FONT>, <FONT COLOR=#"000000"><B>+</B></FONT>, <FONT COLOR=#"000000"><B>{</B></FONT>, <FONT COLOR=#"000000"><B>|</B></FONT>, <FONT COLOR=#"000000"><B>(</B></FONT>, et <FONT COLOR=#"000000"><B>)</B></FONT> perdent  leurs  significations
+       spéciales, il faut utiliser à la place leurs versions avec
+       BackSlash <FONT COLOR=#"000000"><B>\?</B></FONT>, <FONT COLOR=#"000000"><B>\+</B></FONT>, <FONT COLOR=#"000000"><B>\{</B></FONT>, <FONT COLOR=#"000000"><B>\|</B></FONT>, <FONT COLOR=#"000000"><B>\(</B></FONT>, et <FONT COLOR=#"000000"><B>\)</B></FONT>.
+
+       Dans <FONT COLOR=#"000000"><B>egrep</B></FONT>  le  méta-caractère  <FONT COLOR=#"000000"><B>{</B></FONT>  perd  sa  signification
+       spéciale, il faut utiliser <FONT COLOR=#"000000"><B>\{</B></FONT> à la place.
+
+<FONT COLOR=#"000000"><B>DIAGNOSTIQUE</B></FONT>
+       Normalement,  le  code  de  retour est 0 si des correspon­
+       dances ont été trouvées, et 1 si aucune correspondance n'a
+       été faite.  L'option <FONT COLOR=#"000000"><B>-v</B></FONT> inverse le sens du code de retour.
+       Le code de retour correspond à des erreurs de syntaxe dans
+       le motif, des fichiers d'entrée inaccessibles, ou d'autres
+       erreurs système.
+
+
+
+
+
+FSF                      15 Janvier 1997                        4
+
+
+
+
+
+GREP(1)           Manuel de l'utilisateur Linux           GREP(1)
+
+
+<FONT COLOR=#"000000"><B>BUGS</B></FONT>
+       Envoyez les rapports de bug ([NDT] en anglais  !)  à  <FONT COLOR=#"000000"><B>bug-</B></FONT>
+       <FONT COLOR=#"000000"><B>gnu-utils@prep.ai.mit.edu</B></FONT>.   Assurez-vous d'inclure le mot
+       ``grep'' quelque part dans le champ ``Subject:''.
+
+       Dans  les  constructions  <FONT COLOR=#"000000"><B>{m,n}</B></FONT>  de  grandes  valeurs   de
+       répétition  peuvent  pousser  <FONT COLOR=#"000000"><B>grep</B></FONT>  à utiliser beaucoup de
+       mémoire.  De plus, certaines autres expressions régulières
+       obscures  peuvent prendre un temps exponentiellement long,
+       et mener à un manque de mémoire.
+
+       Les références inverses sont très lentes et peuvent néces­
+       siter un temps exponentiellement long.
+
+
+<FONT COLOR=#"000000"><B>TRADUCTION</B></FONT>
+       Christophe Blaess, 1997.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FSF                      15 Janvier 1997                        5
+
+
+</FONT></PRE></BODY></HTML>

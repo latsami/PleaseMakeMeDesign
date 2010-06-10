@@ -1,0 +1,332 @@
+<HTML><HEAD><TITLE>Page de man</TITLE></HEAD>
+<BODY BGCOLOR=#"ffffff" TEXT=#"000010"><PRE><FONT SIZE="3">
+
+
+TR(1)             Manuel de l'utilisateur Linux             TR(1)
+
+
+<FONT COLOR=#"000000"><B>NOM</B></FONT>
+       tr - Transposer ou éliminer des caractères.
+
+<FONT COLOR=#"000000"><B>SYNOPSIS</B></FONT>
+       <FONT COLOR=#"000000"><B>tr</B></FONT>   [-cst]  [--complement]  [--squeeze-repeats]  [--trun­
+       cate-set1] chaîne_1 chaîne_2
+       <FONT COLOR=#"000000"><B>tr</B></FONT> {-s,--squeeze-repeats} [-c] [--complement] chaîne_1
+       <FONT COLOR=#"000000"><B>tr</B></FONT> {-d,--delete} [-c] chaîne_1
+       <FONT COLOR=#"000000"><B>tr</B></FONT> {-d,--delete}  {-s,--squeeze-repeats}  [-c]  [--comple­
+       ment] chaîne_1 chaîne_2
+
+       La  version GNU de <FONT COLOR=#"000000"><B>tr</B></FONT> accepte également les options --help
+       et --version.
+
+<FONT COLOR=#"000000"><B>DESCRIPTION</B></FONT>
+       Cette page de manuel documente la version GNU de <FONT COLOR=#"000000"><B>tr.</B></FONT>
+
+       <FONT COLOR=#"000000"><B>tr</B></FONT> copie son entrée standard sur  sa  sortie  standard  en
+       effectuant l'une des manipulations suivantes :
+
+              ·  transposer,  et  éventuellement  réunir les car­
+              actères dupliqués de la chaîne résultante
+              · réunir les caractères dupliqués
+              · supprimer des caractères
+              ·  supprimer  des  caractères,  et   éventuellement
+              réunir les caractères dupliqués de la chaîne résul­
+              tante
+
+       Les  arguments   <FONT COLOR=#"0000ff"><I>chaîne1</I></FONT>   et   (éventuellement)   <FONT COLOR=#"0000ff"><I>chaîne2</I></FONT>
+       décrivent  des  ensembles ordonnés de caractères, que l'on
+       mentionnera plus bas sous les noms de jeu1 et  jeu2.   Ces
+       ensembles représentent les caractères de l'entrée standard
+       sur lesquels <FONT COLOR=#"000000"><B>tr</B></FONT> travaillera.  L'option  <FONT COLOR=#"0000ff"><I>--complement</I></FONT>  (<FONT COLOR=#"0000ff"><I>-c</I></FONT>)
+       remplace  jeu1  par  son  complément  (tous les caractères
+       n'appartenant pas à jeu1).
+
+   <FONT COLOR=#"000000"><B>DEFINIR</B></FONT> <FONT COLOR=#"000000"><B>LES</B></FONT> <FONT COLOR=#"000000"><B>ENSEMBLES</B></FONT> <FONT COLOR=#"000000"><B>DE</B></FONT> <FONT COLOR=#"000000"><B>CARACTÈRES</B></FONT>
+       Le format des arguments <FONT COLOR=#"0000ff"><I>chaîne1</I></FONT>  et  <FONT COLOR=#"0000ff"><I>chaîne2</I></FONT>  ressemble  à
+       celui  des  expressions régulières. Il ne s'agit toutefois
+       pas d'expressions régulières, mais simplement de listes de
+       caractères.   La  plupart  des caractères sont représentes
+       par eux-mêmes, néanmoins  les  chaînes  peuvent  également
+       contenir  des  raccourcis plus simples décrits ci-dessous.
+       Certains de ces raccourcis ne peuvent  être  utilisés  que
+       dans  <FONT COLOR=#"0000ff"><I>chaîne1</I></FONT>  ou  que dans <FONT COLOR=#"0000ff"><I>chaîne2</I></FONT>, comme c'est mentionné
+       ci-dessous.
+
+       Séquences avec BackSlash. Un  backslash  suivi  d'un  car­
+       actère   non   défini   ci-dessous  déclenche  un  message
+       d'erreur.
+
+       \a     Controle-G.
+
+       \b     Controle-H.
+
+
+
+FSF                      14 Janvier 1997                        1
+
+
+
+
+
+TR(1)             Manuel de l'utilisateur Linux             TR(1)
+
+
+       \f     Controle-L.
+
+       \n     Controle-J.
+
+       \r     Controle-M.
+
+       \t     Controle-I.
+
+       \v     Controle-K.
+
+       \ooo   Le caractère de valeur octale <FONT COLOR=#"0000ff"><I>ooo</I></FONT>, s'étendant sur 1
+              à 3 chiffres.
+
+       \\     BackSlash.
+
+       Intervalles.   La  notation `<FONT COLOR=#"0000ff"><I>m</I></FONT>-<FONT COLOR=#"0000ff"><I>n</I></FONT>' représente tous les car­
+       actères compris entre <FONT COLOR=#"0000ff"><I>m</I></FONT> et <FONT COLOR=#"0000ff"><I>n</I></FONT>, en ordre croissant.  <FONT COLOR=#"0000ff"><I>m</I></FONT>  doit
+       être  inférieur  à  <FONT COLOR=#"0000ff"><I>n</I></FONT>,  sinon  une erreur se produit.  Par
+       exemple, `0-9' est équivalent à `0123456789'.  Bien que la
+       version  GNU de <FONT COLOR=#"000000"><B>tr</B></FONT> ne supporte pas la syntaxe System V qui
+       utilise des crochets pour indiquer  les  intervalles,  les
+       transpositions  spécifiées  avec  ce format fonctionneront
+       quand même si les crochets de chaîne1 correspondent à  des
+       crochets identiques de chaîne2.
+
+       Répétition de caractères. La notation `[<FONT COLOR=#"0000ff"><I>c</I></FONT>*<FONT COLOR=#"0000ff"><I>n</I></FONT>]' dans <FONT COLOR=#"0000ff"><I>chaîne2</I></FONT>
+       se developpe en <FONT COLOR=#"0000ff"><I>n</I></FONT> copies du caractère  <FONT COLOR=#"0000ff"><I>c</I></FONT>.  Ainsi,  `[y*6]'
+       est  équivalent  à  `yyyyyy'.   La  notation  `[<FONT COLOR=#"0000ff"><I>c</I></FONT>*]'  dans
+       <FONT COLOR=#"0000ff"><I>chaîne2</I></FONT> se développe en autant de copie de <FONT COLOR=#"0000ff"><I>c</I></FONT> qu'il le faut
+       pour rendre le jeu2 aussi long que jeu1. Si <FONT COLOR=#"0000ff"><I>n</I></FONT> commence par
+       0, il est interprété en octal, sinon en décimal.
+
+       Classes de caractères. La notation `[:<FONT COLOR=#"0000ff"><I>nom-classe</I></FONT>:]' corre­
+       spond à l'ensemble de tous les caractères appartenant à la
+       classe (prédéfinie)  <FONT COLOR=#"0000ff"><I>nom-classe</I></FONT>.   Les  caractères  ne  se
+       présentent  pas  dans  un ordre particulier, sauf pour les
+       classes `upper' `lower' dont les  membres  sont  en  ordre
+       croissant.    Quand   les   options   <FONT COLOR=#"0000ff"><I>--delete</I></FONT>   (<FONT COLOR=#"0000ff"><I>-d</I></FONT>)   et
+       <FONT COLOR=#"0000ff"><I>--squeeze-repeats</I></FONT>  (<FONT COLOR=#"0000ff"><I>-s</I></FONT>)  sont   utilisées   simultanément,
+       n'importe quelle classe de caractères peut être mentionnée
+       dans <FONT COLOR=#"0000ff"><I>chaîne2</I></FONT>.  Autrement, seules les  classes  `lower'  et
+       `upper'  sont acceptées dans <FONT COLOR=#"0000ff"><I>string2</I></FONT>, et ceci seulement si
+       la classe correspondante (`upper' et `lower',  respective­
+       ment)  est  mentionnée  à  la  même position relative dans
+       <FONT COLOR=#"0000ff"><I>chaîne1</I></FONT>. Ceci permet de convertir le type majuscule/minus­
+       cule des caractères. Les noms de classes sont indiqués ci-
+       dessous. Une erreur se produit si l'on tente d'utiliser un
+       nom de classe invalide.
+
+       alnum  Lettres et chiffres.
+
+       alpha  Lettres.
+
+       blank  Espaces blancs horizontaux.
+
+
+
+FSF                      14 Janvier 1997                        2
+
+
+
+
+
+TR(1)             Manuel de l'utilisateur Linux             TR(1)
+
+
+       cntrl  caractères de controles.
+
+       digit  Chiffres.
+
+       graph  caractères imprimables, sauf l'espace.
+
+       lower  Lettres minuscules.
+
+       print  caractères imprimables, y compris l'espace.
+
+       punct  caractères de ponctuation.
+
+       space  Espaces blancs horizontaux ou verticaux.
+
+       upper  Lettres majuscules.
+
+       xdigit Chiffres héxa-décimaux.
+
+       Classes  d'équivalence. La syntaxe `[=<FONT COLOR=#"0000ff"><I>c</I></FONT>=]' se développe en
+       l'ensemble des caractères équivalents à <FONT COLOR=#"0000ff"><I>c</I></FONT>, sans ordre par­
+       ticulier.   Les  classes  d'équivalence sont une invention
+       récente destinée à  supporter  les  alphabets  autres  que
+       l'anglais.  Mais  il  n'y a pas de manière standard de les
+       définir ou de connaître leur contenu.  Ainsi elles ne sont
+       pas totalement implémentées dans la version GNU de <FONT COLOR=#"000000"><B>tr</B></FONT>.  La
+       classe d'équivalence d'un caractère est  composée  unique­
+       ment  de  ce  caractère,  ce qui rend ces classes inutiles
+       actuellement.
+
+       [NDT] Il serait  pourtant  bien  pratique  que  la  classe
+       d'équivalence d'un caractère inclut également ses versions
+       accentuées...
+
+   <FONT COLOR=#"000000"><B>TRADUCTION</B></FONT>
+       <FONT COLOR=#"000000"><B>tr</B></FONT> effectue les traductions de  caractères  lorsqu'on  lui
+       fournit à la fois <FONT COLOR=#"0000ff"><I>chaîne1</I></FONT> et <FONT COLOR=#"0000ff"><I>chaîne2</I></FONT>, et si l'on n'utilise
+       pas l'option --delete (<FONT COLOR=#"0000ff"><I>-d</I></FONT>).  <FONT COLOR=#"000000"><B>tr</B></FONT> transpose chaque caractère
+       d'entrée appartenant au jeu1 en un caractère correspondant
+       du jeu2. Les caractères non trouvés dans jeu1 sont  copies
+       sans  modification.  Quand un caractère apparaît plusieurs
+       fois dans jeu1, et si  les  caractères  correspondants  de
+       jeu2  ne  sont  pas  toujours  les mêmes, seule la version
+       finale est utilisée.  Par exemple ces deux commandes  sont
+       équivalentes :
+              tr aaa xyz
+              tr a z
+
+       Un  usage classique de <FONT COLOR=#"000000"><B>tr</B></FONT> est la conversions de minuscules
+       en  majuscules.  Ceci  peut  être  réalisé  de  nombreuses
+       manières différentes. En voici trois :
+              tr abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
+              tr a-z A-Z
+              tr '[:lower:]' '[:upper:]'
+
+
+
+
+FSF                      14 Janvier 1997                        3
+
+
+
+
+
+TR(1)             Manuel de l'utilisateur Linux             TR(1)
+
+
+       [NDT]  Une  utilisation pratique pour nous est la suppres­
+       sion des accents d'un texte. En voici un  exemple  suppri­
+       mant les accents utilisés en français.
+              tr "àçéèêëîïôöùüÂÇÉÈÊËÎÏÔÖÙÜ" "aceeeeiioouuACEEEEIIOOUU"
+
+       Quand  <FONT COLOR=#"000000"><B>tr</B></FONT>  effectue  une  traduction, jeu1 et jeu2 doivent
+       normalement avoir la  même  longueur.  Si  jeu1  est  plus
+       courte  que jeu2, les caractères supplémentaires en fin de
+       jeu2 sont ignorés.
+
+       D'autre part, si jeu1 est plus long que  jeu2,  la  porta­
+       bilité  n'est pas assurée. POSIX.2 précise que dans ce cas
+       le  comportement  est  indéfini.  La  version  BSD  de  <FONT COLOR=#"000000"><B>tr</B></FONT>
+       complète  jeu2  jusqu'à  la  même  longueur  que  jeu1  en
+       répétant  son  dernier  caractère  de  fois   autant   que
+       nécéssaire.  La  version  System V de <FONT COLOR=#"000000"><B>tr</B></FONT> tronque jeu1 à la
+       même longueur que jeu2.
+
+       Par défaut, la version GNU de <FONT COLOR=#"000000"><B>tr</B></FONT> se comporte comme la ver­
+       sion  BSD.   Quand  l'option --truncate-set1 (<FONT COLOR=#"0000ff"><I>-t</I></FONT>) est men­
+       tionnée, elle se  comporte  comme  la  version  System  V.
+       Cette option n'a pas d'effet pour les autres manipulations
+       que les traductions.
+
+       Le comportement System V de <FONT COLOR=#"000000"><B>tr</B></FONT> rend impossible la commande
+       BSD classique
+              tr -cs A-Za-z0-9 '\012'
+       car  elle  ne  convertit  que  les octets nuls (le premier
+       élément du complément de jeu1) en Saut de Ligne,  au  lieu
+       de convertir tous les caractères non-alphanumériques.
+
+   <FONT COLOR=#"000000"><B>ÉLIMINER</B></FONT> <FONT COLOR=#"000000"><B>LES</B></FONT> <FONT COLOR=#"000000"><B>RÉPÉTITIONS</B></FONT> <FONT COLOR=#"000000"><B>ET</B></FONT> <FONT COLOR=#"000000"><B>EFFACER</B></FONT> <FONT COLOR=#"000000"><B>DES</B></FONT> <FONT COLOR=#"000000"><B>CARACTÈRES</B></FONT>
+       Quand  seule  l'option  --delete (<FONT COLOR=#"0000ff"><I>-d</I></FONT>) est fournie, <FONT COLOR=#"000000"><B>tr</B></FONT> sup­
+       prime tous les caractères d'entrée présents dans jeu1.
+
+       Quand seule l'option --squeeze-repeats (<FONT COLOR=#"0000ff"><I>-s</I></FONT>)  est  fournie,
+       <FONT COLOR=#"000000"><B>tr</B></FONT>  remplace  chaque répétitions de caractères appartenant
+       au jeu1 par une seule occurence de ce caractère.
+
+       Quand les deux options --delete et --squeeze-repeats  sont
+       réclamées  en  même  temps, <FONT COLOR=#"000000"><B>tr</B></FONT> effectue d'abord toutes les
+       suppressions des caractères  de  jeu1,  puis  élimine  les
+       répétitions des caractères appartenant au jeu2.
+
+       L'option  --squeeze-repeats  peut  également être utilisée
+       pendant les traductions, auquel cas <FONT COLOR=#"000000"><B>tr</B></FONT> effectue d'abord la
+       transposition,  puis élimine les répétitions de caractères
+       appartenant au jeu2.
+
+       Voici quelques exemples destinés à illustrer diverses com­
+       binaisons des options :
+
+       Supprimer les octets nuls :
+              tr -d '\000'
+
+
+
+FSF                      14 Janvier 1997                        4
+
+
+
+
+
+TR(1)             Manuel de l'utilisateur Linux             TR(1)
+
+
+       Afficher  chaque mot sur une ligne indépendante. Ceci con­
+       vertit tous les caractères non alphanumériques en sauts de
+       lignes,  puis  regroupe les lignes blanches successives en
+       un seul saut de ligne :
+              tr -cs '[a-zA-Z0-9]' '[\n*]'
+
+       Convertir les séquences de sauts de lignes en un seul saut
+       de ligne (ceci supprime les lignes blanches) :
+              tr -s '\n'
+
+       La  version  GNU  de  <FONT COLOR=#"000000"><B>tr</B></FONT>  accepte  également  les  options
+       supplémentaire suivantes :
+
+       <FONT COLOR=#"0000ff"><I>--help</I></FONT> Afficher un message d'aide sur la  sortie  standard
+              et terminer normalement.
+
+       <FONT COLOR=#"0000ff"><I>--version</I></FONT>
+              Afficher  un  numéro de version sur la sortie stan­
+              dard et terminer normalement.
+
+   <FONT COLOR=#"000000"><B>MESSAGE</B></FONT> <FONT COLOR=#"000000"><B>D'AVERTISSEMENT</B></FONT>
+       Lorsque la variable  d'environnement  POSIXLY_CORRECT  est
+       validée,  plusieurs messages d'erreurs et d'avertissements
+       sont inhibés, afin  d'assurer  une  compatibilité  stricte
+       avec POSIX.2.  Les messages en question se produisent dans
+       les circonstances suivantes :
+
+       1. Quand l'option  <FONT COLOR=#"0000ff"><I>--delete</I></FONT>  est  utilisée  sans  l'option
+       <FONT COLOR=#"0000ff"><I>--squeeze-repeats,</I></FONT>  et  si <FONT COLOR=#"0000ff"><I>chaîne2</I></FONT> est fournie, la version
+       GNU de <FONT COLOR=#"000000"><B>tr</B></FONT> affiche par défaut un  message  d'erreur  et  se
+       termine,  car <FONT COLOR=#"0000ff"><I>chaîne2</I></FONT> ne serait pas utilisée. Les spécifi­
+       cations POSIX indiquent que dans ce cas <FONT COLOR=#"0000ff"><I>chaîne2</I></FONT> doit  sim­
+       plement  être  ignorée.  Ignorer un argument sans prévenir
+       l'utilisateur n'est pas une bonne idée.
+
+       2. Quand  un  nombre  octal  ambigu  est  fourni  par  une
+       séquence  d'échappement.   Par  exemple \400 correspond en
+       réalite au caractère \40 suivi du chiffre 0, car la valeur
+       octale 400 ne tient pas dans un octet.
+
+       Remarquez  que la version GNU de <FONT COLOR=#"000000"><B>tr</B></FONT> ne fournit pas de com­
+       patibilité totale BSD ou System V. Par exemple, il  n'y  a
+       pas  d'option  pour inhiber l'interprètation des séquences
+       POSIX  [:alpha:], [=c=], et  [c*10].  Remarquez  également
+       que  la  version GNU de <FONT COLOR=#"000000"><B>tr</B></FONT> ne supprime pas les octets nuls
+       automatiquement contrairement aux versions UNIX tradition­
+       nelles, avec lesquelles il n'y a pas de moyen de conserver
+       les octets nuls.
+
+
+<FONT COLOR=#"000000"><B>TRADUCTION</B></FONT>
+       Christophe Blaess, 1997.
+
+
+
+
+
+FSF                      14 Janvier 1997                        5
+
+
+</FONT></PRE></BODY></HTML>

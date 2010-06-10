@@ -1,0 +1,266 @@
+<HTML><HEAD><TITLE>Page de man</TITLE></HEAD>
+<BODY BGCOLOR=#"ffffff" TEXT=#"000010"><PRE><FONT SIZE="3">
+
+
+SORT(1)           Manuel de l'utilisateur Linux           SORT(1)
+
+
+<FONT COLOR=#"000000"><B>NOM</B></FONT>
+       sort - Trier les lignes d'un fichier texte.
+
+<FONT COLOR=#"000000"><B>SYNOPSIS</B></FONT>
+       <FONT COLOR=#"000000"><B>sort</B></FONT>  [-cmus]  [-t  séparateur] [-o fichier_de_sortie] [-T
+       répertoire_temporaire]  [-bdfiMnr]  [+POS1  [-POS2]]   [-k
+       POS1[,POS2]] [fichier...]
+       <FONT COLOR=#"000000"><B>sort</B></FONT> {--help,--version}
+
+<FONT COLOR=#"000000"><B>DESCRIPTION</B></FONT>
+       Cette page de manuel documente la version GNU de <FONT COLOR=#"000000"><B>sort</B></FONT>.
+
+       <FONT COLOR=#"000000"><B>sort</B></FONT>  trie,  regroupe  ou  compare  toutes  les lignes des
+       fichiers indiqués.  Si aucun fichier n'est fourni,  ou  si
+       le  nom  `-'  est  mentionné,  la  lecture  se fera depuis
+       l'entrée standard.
+
+       Par défaut, <FONT COLOR=#"000000"><B>sort</B></FONT> écrit ses résultats sur la  sortie  stan­
+       dard.
+
+       <FONT COLOR=#"000000"><B>sort</B></FONT>  peut  opérer suivant trois modes : tri (par défaut),
+       regroupement, et  vérification  de  l'ordre.  Les  options
+       suivantes modifient le mode opératoire :
+
+       <FONT COLOR=#"0000ff"><I>-c</I></FONT>     ([NDT]  c  =  check  -  vérifier)  Vérifie  si  les
+              fichiers fournis sont déjà triés : s'ils ne le sont
+              pas, afficher un message d'erreur, et terminer avec
+              un code de retour valant 1.
+
+       <FONT COLOR=#"0000ff"><I>-m</I></FONT>     ([NDT] m = merge - melanger) Regrouper les fichiers
+              indiqués  en  les  triant.  Chaque fichier d'entrée
+              doit déjà être trié individuellement. Il  est  tou­
+              jours  possible  de  trier plutôt que de réunir, le
+              regroupement est fourni parce qu'il est plus rapide
+              dans les cas où il fonctionne.
+
+       La  comparaison de deux lignes se fait ainsi : Si un champ
+       clé a été indiqué, <FONT COLOR=#"000000"><B>sort</B></FONT> compare chaque  paire  de  champs,
+       dans  l'ordre précisé sur la ligne de commande, jusqu'à ce
+       qu'une différence soit trouvée, ou qu'il ne reste plus  de
+       champs.
+
+       Si  l'une des options globales <FONT COLOR=#"0000ff"><I>Mbdfinr</I></FONT> est utilisée, et si
+       aucun champ clé n'est indiqué,  <FONT COLOR=#"000000"><B>sort</B></FONT>  compare  les  lignes
+       entières en fonction des options globales.
+
+       Finalement,  si  toutes  les  clés sont égales, en dernier
+       ressort <FONT COLOR=#"000000"><B>sort</B></FONT> compare les lignes octet  par  octet  suivant
+       l'ordre  défini sur la machine. Cette dernière comparaison
+       accepte l'option globale <FONT COLOR=#"0000ff"><I>-r</I></FONT>.  L'option <FONT COLOR=#"0000ff"><I>-s</I></FONT> (stable)  inhibe
+       cette  comparaison  en dernier recours afin que les lignes
+       considérées comme égales restent à leurs  positions  rela­
+       tives.  Si aucun champ clé, et aucune option ne sont four­
+       nis, <FONT COLOR=#"0000ff"><I>-s</I></FONT> est sans effet.
+
+
+
+FSF                      14 Janvier 1997                        1
+
+
+
+
+
+SORT(1)           Manuel de l'utilisateur Linux           SORT(1)
+
+
+       La version GNU de <FONT COLOR=#"000000"><B>sort</B></FONT> n'a pas de limitation concernant la
+       longueur  des lignes d'entrée ou les caractères autorisés.
+       De plus, si le dernier octet d'une  ligne  d'entrée  n'est
+       pas  un saut de ligne (NewLine), la version GNU de <FONT COLOR=#"000000"><B>sort</B></FONT> en
+       ajoute un automatiquement.
+
+       Si la variable d'environnement <FONT COLOR=#"000000"><B>TMPDIR</B></FONT> est configurée, <FONT COLOR=#"000000"><B>sort</B></FONT>
+       utilise  ce  répertoire  pour  stocker les fichiers tempo­
+       raires à la place du répertoire par défaut /tmp.  L'option
+       <FONT COLOR=#"0000ff"><I>-T</I></FONT>  <FONT COLOR=#"0000ff"><I>répertoire_temporaire</I></FONT> permet également de sélectionner
+       un répertoire pour placer les fichiers temporaires, elle a
+       priorité sur la variable d'environnement.
+
+       Les options suivantes affectent l'ordre des lignes de sor­
+       tie.  Elles  peuvent  être  mentionnées  globalement,   ou
+       appliquées  à  un champ clé spécifique. Si aucun champ clé
+       n'est indiqué, les options globales s'appliquent aux  com­
+       paraisons des lignes entières, sinon elles sont transmises
+       aux champs clés n'ayant pas d'option spécifique.
+
+       <FONT COLOR=#"0000ff"><I>-b</I></FONT>     Ignorer les blancs en début  de  ligne  pendant  la
+              recherche de la clé de tri sur chaque ligne.
+
+       <FONT COLOR=#"0000ff"><I>-d</I></FONT>     Trier  dans l'ordre des répertoires téléphoniques :
+              ignorer pour le tri tous les caractères autres  que
+              les lettres, les chiffres et les blancs.
+
+       <FONT COLOR=#"0000ff"><I>-f</I></FONT>     Considérer  les minuscules comme leur équivalent en
+              majuscule pendant le tri. Ainsi  `b'  est  trie  de
+              manière équivalente a `B'. ([NDT] Bien entendu cela
+              ne   fonctionne    pas    avec    les    minuscules
+              accentuées...)
+
+       <FONT COLOR=#"0000ff"><I>-i</I></FONT>     Ignorer  pour  le  tri  les caractères en dehors de
+              l'intervalle  ASCII  octal  040-0176  (bornes  com­
+              prises).
+
+       <FONT COLOR=#"0000ff"><I>-M</I></FONT>     Une  chaîne initiale, consistant en un nombre quel­
+              conque de blancs, suivi de trois lettres correspon­
+              dant  à  une  abreviation  de mois est convertie en
+              majuscules avant d'être comparée dans l'ordre `JAN'
+              &lt  `FEB'  &lt  ...  &lt `DEC.'  Les noms invalides sont
+              considéres  comme  inférieurs  aux  noms   valides.
+              ([NDT] Qu'en-est-il vis à vis de la localisation ?)
+
+       <FONT COLOR=#"0000ff"><I>-n</I></FONT>     Comparer  suivant  la  valeur  arithmétique   d'une
+              chaîne   numérique   initiale   composée  d'espaces
+              éventuels, suivis optionnellement du signe -, et de
+              zéro  ou  plusieurs  chiffres, éventuellement suivi
+              d'un  point  décimal  et  de  zéro   ou   plusieurs
+              chiffres.
+
+       <FONT COLOR=#"0000ff"><I>-r</I></FONT>     Inverser  l'ordre  de tri, afin que les lignes avec
+              la  plus  grande  valeur  de  clé  apparaissent  en
+
+
+
+FSF                      14 Janvier 1997                        2
+
+
+
+
+
+SORT(1)           Manuel de l'utilisateur Linux           SORT(1)
+
+
+              premier.
+
+       Les autres options sont :
+
+       <FONT COLOR=#"0000ff"><I>-o</I></FONT> <FONT COLOR=#"0000ff"><I>fichier_de_sortie</I></FONT>
+              Ecrire  dans le <FONT COLOR=#"0000ff"><I>fichier_de_sortie</I></FONT> plutôt que sur la
+              sortie standard.  Si <FONT COLOR=#"0000ff"><I>fichier_de_sortie</I></FONT>  est  égale­
+              ment  un  fichier  d'entrée, <FONT COLOR=#"000000"><B>sort</B></FONT> copie les données
+              dans un fichier temporaire avant le tri  pour  pou­
+              voir  écrire  correctement  ses  résultats  dans le
+              <FONT COLOR=#"0000ff"><I>fichier_de_sortie</I></FONT>.
+
+       <FONT COLOR=#"0000ff"><I>-t</I></FONT> <FONT COLOR=#"0000ff"><I>caractère_séparateur</I></FONT>
+              Utiliser le <FONT COLOR=#"0000ff"><I>caractère_séparateur</I></FONT> afin de distinguer
+              les  champs  pour   rechercher  la  clé  de tri sur
+              chaque ligne. Par défaut le  séparateur  de  champs
+              est  une chaîne blanche entre chaînes non-blanches.
+              Ceci signifie qu'avec l'entrée  `  foo  bar',  <FONT COLOR=#"000000"><B>sort</B></FONT>
+              distingue  deux champs ` foo' et ` bar'. Le sépara­
+              teur n'appartient ni  au  champ  précédent,  ni  au
+              champ suivant.
+
+       <FONT COLOR=#"0000ff"><I>-u</I></FONT>     Pour  l'action  par  défaut,  ou  pour l'action <FONT COLOR=#"0000ff"><I>-m</I></FONT>,
+              n'afficher que la première séquence de lignes  con­
+              sidérées  comme  égales. Pour l'action <FONT COLOR=#"0000ff"><I>-c</I></FONT>, vérifier
+              qu'aucune lignes consécutives ne soient égales.
+
+       <FONT COLOR=#"0000ff"><I>+POS1</I></FONT> <FONT COLOR=#"0000ff"><I>[-POS2]</I></FONT>
+              Indiquer un champ à utiliser comme clé de tri  pour
+              chaque  ligne.  Le champ consiste en une portion de
+              de ligne débutant à la position POS1, et s'étendant
+              jusqu'à  POS2  non-inclue  (ou jusqu'à la fin de la
+              ligne si POS2 n'est pas mentionnée). Les  positions
+              des champs et des caractères sont numérotées à par­
+              tir de 0.
+
+       <FONT COLOR=#"0000ff"><I>-k</I></FONT> <FONT COLOR=#"0000ff"><I>POS1[,POS2]</I></FONT>
+              Une autre syntaxe possible pour indiquer  les  clés
+              de tri.  Les positions des champs et des caractères
+              sont numérotées à partir de 1.
+
+       Une position est de la forme <FONT COLOR=#"0000ff"><I>f</I></FONT>.<FONT COLOR=#"0000ff"><I>c</I></FONT>, où <FONT COLOR=#"0000ff"><I>f</I></FONT> est  le  numéro  du
+       champ  à  utiliser,  et  <FONT COLOR=#"0000ff"><I>c</I></FONT>  le numéro du premier caractère
+       depuis le début du champ (avec <FONT COLOR=#"0000ff"><I>+pos</I></FONT>) ou depuis la  fin  du
+       champ  précédent (avec <FONT COLOR=#"0000ff"><I>-pos</I></FONT>).  La partie .<FONT COLOR=#"0000ff"><I>c</I></FONT> de la position
+       peut être omise, auquel cas le caractère considéré est  le
+       premier  du  champ.  Si l'option <FONT COLOR=#"0000ff"><I>-b</I></FONT> est choisie, la partie
+       .<FONT COLOR=#"0000ff"><I>c</I></FONT> d'une spécification de champ est comptée  à  partir  du
+       premier caractère non-blanc du champ (pour <FONT COLOR=#"0000ff"><I>+pos</I></FONT>) ou à par­
+       tir  du  premier  caractère  non-blanc  suivant  le  champ
+       précédent (pour <FONT COLOR=#"0000ff"><I>-pos</I></FONT>).
+
+       Un  argument  <FONT COLOR=#"0000ff"><I>+pos</I></FONT> ou <FONT COLOR=#"0000ff"><I>-pos</I></FONT> peut également avoir un préfixe
+       constitué d'une des lettres d'option  <FONT COLOR=#"0000ff"><I>Mbdfinr</I></FONT>  auquel  cas
+
+
+
+FSF                      14 Janvier 1997                        3
+
+
+
+
+
+SORT(1)           Manuel de l'utilisateur Linux           SORT(1)
+
+
+       les  options  globales  ne  s'appliquent  pas  à ce champ.
+       l'option <FONT COLOR=#"0000ff"><I>-b</I></FONT> peut être attachée indépendament  aux  parties
+       <FONT COLOR=#"0000ff"><I>+pos</I></FONT>  ou  <FONT COLOR=#"0000ff"><I>-pos</I></FONT>  d'une  spécification de champ. Si elle est
+       héritée d'une option globale, elle s'appliquera  aux  deux
+       parties.   Si  une  option  <FONT COLOR=#"0000ff"><I>-n</I></FONT>  ou  <FONT COLOR=#"0000ff"><I>-M</I></FONT>  est utilisée, ceci
+       implique que l'option <FONT COLOR=#"0000ff"><I>-b</I></FONT> s'applique  aux  deux  spécifica­
+       tions  <FONT COLOR=#"0000ff"><I>+pos</I></FONT>  et  <FONT COLOR=#"0000ff"><I>-pos</I></FONT>.   Les  clés  peuvent  s'étendre sur
+       plusieurs champs.
+
+       De plus quand la version GNU de <FONT COLOR=#"000000"><B>sort</B></FONT> est invoquée avec  un
+       seul argument, les options suivantes sont reconnues :
+
+       <FONT COLOR=#"0000ff"><I>--help</I></FONT> Afficher  un  message d'aide sur la sortie standard
+              et terminer normalement.
+
+       <FONT COLOR=#"0000ff"><I>--version</I></FONT>
+              Afficher un numéro de version sur la  sortie  stan­
+              dard et terminer normalement.
+
+<FONT COLOR=#"000000"><B>COMPATIBILITE</B></FONT>
+       Les  implémentations historiques (BSD et System V) de <FONT COLOR=#"000000"><B>sort</B></FONT>
+       diffèrent dans leurs interprétations de certaines options,
+       notamment <FONT COLOR=#"0000ff"><I>-b</I></FONT>, <FONT COLOR=#"0000ff"><I>-f</I></FONT>, et <FONT COLOR=#"0000ff"><I>-n</I></FONT>.  La version GNU suit le comporte­
+       ment POSIX, qui est généralement (mais pas toujours) celui
+       de  la version System V.  Suivant POSIX <FONT COLOR=#"0000ff"><I>-n</I></FONT> n'implique plus
+       obligatoirement <FONT COLOR=#"0000ff"><I>-b</I></FONT>.  Pour assurer l'homogénéïte, <FONT COLOR=#"0000ff"><I>-M</I></FONT> a  été
+       modifiée  de  la  même  manière.  Dans certains cas, assez
+       obscurs, ceci peut affecter la signification des positions
+       de  caractères dans les spécifications de champs.  Si ceci
+       vous perturbe, vous pouvez ajouter explicitement un <FONT COLOR=#"0000ff"><I>-b</I></FONT>.
+
+<FONT COLOR=#"000000"><B>BUGS</B></FONT>
+       Les différentes significations des numéros  de  champs  en
+       fonction de l'utilisation ou non de l'option <FONT COLOR=#"0000ff"><I>-k</I></FONT> induit une
+       confusion certaine.  C'est la faute à POSIX !
+
+
+<FONT COLOR=#"000000"><B>TRADUCTION</B></FONT>
+       Christophe Blaess, 1997.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FSF                      14 Janvier 1997                        4
+
+
+</FONT></PRE></BODY></HTML>
