@@ -1,0 +1,33 @@
+Logiciel libre
+==============
+
+    source: Wikipédia
+    
+    Contributeurs de Wikipédia, "Logiciel libre," Wikipédia, l'encyclopédie
+    libre, http://fr.wikipedia.org/w/index.php?title=Logiciel_libre&oldid=52345293 
+    (Page consultée le avril 21, 2010). 
+
+Un logiciel libre est un logiciel  dont l'utilisation, l'étude, la
+modification, la duplication et la diffusion sont universellement autorisées
+sans contrepartie. Les droits correspondant à ces libertés peuvent être
+simplement disponibles (comme pour les logiciels du domaine public) ou
+établis par une licence dite « libre » basée sur le droit d'auteur ; les
+licences qui imposent le maintien de ces droits aux logiciels dérivés sont
+dites « licences copyleft ».
+
+Si la production et la distribution de logiciels libres peuvent être
+rémunérées, leur utilisation doit rester libre, et donc potentiellement
+gratuite. Ils sont toutefois à distinguer des freewares (gratuiciels) qui ne
+sont pas nécessairement libres. La notion de logiciel Open Source telle que
+définie par l'Open Source Initiative est reconnue comme techniquement
+comparable à celle du logiciel libre.
+
+Richard Stallman a formalisé la notion de logiciel libre pendant la première
+moitié des années 1980 puis l'a popularisée avec le projet GNU et la Free
+Software Foundation (FSF). Les logiciels libres constituent une alternative à
+ceux qui ne le sont pas, qualifiés de « propriétaires » ou de « privateurs ».
+
+Depuis la fin des années 1990, le succès des logiciels libres, notamment de
+GNU/Linux, suscite un vif intérêt dans l'industrie informatique et les
+médias.
+
