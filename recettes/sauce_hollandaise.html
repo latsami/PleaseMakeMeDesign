@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Conforming XHTML 1.0 Strict Template</title>
+
+</head>
+
+<body>
+<h1>Poster à la Sauce Hollandaise</h1>
+
+<p>Difficultée: **...
+Temps de préparation: 1 heure
+Temps de cuisson: 2 heures</p>
+
+<h1>Ingrédients</h1>
+
+<ul>
+<li>2 textes d'un bon poids susceptibles d'avoir des mots en commun</li>
+<li>Un peu d'huile de coude</li>
+<li>de l'Helvetica Bold, ou mieux: un équivalent libre</li>
+</ul>
+
+<h1>Ustensiles</h1>
+
+<ul>
+<li><code>comm</code></li>
+<li><code>tr</code></li>
+<li><code>cat</code></li>
+<li><code>sort</code></li>
+<li><code>uniq</code></li>
+<li><code>grep</code> (optional)</li>
+<li><code>less</code> (optional)</li>
+<li><code>enscript</code></li>
+<li><code>ps2pdf</code></li>
+</ul>
+
+<h1>Étapes</h1>
+
+<ol>
+<li><p>Aller dans le dossier du projet.
+<code>cd mon_chemin/PleaseMakeMeDesign</code></p></li>
+<li><p>Créer un nouveau dossier dans lequel nous allons travailler.
+<code>mkdir plan_de_travail</code></p></li>
+<li><p>Aller dans ce dossier.
+<code>cd plan_de_travail</code></p></li>
+<li><p>Afficher le contenu du premier fichier dans le <em>shell</em>.
+<code>cat fichier_1.txt</code></p></li>
+<li><p>Mettre tous les mots à la ligne.
+<code>cat fichier_1.txt | tr " " "
+"</code></p></li>
+<li><p>Supprimer les ponctuations.
+<code>cat fichier_1.txt | tr " " "
+" | tr -d [:punct:]</code></p></li>
+<li><p>Mettre tous les mots en bas de casse.
+<code>cat fichier_1.txt | tr " " "
+" | tr -d [:punct:] | tr [:upper:] [:lower:]</code></p></li>
+<li><p>Classer les mots par ordre alphabétique.
+<code>cat fichier_1.txt | tr " " "
+" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort</code></p></li>
+<li><p>Supprimer les mots en double.
+<code>cat fichier_1.txt | tr " " "
+" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq</code></p></li>
+<li><p>Sauvegarder le résultat.
+<code>cat fichier_1.txt | tr " " "
+" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq &gt; liste_mots_1.txt</code></p></li>
+<li><p>Répéter les étapes 1 à 7 avec le deuxième fichier.
+<code>cat fichier_2.txt | tr " " "
+" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq &gt; liste_mots_2.txt</code></p></li>
+<li><p>Comparer les mots communs des deux listes de mots obtenues.
+<code>comm liste_mots_1.txt liste_mots_2.txt</code> <br />
+Astuce: utiliser un <em>pager</em> pour analyser le résultat.
+<code>comm liste_mots_1.txt liste_mots_2.txt | less</code></p></li>
+<li><p>Sélectionner un mot intéressant du résultat (avec 5 lignes avant et 5 lignes après).
+<code>comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot"</code></p></li>
+<li><p>Enregistrer le résultat dans un fichier texte.
+<code>comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" &gt; montexte.txt</code></p></li>
+<li><p>Mettre en page le texte dans un pdf (jouez avec les éléments variables!).
+<code>enscript -B -f 'Helvetica-Bold18/19' -T 16 -p 'mon_pdf.ps montexte.txt | ps2pdf mon_pdf.ps</code></p></li>
+</ol>
+
+<h1>Finition alternative</h1>
+
+<ol>
+<li><p>Mettre en page le texte sur un A4 en adaptant le corps du texte automatiquement pour remplir le format sur toute la hauteur. (le fichier obtenu s'appelle "my_pdf.pdf")
+<code>comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | ../scripts/./v-justify.sh</code></p></li>
+<li><p>Convertit le fichier postscript en fichier pdf.
+<code>comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | ../scripts/./v-justify.sh | ps2pdf mon_pdf.ps</code></p></li>
+</ol>
+
+<h1>Le petit plus: superposer 2 posters !!!</h1>
+
+<ol>
+<li><p>Répéter toutes les étapes pour obtenir un second poster.</p></li>
+<li><p>Créer un fichier texte listant les fichiers pdf à superposer.
+<code>ls *.pdf &gt; pdf_list.txt</code></p></li>
+<li><p>Superposez !
+<code>podofoimpose pdf_list.txt 2in1poster.pdf superimpose.plan lua</code></p></li>
+</ol>
+
+<h1>Voilà ! Vous êtes maintenant face à une magnifique affiche amstellodamoise !</h1>
+
+</body>
+</html>

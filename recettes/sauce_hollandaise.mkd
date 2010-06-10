@@ -1,0 +1,104 @@
+Poster à la Sauce Hollandaise
+=============================
+
+Difficultée: **...
+Temps de préparation: 1 heure
+Temps de cuisson: 2 heures
+
+Ingrédients
+===========
+
+- 2 textes d'un bon poids susceptibles d'avoir des mots en commun
+- Un peu d'huile de coude
+- de l'Helvetica Bold, ou mieux: un équivalent libre
+
+Ustensiles
+==========
+
+- `comm`
+- `tr`
+- `cat`
+- `sort`
+- `uniq`
+- `grep` (optional)
+- `less` (optional)
+- `enscript`
+- `ps2pdf`
+
+Étapes
+======
+
+01. Aller dans le dossier du projet.
+    `cd mon_chemin/PleaseMakeMeDesign`
+
+02. Créer un nouveau dossier dans lequel nous allons travailler.
+    `mkdir plan_de_travail`
+
+03. Aller dans ce dossier.
+    `cd plan_de_travail`
+    
+04. Afficher le contenu du premier fichier dans le *shell*.
+    `cat fichier_1.txt`
+
+05. Mettre tous les mots à la ligne.
+    `cat fichier_1.txt | tr " " "\n"`
+
+06. Supprimer les ponctuations.
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:]`
+
+07. Mettre tous les mots en bas de casse.
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:]`
+
+08. Classer les mots par ordre alphabétique.
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort`
+
+09. Supprimer les mots en double.
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq`
+
+10. Sauvegarder le résultat.
+    `cat fichier_1.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq > liste_mots_1.txt`
+
+11. Répéter les étapes 1 à 7 avec le deuxième fichier.
+    `cat fichier_2.txt | tr " " "\n" | tr -d [:punct:] | tr [:upper:] [:lower:] | sort | uniq > liste_mots_2.txt`
+
+12. Comparer les mots communs des deux listes de mots obtenues.
+    `comm liste_mots_1.txt liste_mots_2.txt`  
+    Astuce: utiliser un *pager* pour analyser le résultat.
+    `comm liste_mots_1.txt liste_mots_2.txt | less`
+
+13. Sélectionner un mot intéressant du résultat (avec 5 lignes avant et 5 lignes après).
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot"`
+
+14. Enregistrer le résultat dans un fichier texte.
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" > montexte.txt`
+
+15. Mettre en page le texte dans un pdf (jouez avec les éléments variables!).
+    `enscript -B -f 'Helvetica-Bold18/19' -T 16 -p 'mon_pdf.ps montexte.txt | ps2pdf mon_pdf.ps`
+
+
+Finition alternative
+====================
+
+14. Mettre en page le texte sur un A4 en adaptant le corps du texte automatiquement pour remplir le format sur toute la hauteur. (le fichier obtenu s'appelle "my_pdf.pdf")
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | ../scripts/./v-justify.sh`
+
+15. Convertit le fichier postscript en fichier pdf.
+    `comm liste_mots_1.txt liste_mots_2.txt | grep -C 5 "mot" | ../scripts/./v-justify.sh | ps2pdf mon_pdf.ps`
+
+
+Le petit plus: superposer 2 posters !!!
+=======================================
+
+1. Répéter toutes les étapes pour obtenir un second poster.
+
+2. Créer un fichier texte listant les fichiers pdf à superposer.
+    `ls *.pdf > pdf_list.txt`
+
+3. Superposez !
+    `podofoimpose pdf_list.txt 2in1poster.pdf superimpose.plan lua`
+
+
+
+Voilà ! Vous êtes maintenant face à une magnifique affiche amstellodamoise !
+============================================================================
+
