@@ -87,5 +87,19 @@ Alternative end
 15. Convert the postscript file to a pdf file.
     `comm word_list_1.txt word_list_2.txt | grep -C 5 "anyword" | ../scripts/./v-justify.sh | ps2pdf my_pdf.ps`
 
-Here you are! You now have a wonderful Dutch style poster!
 
+Optional: superpose 2 posters !!!
+=================================
+
+1. Repeat the previous steps to have another poster.
+
+2. Create a text file listing your pdf files.
+    `ls *.pdf > pdf_list.txt`
+
+3. Superpose !
+    `podofoimpose pdf_list.txt 2in1poster.pdf superimpose.plan lua`
+
+
+
+Here you are! You now have a wonderful Dutch style poster!
+==========================================================

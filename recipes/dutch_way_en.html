@@ -86,8 +86,17 @@ Tip: use a <em>pager</em> to be able to scroll up and down.
 <code>comm word_list_1.txt word_list_2.txt | grep -C 5 "anyword" | ../scripts/./v-justify.sh | ps2pdf my_pdf.ps</code></p></li>
 </ol>
 
-<p>Here you are! You now have a wonderful Dutch style poster!</p>
+<h1>Optional: superpose 2 posters !!!</h1>
 
+<ol>
+<li><p>Repeat the previous steps to have another poster.</p></li>
+<li><p>Create a text file listing your pdf files.
+<code>ls *.pdf &gt; pdf_list.txt</code></p></li>
+<li><p>Superpose !
+<code>podofoimpose pdf_list.txt 2in1poster.pdf superimpose.plan lua     </code></p></li>
+</ol>
+
+<h1>Here you are! You now have a wonderful Dutch style poster!</h1>
 
 </body>
 </html>
